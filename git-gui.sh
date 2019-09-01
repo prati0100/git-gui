@@ -2495,7 +2495,7 @@ proc force_first_diff {after} {
 
 proc toggle_or_diff {mode w args} {
 	global file_states file_lists current_diff_path ui_index ui_workdir
-	global last_clicked selected_paths
+	global last_clicked selected_paths file_lists_last_clicked
 
 	if {$mode eq "click"} {
 		foreach {x y} $args break
@@ -2526,6 +2526,8 @@ proc toggle_or_diff {mode w args} {
 	array unset selected_paths
 	$ui_index tag remove in_sel 0.0 end
 	$ui_workdir tag remove in_sel 0.0 end
+
+	set file_lists_last_clicked($w) $lno
 
 	# Determine the state of the file
 	if {[info exists file_states($path)]} {
@@ -2637,6 +2639,29 @@ proc show_less_context {} {
 	if {$repo_config(gui.diffcontext) > 1} {
 		incr repo_config(gui.diffcontext) -1
 		reshow_diff
+	}
+}
+
+proc select_path_in {widget} {
+	global file_lists last_clicked selected_paths ui_workdir
+	global file_lists_last_clicked
+
+	set _list_length [llength $file_lists($widget)]
+	if {$_list_length > 0} {
+
+		set _index $file_lists_last_clicked($widget)
+		if {$_index eq {}} {
+			set _index 1
+		} elseif {$_index > $_list_length} {
+			set _index $_list_length
+		}
+
+		focus $widget
+		set last_clicked [list $widget $_index]
+		set path [lindex $file_lists($widget) [expr $_index - 1]]
+		array unset selected_paths
+		set selected_paths($path) 1
+		show_diff $path $widget
 	}
 }
 
@@ -3851,6 +3876,14 @@ foreach i [list $ui_index $ui_workdir] {
 	bind $i <Key-Down>       { toggle_or_diff down %W; break }
 }
 unset i
+
+bind . <$M1B-Key-1> {select_path_in $::ui_workdir}
+bind . <$M1B-Key-2> {select_path_in $::ui_index}
+bind . <$M1B-Key-3> {focus $::ui_diff}
+bind . <$M1B-Key-4> {focus $::ui_comm}
+
+set file_lists_last_clicked($ui_index) {}
+set file_lists_last_clicked($ui_workdir) {}
 
 set file_lists($ui_index) [list]
 set file_lists($ui_workdir) [list]
