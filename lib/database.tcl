@@ -87,29 +87,3 @@ proc do_fsck_objects {} {
 	lappend cmd --strict
 	console::exec $w $cmd
 }
-
-proc hint_gc {} {
-	set ndirs 1
-	set limit 8
-	if {[is_Windows]} {
-		set ndirs 4
-		set limit 1
-	}
-
-	set count [llength [glob \
-		-nocomplain \
-		-- \
-		[gitdir objects 4\[0-[expr {$ndirs-1}]\]/*]]]
-
-	if {$count >= $limit * $ndirs} {
-		set objects_current [expr {$count * 256/$ndirs}]
-		if {[ask_popup \
-			[mc "This repository currently has approximately %i loose objects.
-
-To maintain optimal performance it is strongly recommended that you compress the database.
-
-Compress the database now?" $objects_current]] eq yes} {
-			do_gc
-		}
-	}
-}
