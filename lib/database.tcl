@@ -87,3 +87,20 @@ proc do_fsck_objects {} {
 	lappend cmd --strict
 	console::exec $w $cmd
 }
+
+proc auto_gc {} {
+	ui_status [mc "Performing an auto-gc..."]
+
+	# 'git-gc --auto' sends output to stderr.
+	set result [git --stderr gc --auto]
+
+	# FIXME: Should I display a warning dialog here?
+	#
+	# Show a warning dialog here if the git-gc output has a warning
+	# anywhere.
+	if {[regexp -line "^warning:" $result]} {
+		warn_popup $result
+	}
+
+	ui_ready
+}

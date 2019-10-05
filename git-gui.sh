@@ -2366,6 +2366,7 @@ proc ui_do_rescan {} {
 }
 
 proc do_commit {} {
+	auto_gc
 	commit_tree
 }
 
