@@ -11,6 +11,8 @@ proc fetch_from {remote} {
 		lappend cmds [list exec git remote prune $remote]
 	}
 	console::chain $w $cmds
+
+	auto_gc
 }
 
 proc prune_from {remote} {
@@ -31,6 +33,8 @@ proc fetch_from_all {} {
 	}
 
 	console::exec $w $cmd
+
+	auto_gc
 }
 
 proc prune_from_all {} {
