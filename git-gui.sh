@@ -2700,6 +2700,15 @@ proc toggle_commit_type {} {
 	do_select_commit_type
 }
 
+proc check_diff_selected {} {
+	global current_diff_path file_lists
+	# If no diff path selected, select a staged file
+	if {$current_diff_path eq {}
+		&& [llength $file_lists($::ui_index)] > 0} {
+		select_path_in_widget $::ui_index
+	}
+}
+
 ######################################################################
 ##
 ## ui construction
@@ -3444,6 +3453,8 @@ pack $ui_comm -side left -fill y
 pack .vpane.lower.commarea.buffer.header -side top -fill x
 pack .vpane.lower.commarea.buffer.frame -side left -fill y
 pack .vpane.lower.commarea.buffer -side left -fill y
+
+bind $ui_comm <FocusIn> {check_diff_selected}
 
 # -- Commit Message Buffer Context Menu
 #
