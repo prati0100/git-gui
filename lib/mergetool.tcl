@@ -52,7 +52,7 @@ proc do_merge_stage_workdir {path} {
 }
 
 proc merge_add_resolution {path} {
-	global current_diff_path ui_workdir
+	global ui_workdir
 
 	set after [next_diff_after_action $ui_workdir $path {} {^_?U}]
 
@@ -110,7 +110,7 @@ proc read_merge_stages {fd cont} {
 		set fcols [split $p "\t"]
 		set cols  [split [lindex $fcols 0] " "]
 		set stage [lindex $cols 2]
-		
+
 		set merge_stages($stage) [lrange $cols 0 1]
 	}
 
@@ -304,7 +304,7 @@ proc merge_tool_get_stages {target stages} {
 }
 
 proc merge_tool_start {cmdline target backup stages} {
-	global merge_stages mtool_target mtool_tmpfiles mtool_fd mtool_mtime
+	global mtool_target mtool_tmpfiles mtool_fd mtool_mtime
 
 	if {[info exists mtool_fd]} {
 		if {[ask_popup [mc "Merge tool is already running, terminate it?"]] eq {yes}} {
@@ -358,7 +358,7 @@ proc merge_tool_start {cmdline target backup stages} {
 }
 
 proc read_mtool_output {fd} {
-	global mtool_fd mtool_tmpfiles
+	global mtool_fd
 
 	read $fd
 	if {[eof $fd]} {
@@ -370,7 +370,7 @@ proc read_mtool_output {fd} {
 }
 
 proc merge_tool_finish {fd} {
-	global mtool_tmpfiles mtool_target mtool_mtime
+	global mtool_tmpfiles mtool_target
 
 	set backup [lindex $mtool_tmpfiles end]
 	set failed 0

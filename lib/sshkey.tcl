@@ -18,7 +18,7 @@ proc find_ssh_key {} {
 }
 
 proc do_ssh_key {} {
-	global sshkey_title have_tk85 sshkey_fd use_ttk NS
+	global sshkey_title have_tk85 use_ttk NS
 
 	set w .sshkey_dialog
 	if {[winfo exists $w]} {

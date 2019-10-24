@@ -63,7 +63,7 @@ proc force_diff_encoding {enc} {
 }
 
 proc handle_empty_diff {} {
-	global current_diff_path file_states file_lists
+	global current_diff_path file_states
 	global diff_empty_count
 
 	set path $current_diff_path
@@ -88,10 +88,8 @@ A rescan will be automatically started to find other files which may have the sa
 }
 
 proc show_diff {path w {lno {}} {scroll_pos {}} {callback {}}} {
-	global file_states file_lists
-	global is_3way_diff is_conflict_diff diff_active repo_config
-	global ui_diff ui_index ui_workdir
-	global current_diff_path current_diff_side current_diff_header
+	global file_states file_lists is_conflict_diff diff_active
+	global current_diff_path current_diff_side
 	global current_diff_queue
 
 	if {$diff_active || ![lock_index read]} return
@@ -133,8 +131,7 @@ proc show_diff {path w {lno {}} {scroll_pos {}} {callback {}}} {
 }
 
 proc show_unmerged_diff {cont_info} {
-	global current_diff_path current_diff_side
-	global merge_stages ui_diff is_conflict_diff
+	global current_diff_path merge_stages is_conflict_diff
 	global current_diff_queue
 
 	if {$merge_stages(2) eq {}} {
@@ -179,10 +176,7 @@ proc advance_diff_queue {cont_info} {
 }
 
 proc show_other_diff {path w m cont_info} {
-	global file_states file_lists
-	global is_3way_diff diff_active repo_config
-	global ui_diff ui_index ui_workdir
-	global current_diff_path current_diff_side current_diff_header
+	global diff_active ui_diff
 
 	# - Git won't give us the diff, there's nothing to compare to!
 	#
@@ -271,9 +265,8 @@ proc show_other_diff {path w m cont_info} {
 }
 
 proc start_show_diff {cont_info {add_opts {}}} {
-	global file_states file_lists
+	global file_states ui_index ui_workdir
 	global is_3way_diff is_submodule_diff diff_active repo_config
-	global ui_diff ui_index ui_workdir
 	global current_diff_path current_diff_side current_diff_header
 
 	set path $current_diff_path
@@ -879,7 +872,7 @@ proc apply_or_revert_range_or_line {x y revert} {
 # stack/deque for simplicity, so multiple undos are not possible. Maybe this
 # can be added if the need for something like this is felt in the future.
 proc undo_last_revert {} {
-	global last_revert current_diff_path current_diff_header
+	global last_revert
 	global last_revert_enc
 
 	if {$last_revert eq {}} return

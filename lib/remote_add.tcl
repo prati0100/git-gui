@@ -13,7 +13,7 @@ field location     {}; # location of the remote the user has chosen
 field opt_action fetch; # action to do after registering the remote locally
 
 constructor dialog {} {
-	global repo_config use_ttk NS
+	global NS
 
 	make_dialog top w
 	wm withdraw $top
@@ -88,8 +88,7 @@ constructor dialog {} {
 }
 
 method _add {} {
-	global repo_config env
-	global M1B
+	global env
 
 	if {$name eq {}} {
 		tk_messageBox \

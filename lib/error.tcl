@@ -71,7 +71,7 @@ proc ask_popup {msg} {
 }
 
 proc hook_failed_popup {hook msg {is_fatal 1}} {
-	global use_ttk NS
+	global NS
 	set w .hookfail
 	Dialog $w
 	wm withdraw $w

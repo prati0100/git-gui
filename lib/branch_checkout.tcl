@@ -10,7 +10,7 @@ field opt_fetch     1; # refetch tracking branch if used?
 field opt_detach    0; # force a detached head case?
 
 constructor dialog {} {
-	global use_ttk NS
+	global NS
 	make_dialog top w
 	wm withdraw $w
 	wm title $top [mc "%s (%s): Checkout Branch" [appname] [reponame]]

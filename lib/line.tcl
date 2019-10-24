@@ -9,7 +9,7 @@ field ctext
 field linenum   {}
 
 constructor new {i_w i_text args} {
-	global use_ttk NS
+	global NS
 	set w      $i_w
 	set ctext  $i_text
 

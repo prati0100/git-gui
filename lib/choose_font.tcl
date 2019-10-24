@@ -17,7 +17,7 @@ variable all_families [list]  ; # All fonts known to Tk
 
 constructor pick {path title a_family a_size} {
 	variable all_families
-	global use_ttk NS
+	global NS
 
 	set v_family $a_family
 	set v_size $a_size

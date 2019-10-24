@@ -62,7 +62,7 @@ field tooltip_timer     {} ; # Current timer event for our tooltip
 field tooltip_commit    {} ; # Commit(s) in tooltip
 
 constructor new {i_commit i_path i_jump} {
-	global cursor_ptr M1B M1T have_tk85 use_ttk NS
+	global cursor_ptr have_tk85 NS
 	variable active_color
 	variable group_colors
 
@@ -921,7 +921,6 @@ method _load_new_commit {new_commit new_path jump} {
 }
 
 method _showcommit {cur_w lno} {
-	global repo_config
 	variable active_color
 
 	if {$highlight_commit ne {}} {

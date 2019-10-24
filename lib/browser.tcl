@@ -269,7 +269,7 @@ field w              ; # widget path
 field w_rev          ; # mega-widget to pick the initial revision
 
 constructor dialog {} {
-	global use_ttk NS
+	global NS
 	make_dialog top w
 	wm withdraw $top
 	wm title $top [mc "%s (%s): Browse Branch Files" [appname] [reponame]]

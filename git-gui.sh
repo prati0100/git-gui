@@ -501,7 +501,6 @@ proc is_shellscript {filename} {
 # contain a command with arguments. On windows we must check for shell
 # scripts specifically otherwise just call the filter command.
 proc open_cmd_pipe {cmd path} {
-	global env
 	if {![file executable [shellpath]]} {
 		set exe [auto_execok [lindex $cmd 0]]
 		if {[is_shellscript [lindex $exe 0]]} {
@@ -1396,7 +1395,6 @@ proc unlock_index {} {
 ## status
 
 proc repository_state {ctvar hdvar mhvar} {
-	global current_branch
 	upvar $ctvar ct $hdvar hd $mhvar mh
 
 	set mh [list]
@@ -1450,8 +1448,7 @@ proc force_amend {} {
 }
 
 proc rescan {after {honor_trustmtime 1}} {
-	global HEAD PARENT MERGE_HEAD commit_type
-	global ui_index ui_workdir ui_comm
+	global HEAD PARENT MERGE_HEAD commit_type ui_comm
 	global rescan_active file_states
 	global repo_config
 
@@ -1741,7 +1738,6 @@ proc read_ls_others {fd after} {
 
 proc rescan_done {fd buf after} {
 	global rescan_active current_diff_path
-	global file_states repo_config
 	upvar $buf to_clear
 
 	if {![eof $fd]} return
@@ -2370,7 +2366,7 @@ proc do_commit {} {
 }
 
 proc next_diff {{after {}}} {
-	global next_diff_p next_diff_w next_diff_i
+	global next_diff_p next_diff_w
 	show_diff $next_diff_p $next_diff_w {} {} $after
 }
 
@@ -2411,7 +2407,7 @@ proc find_file_from {flist idx delta path mmask} {
 
 proc find_next_diff {w path {lno {}} {mmask {}}} {
 	global next_diff_p next_diff_w next_diff_i
-	global file_lists ui_index ui_workdir
+	global file_lists ui_index
 
 	set flist $file_lists($w)
 	if {$lno eq {}} {
@@ -2495,7 +2491,7 @@ proc force_first_diff {after} {
 }
 
 proc toggle_or_diff {mode w args} {
-	global file_states file_lists current_diff_path ui_index ui_workdir
+	global file_states file_lists ui_index ui_workdir
 	global last_clicked selected_paths file_lists_last_clicked
 
 	if {$mode eq "click"} {

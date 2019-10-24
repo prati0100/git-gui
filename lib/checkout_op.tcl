@@ -389,9 +389,7 @@ $err
 }
 
 method _after_readtree {} {
-	global commit_type HEAD MERGE_HEAD PARENT
-	global current_branch is_detached
-	global ui_comm
+	global HEAD current_branch is_detached
 
 	set name [_name $this]
 	set log "checkout: moving"

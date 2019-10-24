@@ -21,7 +21,7 @@ field smarktop
 field smarkbot
 
 constructor new {i_w i_text args} {
-	global use_ttk NS
+	global NS
 	set w      $i_w
 	set ctext  $i_text
 
@@ -68,7 +68,7 @@ constructor new {i_w i_text args} {
 	bind $w.ent <Shift-Return> [cb find_prev]
 	bind $w.ent <Key-Up>   [cb _prev_search]
 	bind $w.ent <Key-Down> [cb _next_search]
-	
+
 	bind $w <Destroy> [list delete_this $this]
 	return $this
 }

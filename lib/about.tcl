@@ -4,7 +4,7 @@
 proc do_about {} {
 	global appvers copyright oguilib
 	global tcl_patchLevel tk_patchLevel
-	global ui_comm_spell NS use_ttk
+	global ui_comm_spell NS
 
 	set w .about_dialog
 	Dialog $w

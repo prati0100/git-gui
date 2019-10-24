@@ -144,8 +144,7 @@ method _finish {cons ok} {
 }
 
 constructor dialog {} {
-	global current_branch
-	global M1B use_ttk NS
+	global current_branch M1B NS
 
 	if {![_can_merge $this]} {
 		delete_this
@@ -212,7 +211,7 @@ method _cancel {} {
 namespace eval merge {
 
 proc reset_hard {} {
-	global HEAD commit_type file_states
+	global HEAD commit_type
 
 	if {[string match amend* $commit_type]} {
 		info_popup [mc "Cannot abort while amending.

@@ -115,7 +115,6 @@ constructor dialog {} {
 
 method _create {} {
 	global repo_config
-	global M1B
 
 	set spec [$w_rev get_tracking_branch]
 	switch -- $name_type {

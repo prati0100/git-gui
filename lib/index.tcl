@@ -8,7 +8,7 @@ proc _delete_indexlock {} {
 }
 
 proc _close_updateindex {fd after} {
-	global use_ttk NS
+	global NS
 	fconfigure $fd -blocking 1
 	if {[catch {close $fd} err]} {
 		set w .indexfried
@@ -87,7 +87,7 @@ proc update_indexinfo {msg pathList after} {
 
 proc write_update_indexinfo {fd pathList totalCnt batch after} {
 	global update_index_cp
-	global file_states current_diff_path
+	global file_states
 
 	if {$update_index_cp >= $totalCnt} {
 		_close_updateindex $fd $after
@@ -153,7 +153,7 @@ proc update_index {msg pathList after} {
 
 proc write_update_index {fd pathList totalCnt batch after} {
 	global update_index_cp
-	global file_states current_diff_path
+	global file_states
 
 	if {$update_index_cp >= $totalCnt} {
 		_close_updateindex $fd $after
@@ -229,8 +229,7 @@ proc checkout_index {msg pathList after} {
 }
 
 proc write_checkout_index {fd pathList totalCnt batch after} {
-	global update_index_cp
-	global file_states current_diff_path
+	global update_index_cp file_states
 
 	if {$update_index_cp >= $totalCnt} {
 		_close_updateindex $fd $after

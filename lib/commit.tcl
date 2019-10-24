@@ -3,7 +3,6 @@
 
 proc load_last_commit {} {
 	global HEAD PARENT MERGE_HEAD commit_type ui_comm commit_author
-	global repo_config
 
 	if {[llength $PARENT] == 0} {
 		error_popup [mc "There is nothing to amend.
@@ -142,7 +141,7 @@ proc setup_commit_encoding {msg_wt {quiet 0}} {
 }
 
 proc commit_tree {} {
-	global HEAD commit_type file_states ui_comm repo_config
+	global HEAD commit_type file_states ui_comm
 	global pch_error
 
 	if {[committer_ident] eq {}} return
@@ -269,7 +268,7 @@ proc commit_prehook_wait {fd_ph curHEAD msg_p} {
 }
 
 proc commit_commitmsg {curHEAD msg_p} {
-	global is_detached repo_config
+	global is_detached
 	global pch_error
 
 	if {$is_detached
@@ -332,11 +331,8 @@ proc commit_writetree {curHEAD msg_p} {
 
 proc commit_committree {fd_wt curHEAD msg_p} {
 	global HEAD PARENT MERGE_HEAD commit_type commit_author
-	global current_branch
 	global ui_comm commit_type_is_amend
-	global file_states selected_paths rescan_active
-	global repo_config
-	global env
+	global file_states selected_paths
 
 	gets $fd_wt tree_id
 	if {[catch {close $fd_wt} err]} {
