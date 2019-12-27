@@ -2695,6 +2695,17 @@ proc toggle_commit_type {} {
 	do_select_commit_type
 }
 
+proc file_list_popup {window x y} {
+	global ui_index ui_index_ctxm ui_workdir_ctxm
+
+	if {$window eq $ui_index} {
+		tk_popup $ui_index_ctxm $x $y
+	} else {
+		tk_popup $ui_workdir_ctxm $x $y
+	}
+}
+
+
 ######################################################################
 ##
 ## ui construction
@@ -3273,6 +3284,15 @@ pack .vpane.files.workdir.sx -side bottom -fill x
 pack .vpane.files.workdir.sy -side right -fill y
 pack $ui_workdir -side left -fill both -expand 1
 
+# -- Working Directory File List Context Menu
+#
+set ui_workdir_ctxm .vpane.files.workdir.ctxm
+menu $ui_workdir_ctxm -tearoff 0
+$ui_workdir_ctxm add command -label [mc "Stage To Commit"] \
+	-command do_add_selection
+$ui_workdir_ctxm add command -label [mc "Revert Changes"] \
+	-command do_revert_selection
+
 # -- Index File List
 #
 textframe .vpane.files.index -height 100 -width 200
@@ -3294,6 +3314,13 @@ pack .vpane.files.index.title -side top -fill x
 pack .vpane.files.index.sx -side bottom -fill x
 pack .vpane.files.index.sy -side right -fill y
 pack $ui_index -side left -fill both -expand 1
+
+# -- Index File List Context Menu
+#
+set ui_index_ctxm .vpane.files.index.ctxm
+menu $ui_index_ctxm -tearoff 0
+$ui_index_ctxm add command -label [mc "Unstage From Commit"] \
+	-command do_unstage_selection \
 
 # -- Insert the workdir and index into the panes
 #
@@ -3965,12 +3992,14 @@ bind .   <$M1B-Key-plus> {show_more_context;break}
 bind .   <$M1B-Key-KP_Add> {show_more_context;break}
 bind .   <$M1B-Key-Return> do_commit
 bind .   <$M1B-Key-KP_Enter> do_commit
+
 foreach i [list $ui_index $ui_workdir] {
 	bind $i <Button-1>       { toggle_or_diff click %W %x %y; break }
 	bind $i <$M1B-Button-1>  { add_one_to_selection %W %x %y; break }
 	bind $i <Shift-Button-1> { add_range_to_selection %W %x %y; break }
 	bind $i <Key-Up>         { toggle_or_diff up %W; break }
 	bind $i <Key-Down>       { toggle_or_diff down %W; break }
+	bind $i <Button-3>       { file_list_popup %W %X %Y; break }
 }
 unset i
 
