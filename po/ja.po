@@ -5,6 +5,7 @@
 # しらいし ななこ <nanako3@bluebottle.com>, 2007.
 # Satoshi Yasushima <s.yasushima@gmail.com>, 2016.
 # KIDANI Akito <a.kid.1985@gmail.com>, 2019.
+# Tomo Dote <fu7mu4@gmail.com>, 2020.
 #
 msgid ""
 msgstr ""
@@ -771,7 +772,7 @@ msgstr "Git から出た無効な日付: %s"
 
 #: lib/encoding.tcl:443
 msgid "Default"
-msgstr "デフォールト"
+msgstr "デフォルト"
 
 #: lib/encoding.tcl:448
 #, tcl-format
@@ -972,7 +973,7 @@ msgstr "ブランチ'%s'は存在しません。"
 #: lib/checkout_op.tcl:194
 #, tcl-format
 msgid "Failed to configure simplified git-pull for '%s'."
-msgstr "'%s' に簡易 git-pull を設定できませんでした"
+msgstr "'%s' に簡易 git-pull を設定できませんでした。"
 
 #: lib/checkout_op.tcl:202 lib/branch_rename.tcl:102
 #, tcl-format
@@ -1249,7 +1250,7 @@ msgstr "最近使ったリポジトリを開く"
 #: lib/choose_repository.tcl:330
 #, tcl-format
 msgid "Failed to create repository %s:"
-msgstr "リポジトリ %s を作製できません:"
+msgstr "リポジトリ %s を作成できません:"
 
 #: lib/choose_repository.tcl:407 lib/branch_create.tcl:33
 msgid "Create"
@@ -1352,7 +1353,7 @@ msgstr "objects/info/alternates を複写できません: %s"
 #: lib/choose_repository.tcl:724
 #, tcl-format
 msgid "Nothing to clone from %s."
-msgstr "%s から複製する内容はありません"
+msgstr "%s から複製する内容はありません。"
 
 #: lib/choose_repository.tcl:726 lib/choose_repository.tcl:940
 #: lib/choose_repository.tcl:952
@@ -1361,7 +1362,7 @@ msgstr "'master' ブランチが初期化されていません"
 
 #: lib/choose_repository.tcl:739
 msgid "Hardlinks are unavailable.  Falling back to copying."
-msgstr "ハードリンクが作れないので、コピーします"
+msgstr "ハードリンクが作れないので、コピーします。"
 
 #: lib/choose_repository.tcl:751
 #, tcl-format
@@ -1396,15 +1397,15 @@ msgstr "オブジェクトをハードリンクできません: %s"
 
 #: lib/choose_repository.tcl:881
 msgid "Cannot fetch branches and objects.  See console output for details."
-msgstr "ブランチやオブジェクトを取得できません。コンソール出力を見て下さい"
+msgstr "ブランチやオブジェクトを取得できません。コンソール出力を見て下さい。"
 
 #: lib/choose_repository.tcl:892
 msgid "Cannot fetch tags.  See console output for details."
-msgstr "タグを取得できません。コンソール出力を見て下さい"
+msgstr "タグを取得できません。コンソール出力を見て下さい。"
 
 #: lib/choose_repository.tcl:916
 msgid "Cannot determine HEAD.  See console output for details."
-msgstr "HEAD を確定できません。コンソール出力を見て下さい"
+msgstr "HEAD を確定できません。コンソール出力を見て下さい。"
 
 #: lib/choose_repository.tcl:925
 #, tcl-format
@@ -1417,12 +1418,12 @@ msgstr "複写に失敗しました。"
 
 #: lib/choose_repository.tcl:938
 msgid "No default branch obtained."
-msgstr "デフォールト・ブランチが取得されませんでした"
+msgstr "デフォルト・ブランチが取得されませんでした。"
 
 #: lib/choose_repository.tcl:949
 #, tcl-format
 msgid "Cannot resolve %s as a commit."
-msgstr "%s をコミットとして解釈できません"
+msgstr "%s をコミットとして解釈できません。"
 
 #: lib/choose_repository.tcl:961
 msgid "Creating working directory"
@@ -1443,7 +1444,7 @@ msgstr "サブモジュールを複製しています"
 
 #: lib/choose_repository.tcl:1015
 msgid "Initial file checkout failed."
-msgstr "初期チェックアウトに失敗しました"
+msgstr "初期チェックアウトに失敗しました。"
 
 #: lib/choose_repository.tcl:1059
 msgid "Open"
@@ -1707,7 +1708,7 @@ msgstr "ツールでは削除やリンク競合は扱えません"
 
 #: lib/mergetool.tcl:146
 msgid "Conflict file does not exist"
-msgstr "競合ファイルは存在しません。"
+msgstr "競合ファイルは存在しません"
 
 #: lib/mergetool.tcl:246
 #, tcl-format
@@ -1852,7 +1853,7 @@ msgstr "新しいブランチ名のテンプレート"
 
 #: lib/option.tcl:160
 msgid "Default File Contents Encoding"
-msgstr "ファイル内容のデフォールトエンコーディング"
+msgstr "ファイル内容のデフォルトエンコーディング"
 
 #: lib/option.tcl:161
 msgid "Warn before committing to a detached head"
@@ -2203,7 +2204,7 @@ msgstr "ローカル・ブランチから削除"
 
 #: lib/index.tcl:6
 msgid "Unable to unlock the index."
-msgstr "インデックスをロックできません"
+msgstr "インデックスをロックできません。"
 
 #: lib/index.tcl:17
 msgid "Index Error"
@@ -2457,7 +2458,7 @@ msgstr ""
 
 #: lib/commit.tcl:290
 msgid "Calling commit-msg hook..."
-msgstr "コミット・メッセージ・フックを実行中・・・"
+msgstr "コミット・メッセージ・フックを実行中…"
 
 #: lib/commit.tcl:305
 msgid "Commit declined by commit-msg hook."
@@ -2465,7 +2466,7 @@ msgstr "コミット・メッセージ・フックがコミットを拒否しま
 
 #: lib/commit.tcl:318
 msgid "Committing changes..."
-msgstr "変更点をコミット中・・・"
+msgstr "変更点をコミット中…"
 
 #: lib/commit.tcl:334
 msgid "write-tree failed:"
@@ -2662,7 +2663,7 @@ msgstr "スペルチェックの設定が不正です"
 #: lib/spellcheck.tcl:70
 #, tcl-format
 msgid "Reverting dictionary to %s."
-msgstr "辞書を %s に巻き戻します"
+msgstr "辞書を %s に巻き戻します。"
 
 #: lib/spellcheck.tcl:73
 msgid "Spell checker silently failed on startup"
