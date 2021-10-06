@@ -862,6 +862,9 @@ proc apply_config {} {
 			set NS ttk
 			bind [winfo class .] <<ThemeChanged>> [list InitTheme]
 			pave_toplevel .
+			if {[get_config gui.theme] != {}} {
+				ttk::style theme use [get_config gui.theme]
+			}
 			color::sync_with_theme
 		}
 	}
@@ -895,6 +898,7 @@ set default_config(gui.fontdiff) [font configure font_diff]
 # TODO: this option should be added to the git-config documentation
 set default_config(gui.maxfilesdisplayed) 5000
 set default_config(gui.usettk) 1
+set default_config(gui.theme) "default"
 set default_config(gui.warndetachedcommit) 1
 set default_config(gui.tabsize) 8
 set font_descs {

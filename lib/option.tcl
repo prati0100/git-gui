@@ -160,6 +160,7 @@ proc do_options {} {
 		{c gui.encoding {mc "Default File Contents Encoding"}}
 		{b gui.warndetachedcommit {mc "Warn before committing to a detached head"}}
 		{s gui.stageuntracked {mc "Staging of untracked files"} {list "yes" "no" "ask"}}
+		{s gui.theme {mc "GUI theme"} {ttk::style theme names}}
 		{b gui.displayuntracked {mc "Show untracked files"}}
 		{i-1..99 gui.tabsize {mc "Tab spacing"}}
 		} {
