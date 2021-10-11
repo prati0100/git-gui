@@ -1820,10 +1820,14 @@ proc short_path {path} {
 }
 
 set next_icon_id 0
-set null_sha1 [string repeat 0 40]
+if { [get_config extensions.objectformat] eq "sha256" } {
+	set null_oid [string repeat 0 64]
+} else {
+	set null_oid [string repeat 0 40]
+}
 
 proc merge_state {path new_state {head_info {}} {index_info {}}} {
-	global file_states next_icon_id null_sha1
+	global file_states next_icon_id null_oid
 
 	set s0 [string index $new_state 0]
 	set s1 [string index $new_state 1]
@@ -1845,7 +1849,7 @@ proc merge_state {path new_state {head_info {}} {index_info {}}} {
 	elseif {$s1 eq {_}} {set s1 _}
 
 	if {$s0 eq {A} && $s1 eq {_} && $head_info eq {}} {
-		set head_info [list 0 $null_sha1]
+		set head_info [list 0 $null_oid]
 	} elseif {$s0 ne {_} && [string index $state 0] eq {_}
 		&& $head_info eq {}} {
 		set head_info $index_info
@@ -2179,21 +2183,21 @@ proc do_gitk {revs {is_submodule false}} {
 			cd $current_diff_path
 			if {$revs eq {--}} {
 				set s $file_states($current_diff_path)
-				set old_sha1 {}
-				set new_sha1 {}
+				set old_oid {}
+				set new_oid {}
 				switch -glob -- [lindex $s 0] {
-				M_ { set old_sha1 [lindex [lindex $s 2] 1] }
-				_M { set old_sha1 [lindex [lindex $s 3] 1] }
+				M_ { set old_oid [lindex [lindex $s 2] 1] }
+				_M { set old_oid [lindex [lindex $s 3] 1] }
 				MM {
 					if {$current_diff_side eq $ui_index} {
-						set old_sha1 [lindex [lindex $s 2] 1]
-						set new_sha1 [lindex [lindex $s 3] 1]
+						set old_oid [lindex [lindex $s 2] 1]
+						set new_oid [lindex [lindex $s 3] 1]
 					} else {
-						set old_sha1 [lindex [lindex $s 3] 1]
+						set old_oid [lindex [lindex $s 3] 1]
 					}
 				}
 				}
-				set revs $old_sha1...$new_sha1
+				set revs $old_oid...$new_oid
 			}
 			# GIT_DIR and GIT_WORK_TREE for the submodule are not the ones
 			# we've been using for the main repository, so unset them.

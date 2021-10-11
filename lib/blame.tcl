@@ -1056,14 +1056,14 @@ method _format_offset_date {base offset} {
 }
 
 method _gitkcommit {} {
-	global null_sha1
+	global null_oid
 
 	set dat [_get_click_amov_info $this]
 	if {$dat ne {}} {
 		set cmit [lindex $dat 0]
 
 		# If the line belongs to the working copy, use HEAD instead
-		if {$cmit eq $null_sha1} {
+		if {$cmit eq $null_oid} {
 			if {[catch {set cmit [git rev-parse --verify HEAD]} err]} {
 				error_popup [strcat [mc "Cannot find HEAD commit:"] "\n\n$err"]
 				return;
@@ -1106,7 +1106,7 @@ method _gitkcommit {} {
 }
 
 method _blameparent {} {
-	global null_sha1
+	global null_oid
 
 	set dat [_get_click_amov_info $this]
 	if {$dat ne {}} {
@@ -1114,7 +1114,7 @@ method _blameparent {} {
 		set new_path [lindex $dat 1]
 
 		# Allow using Blame Parent on lines modified in the working copy
-		if {$cmit eq $null_sha1} {
+		if {$cmit eq $null_oid} {
 			set parent_ref "HEAD"
 		} else {
 			set parent_ref "$cmit^"
@@ -1129,7 +1129,7 @@ method _blameparent {} {
 		# Generate a diff between the commit and its parent,
 		# and use the hunks to update the line number.
 		# Request zero context to simplify calculations.
-		if {$cmit eq $null_sha1} {
+		if {$cmit eq $null_oid} {
 			set diffcmd [list diff-index --unified=0 $cparent -- $new_path]
 		} else {
 			set diffcmd [list diff-tree --unified=0 $cparent $cmit -- $new_path]
