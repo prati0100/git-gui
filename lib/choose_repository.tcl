@@ -904,7 +904,7 @@ method _do_clone_full_end {ok} {
 		if {[file exists [gitdir FETCH_HEAD]]} {
 			set fd [open [gitdir FETCH_HEAD] r]
 			while {[gets $fd line] >= 0} {
-				if {[regexp "^(.{40})\t\t" $line line HEAD]} {
+				if {[regexp "^([0-9a-fA-F]{40}(?:[0-9a-fA-F]{24})?)\t\t" $line line HEAD]} {
 					break
 				}
 			}
