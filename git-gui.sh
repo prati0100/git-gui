@@ -1821,10 +1821,11 @@ proc short_path {path} {
 
 set next_icon_id 0
 if { [get_config extensions.objectformat] eq "sha256" } {
-	set null_oid [string repeat 0 64]
+	set oid_size 64
 } else {
-	set null_oid [string repeat 0 40]
+	set oid_size 40
 }
+set null_oid [string repeat 0 $oid_size]
 
 proc merge_state {path new_state {head_info {}} {index_info {}}} {
 	global file_states next_icon_id null_oid
