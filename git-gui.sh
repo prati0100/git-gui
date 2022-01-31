@@ -1162,6 +1162,17 @@ proc load_config {include_global} {
 ##
 ## feature option selection
 
+disable_option nopushbutton
+for {set i 0} {$i < [llength $argv]} {incr i} {
+    set a [lindex $argv $i]
+    switch -- $a {
+    --nopushbutton {
+        enable_option nopushbutton
+		set argv [lreplace $argv $i $i]
+    }
+    }
+}
+
 if {[regexp {^git-(.+)$} [file tail $argv0] _junk subcommand]} {
 	unset _junk
 } else {
@@ -3401,7 +3412,7 @@ pack .vpane.lower.commarea.buttons.commit -side top -fill x
 lappend disable_on_lock \
 	{.vpane.lower.commarea.buttons.commit conf -state}
 
-if {![is_enabled nocommit]} {
+if {![is_enabled nocommit] && ![is_enabled nopushbutton]} {
 	${NS}::button .vpane.lower.commarea.buttons.push -text [mc Push] \
 		-command do_push_anywhere
 	pack .vpane.lower.commarea.buttons.push -side top -fill x
