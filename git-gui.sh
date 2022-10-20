@@ -30,8 +30,8 @@ along with this program; if not, see <http://www.gnu.org/licenses/>.}]
 ##
 ## Tcl/Tk sanity check
 
-if {[catch {package require Tcl 8.4} err]
- || [catch {package require Tk  8.4} err]
+if {[catch {package require Tcl 8.5} err]
+ || [catch {package require Tk  8.5} err]
 } {
 	catch {wm withdraw .}
 	tk_messageBox \
@@ -684,6 +684,7 @@ proc load_current_branch {} {
 	global current_branch is_detached
 
 	set fd [open [gitdir HEAD] r]
+	fconfigure $fd -translation binary -encoding utf-8
 	if {[gets $fd ref] < 1} {
 		set ref {}
 	}
@@ -719,7 +720,6 @@ proc rmsel_tag {text} {
 		-background [$text cget -background] \
 		-foreground [$text cget -foreground] \
 		-borderwidth 0
-	$text tag conf in_sel -background lightgray
 	bind $text <Motion> break
 	return $text
 }
@@ -862,6 +862,7 @@ proc apply_config {} {
 			set NS ttk
 			bind [winfo class .] <<ThemeChanged>> [list InitTheme]
 			pave_toplevel .
+			color::sync_with_theme
 		}
 	}
 }
@@ -874,6 +875,7 @@ set default_config(merge.summary) false
 set default_config(merge.verbosity) 2
 set default_config(user.name) {}
 set default_config(user.email) {}
+set default_config(core.commentchar) "#"
 
 set default_config(gui.encoding) [encoding system]
 set default_config(gui.matchtrackingbranch) false
@@ -946,15 +948,15 @@ if {![regsub {^git version } $_git_version {} _git_version]} {
 }
 
 proc get_trimmed_version {s} {
-    set r {}
-    foreach x [split $s -._] {
-        if {[string is integer -strict $x]} {
-            lappend r $x
-        } else {
-            break
-        }
-    }
-    return [join $r .]
+	set r {}
+	foreach x [split $s -._] {
+		if {[string is integer -strict $x]} {
+			lappend r $x
+		} else {
+			break
+		}
+	}
+	return [join $r .]
 }
 set _real_git_version $_git_version
 set _git_version [get_trimmed_version $_git_version]
@@ -966,7 +968,7 @@ if {![regexp {^[1-9]+(\.[0-9]+)+$} $_git_version]} {
 		-type yesno \
 		-default no \
 		-title "[appname]: warning" \
-		 -message [mc "Git version cannot be determined.
+		-message [mc "Git version cannot be determined.
 
 %s claims it is version '%s'.
 
@@ -1478,6 +1480,7 @@ proc rescan {after {honor_trustmtime 1}} {
 		} elseif {[run_prepare_commit_msg_hook]} {
 		} elseif {[load_message MERGE_MSG]} {
 		} elseif {[load_message SQUASH_MSG]} {
+		} elseif {[load_message [get_config commit.template]]} {
 		}
 		$ui_comm edit reset
 		$ui_comm edit modified false
@@ -1612,6 +1615,12 @@ proc run_prepare_commit_msg_hook {} {
 		fconfigure $fd_sm -encoding utf-8
 		puts -nonewline $fd_pcm [read $fd_sm]
 		close $fd_sm
+	} elseif {[file isfile [get_config commit.template]]} {
+		set pcm_source "template"
+		set fd_sm [open [get_config commit.template] r]
+		fconfigure $fd_sm -encoding utf-8
+		puts -nonewline $fd_pcm [read $fd_sm]
+		close $fd_sm
 	} else {
 		set pcm_source ""
 	}
@@ -1652,7 +1661,7 @@ proc prepare_commit_msg_hook_wait {fd_ph} {
 		set pch_error {}
 		catch {file delete [gitdir PREPARE_COMMIT_MSG]}
 		return
-        }
+	}
 	fconfigure $fd_ph -blocking 0
 	catch {file delete [gitdir PREPARE_COMMIT_MSG]}
 }
@@ -1797,10 +1806,10 @@ proc ui_status {msg} {
 	}
 }
 
-proc ui_ready {{test {}}} {
+proc ui_ready {} {
 	global main_status
 	if {[info exists main_status]} {
-		$main_status show [mc "Ready."] $test
+		$main_status show [mc "Ready."]
 	}
 }
 
@@ -2000,72 +2009,72 @@ set filemask {
 #define mask_width 14
 #define mask_height 15
 static unsigned char mask_bits[] = {
-   0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f,
-   0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f,
-   0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f};
+	0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f,
+	0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f,
+	0xfe, 0x1f, 0xfe, 0x1f, 0xfe, 0x1f};
 }
 
 image create bitmap file_plain -background white -foreground black -data {
 #define plain_width 14
 #define plain_height 15
 static unsigned char plain_bits[] = {
-   0xfe, 0x01, 0x02, 0x03, 0x02, 0x05, 0x02, 0x09, 0x02, 0x1f, 0x02, 0x10,
-   0x02, 0x10, 0x02, 0x10, 0x02, 0x10, 0x02, 0x10, 0x02, 0x10, 0x02, 0x10,
-   0x02, 0x10, 0x02, 0x10, 0xfe, 0x1f};
+	0xfe, 0x01, 0x02, 0x03, 0x02, 0x05, 0x02, 0x09, 0x02, 0x1f, 0x02, 0x10,
+	0x02, 0x10, 0x02, 0x10, 0x02, 0x10, 0x02, 0x10, 0x02, 0x10, 0x02, 0x10,
+	0x02, 0x10, 0x02, 0x10, 0xfe, 0x1f};
 } -maskdata $filemask
 
 image create bitmap file_mod -background white -foreground blue -data {
 #define mod_width 14
 #define mod_height 15
 static unsigned char mod_bits[] = {
-   0xfe, 0x01, 0x02, 0x03, 0x7a, 0x05, 0x02, 0x09, 0x7a, 0x1f, 0x02, 0x10,
-   0xfa, 0x17, 0x02, 0x10, 0xfa, 0x17, 0x02, 0x10, 0xfa, 0x17, 0x02, 0x10,
-   0xfa, 0x17, 0x02, 0x10, 0xfe, 0x1f};
+	0xfe, 0x01, 0x02, 0x03, 0x7a, 0x05, 0x02, 0x09, 0x7a, 0x1f, 0x02, 0x10,
+	0xfa, 0x17, 0x02, 0x10, 0xfa, 0x17, 0x02, 0x10, 0xfa, 0x17, 0x02, 0x10,
+	0xfa, 0x17, 0x02, 0x10, 0xfe, 0x1f};
 } -maskdata $filemask
 
 image create bitmap file_fulltick -background white -foreground "#007000" -data {
 #define file_fulltick_width 14
 #define file_fulltick_height 15
 static unsigned char file_fulltick_bits[] = {
-   0xfe, 0x01, 0x02, 0x1a, 0x02, 0x0c, 0x02, 0x0c, 0x02, 0x16, 0x02, 0x16,
-   0x02, 0x13, 0x00, 0x13, 0x86, 0x11, 0x8c, 0x11, 0xd8, 0x10, 0xf2, 0x10,
-   0x62, 0x10, 0x02, 0x10, 0xfe, 0x1f};
+	0xfe, 0x01, 0x02, 0x1a, 0x02, 0x0c, 0x02, 0x0c, 0x02, 0x16, 0x02, 0x16,
+	0x02, 0x13, 0x00, 0x13, 0x86, 0x11, 0x8c, 0x11, 0xd8, 0x10, 0xf2, 0x10,
+	0x62, 0x10, 0x02, 0x10, 0xfe, 0x1f};
 } -maskdata $filemask
 
 image create bitmap file_question -background white -foreground black -data {
 #define file_question_width 14
 #define file_question_height 15
 static unsigned char file_question_bits[] = {
-   0xfe, 0x01, 0x02, 0x02, 0xe2, 0x04, 0xf2, 0x09, 0x1a, 0x1b, 0x0a, 0x13,
-   0x82, 0x11, 0xc2, 0x10, 0x62, 0x10, 0x62, 0x10, 0x02, 0x10, 0x62, 0x10,
-   0x62, 0x10, 0x02, 0x10, 0xfe, 0x1f};
+	0xfe, 0x01, 0x02, 0x02, 0xe2, 0x04, 0xf2, 0x09, 0x1a, 0x1b, 0x0a, 0x13,
+	0x82, 0x11, 0xc2, 0x10, 0x62, 0x10, 0x62, 0x10, 0x02, 0x10, 0x62, 0x10,
+	0x62, 0x10, 0x02, 0x10, 0xfe, 0x1f};
 } -maskdata $filemask
 
 image create bitmap file_removed -background white -foreground red -data {
 #define file_removed_width 14
 #define file_removed_height 15
 static unsigned char file_removed_bits[] = {
-   0xfe, 0x01, 0x02, 0x03, 0x02, 0x05, 0x02, 0x09, 0x02, 0x1f, 0x02, 0x10,
-   0x1a, 0x16, 0x32, 0x13, 0xe2, 0x11, 0xc2, 0x10, 0xe2, 0x11, 0x32, 0x13,
-   0x1a, 0x16, 0x02, 0x10, 0xfe, 0x1f};
+	0xfe, 0x01, 0x02, 0x03, 0x02, 0x05, 0x02, 0x09, 0x02, 0x1f, 0x02, 0x10,
+	0x1a, 0x16, 0x32, 0x13, 0xe2, 0x11, 0xc2, 0x10, 0xe2, 0x11, 0x32, 0x13,
+	0x1a, 0x16, 0x02, 0x10, 0xfe, 0x1f};
 } -maskdata $filemask
 
 image create bitmap file_merge -background white -foreground blue -data {
 #define file_merge_width 14
 #define file_merge_height 15
 static unsigned char file_merge_bits[] = {
-   0xfe, 0x01, 0x02, 0x03, 0x62, 0x05, 0x62, 0x09, 0x62, 0x1f, 0x62, 0x10,
-   0xfa, 0x11, 0xf2, 0x10, 0x62, 0x10, 0x02, 0x10, 0xfa, 0x17, 0x02, 0x10,
-   0xfa, 0x17, 0x02, 0x10, 0xfe, 0x1f};
+	0xfe, 0x01, 0x02, 0x03, 0x62, 0x05, 0x62, 0x09, 0x62, 0x1f, 0x62, 0x10,
+	0xfa, 0x11, 0xf2, 0x10, 0x62, 0x10, 0x02, 0x10, 0xfa, 0x17, 0x02, 0x10,
+	0xfa, 0x17, 0x02, 0x10, 0xfe, 0x1f};
 } -maskdata $filemask
 
 image create bitmap file_statechange -background white -foreground green -data {
 #define file_statechange_width 14
 #define file_statechange_height 15
 static unsigned char file_statechange_bits[] = {
-   0xfe, 0x01, 0x02, 0x03, 0x02, 0x05, 0x02, 0x09, 0x02, 0x1f, 0x62, 0x10,
-   0x62, 0x10, 0xba, 0x11, 0xba, 0x11, 0x62, 0x10, 0x62, 0x10, 0x02, 0x10,
-   0x02, 0x10, 0x02, 0x10, 0xfe, 0x1f};
+	0xfe, 0x01, 0x02, 0x03, 0x02, 0x05, 0x02, 0x09, 0x02, 0x1f, 0x62, 0x10,
+	0x62, 0x10, 0xba, 0x11, 0xba, 0x11, 0x62, 0x10, 0x62, 0x10, 0x02, 0x10,
+	0x02, 0x10, 0x02, 0x10, 0xfe, 0x1f};
 } -maskdata $filemask
 
 set ui_index .vpane.files.index.list
@@ -2150,8 +2159,6 @@ proc incr_font_size {font {amt 1}} {
 ##
 ## ui commands
 
-set starting_gitk_msg [mc "Starting gitk... please wait..."]
-
 proc do_gitk {revs {is_submodule false}} {
 	global current_diff_path file_states current_diff_side ui_index
 	global _gitdir _gitworktree
@@ -2206,9 +2213,12 @@ proc do_gitk {revs {is_submodule false}} {
 		set env(GIT_WORK_TREE) $_gitworktree
 		cd $pwd
 
-		ui_status $::starting_gitk_msg
-		after 10000 {
-			ui_ready $starting_gitk_msg
+		if {[info exists main_status]} {
+			set status_operation [$::main_status \
+				start \
+				[mc "Starting %s... please wait..." "gitk"]]
+
+			after 3500 [list $status_operation stop]
 		}
 	}
 }
@@ -2240,16 +2250,16 @@ proc do_git_gui {} {
 		set env(GIT_WORK_TREE) $_gitworktree
 		cd $pwd
 
-		ui_status $::starting_gitk_msg
-		after 10000 {
-			ui_ready $starting_gitk_msg
-		}
+		set status_operation [$::main_status \
+			start \
+			[mc "Starting %s... please wait..." "git-gui"]]
+
+		after 3500 [list $status_operation stop]
 	}
 }
 
-proc do_explore {} {
-	global _gitworktree
-	set explorer {}
+# Get the system-specific explorer app/command.
+proc get_explorer {} {
 	if {[is_Cygwin] || [is_Windows]} {
 		set explorer "explorer.exe"
 	} elseif {[is_MacOSX]} {
@@ -2258,7 +2268,21 @@ proc do_explore {} {
 		# freedesktop.org-conforming system is our best shot
 		set explorer "xdg-open"
 	}
+	return $explorer
+}
+
+proc do_explore {} {
+	global _gitworktree
+	set explorer [get_explorer]
 	eval exec $explorer [list [file nativename $_gitworktree]] &
+}
+
+# Open file relative to the working tree by the default associated app.
+proc do_file_open {file} {
+	global _gitworktree
+	set explorer [get_explorer]
+	set full_file_path [file join $_gitworktree $file]
+	exec $explorer [file nativename $full_file_path] &
 }
 
 set is_quitting 0
@@ -2286,11 +2310,10 @@ proc do_quit {{rc {1}}} {
 		if {$GITGUI_BCK_exists && ![$ui_comm edit modified]} {
 			file rename -force [gitdir GITGUI_BCK] $save
 			set GITGUI_BCK_exists 0
-		} else {
+		} elseif {[$ui_comm edit modified]} {
 			set msg [string trim [$ui_comm get 0.0 end]]
 			regsub -all -line {[ \r\t]+$} $msg {} msg
-			if {(![string match amend* $commit_type]
-				|| [$ui_comm edit modified])
+			if {![string match amend* $commit_type]
 				&& $msg ne {}} {
 				catch {
 					set fd [open $save w]
@@ -2584,12 +2607,12 @@ proc toggle_or_diff {mode w args} {
 			update_indexinfo \
 				"Unstaging [short_path $path] from commit" \
 				[list $path] \
-				[concat $after [list ui_ready]]
+				[concat $after {ui_ready;}]
 		} elseif {$w eq $ui_workdir} {
 			update_index \
 				"Adding [short_path $path]" \
 				[list $path] \
-				[concat $after [list ui_ready]]
+				[concat $after {ui_ready;}]
 		}
 	} else {
 		set selected_paths($path) 1
@@ -3271,7 +3294,7 @@ pack .vpane -anchor n -side top -fill both -expand 1
 textframe .vpane.files.workdir -height 100 -width 200
 tlabel .vpane.files.workdir.title -text [mc "Unstaged Changes"] \
 	-background lightsalmon -foreground black
-ttext $ui_workdir -background white -foreground black \
+ttext $ui_workdir \
 	-borderwidth 0 \
 	-width 20 -height 10 \
 	-wrap none \
@@ -3293,7 +3316,7 @@ textframe .vpane.files.index -height 100 -width 200
 tlabel .vpane.files.index.title \
 	-text [mc "Staged Changes (Will Commit)"] \
 	-background lightgreen -foreground black
-ttext $ui_index -background white -foreground black \
+ttext $ui_index \
 	-borderwidth 0 \
 	-width 20 -height 10 \
 	-wrap none \
@@ -3318,9 +3341,20 @@ if {!$use_ttk} {
 	.vpane.files paneconfigure .vpane.files.index -sticky news
 }
 
+proc set_selection_colors {w has_focus} {
+	foreach tag [list in_diff in_sel] {
+		$w tag conf $tag \
+			-background [expr {$has_focus ? $color::select_bg : $color::inactive_select_bg}] \
+			-foreground [expr {$has_focus ? $color::select_fg : $color::inactive_select_fg}]
+	}
+}
+
 foreach i [list $ui_index $ui_workdir] {
 	rmsel_tag $i
-	$i tag conf in_diff -background [$i tag cget in_sel -background]
+
+	set_selection_colors $i 0
+	bind $i <FocusIn>	{ set_selection_colors %W 1 }
+	bind $i <FocusOut>	{ set_selection_colors %W 0 }
 }
 unset i
 
@@ -3418,6 +3452,10 @@ proc trace_commit_type {varname args} {
 	merge         {set txt [mc "Merge Commit Message:"]}
 	*             {set txt [mc "Commit Message:"]}
 	}
+
+	set comment_char [get_config core.commentchar]
+	set txt [string cat $txt \
+				 [mc " (Lines starting with '$comment_char' will be ignored)"]]
 	$ui_coml conf -text $txt
 }
 trace add variable commit_type write trace_commit_type
@@ -3428,7 +3466,7 @@ if {![is_enabled nocommit]} {
 }
 
 textframe .vpane.lower.commarea.buffer.frame
-ttext $ui_comm -background white -foreground black \
+ttext $ui_comm \
 	-borderwidth 1 \
 	-undo true \
 	-maxundo 20 \
@@ -3529,9 +3567,11 @@ tlabel .vpane.lower.diff.header.file \
 	-justify left
 tlabel .vpane.lower.diff.header.path \
 	-background gold \
-	-foreground black \
+	-foreground blue \
 	-anchor w \
-	-justify left
+	-justify left \
+	-font [eval font create [font configure font_ui] -underline 1] \
+	-cursor hand2
 pack .vpane.lower.diff.header.status -side left
 pack .vpane.lower.diff.header.file -side left
 pack .vpane.lower.diff.header.path -fill x
@@ -3546,14 +3586,18 @@ $ctxm add command \
 			-type STRING \
 			-- $current_diff_path
 	}
+$ctxm add command \
+	-label [mc Open] \
+	-command {do_file_open $current_diff_path}
 lappend diff_actions [list $ctxm entryconf [$ctxm index last] -state]
 bind_button3 .vpane.lower.diff.header.path "tk_popup $ctxm %X %Y"
+bind .vpane.lower.diff.header.path <Button-1> {do_file_open $current_diff_path}
 
 # -- Diff Body
 #
 textframe .vpane.lower.diff.body
 set ui_diff .vpane.lower.diff.body.t
-ttext $ui_diff -background white -foreground black \
+ttext $ui_diff \
 	-borderwidth 0 \
 	-width 80 -height 5 -wrap none \
 	-font font_diff \
@@ -3873,18 +3917,18 @@ proc on_application_mapped {} {
 	set gm $repo_config(gui.geometry)
 	if {$use_ttk} {
 		bind .vpane <Map> \
-		    [list on_ttk_pane_mapped %W 0 [lindex $gm 1]]
+			[list on_ttk_pane_mapped %W 0 [lindex $gm 1]]
 		bind .vpane.files <Map> \
-		    [list on_ttk_pane_mapped %W 0 [lindex $gm 2]]
+			[list on_ttk_pane_mapped %W 0 [lindex $gm 2]]
 	} else {
 		bind .vpane <Map> \
-		    [list on_tk_pane_mapped %W 0 \
-			 [lindex $gm 1] \
-			 [lindex [.vpane sash coord 0] 1]]
+			[list on_tk_pane_mapped %W 0 \
+			[lindex $gm 1] \
+			[lindex [.vpane sash coord 0] 1]]
 		bind .vpane.files <Map> \
-		    [list on_tk_pane_mapped %W 0 \
-			 [lindex [.vpane.files sash coord 0] 0] \
-			 [lindex $gm 2]]
+			[list on_tk_pane_mapped %W 0 \
+			[lindex [.vpane.files sash coord 0] 0] \
+			[lindex $gm 2]]
 	}
 	wm geometry . [lindex $gm 0]
 }
@@ -3923,6 +3967,8 @@ bind $ui_comm <$M1B-Key-KP_Subtract> {show_less_context;break}
 bind $ui_comm <$M1B-Key-equal> {show_more_context;break}
 bind $ui_comm <$M1B-Key-plus> {show_more_context;break}
 bind $ui_comm <$M1B-Key-KP_Add> {show_more_context;break}
+bind $ui_comm <$M1B-Key-BackSpace> {event generate %W <Meta-Delete>;break}
+bind $ui_comm <$M1B-Key-Delete> {event generate %W <Meta-d>;break}
 
 bind $ui_diff <$M1B-Key-x> {tk_textCopy %W;break}
 bind $ui_diff <$M1B-Key-X> {tk_textCopy %W;break}
@@ -4175,6 +4221,9 @@ if {[is_enabled retcode]} {
 if {$picked && [is_config_true gui.autoexplore]} {
 	do_explore
 }
+
+# Clear "Initializing..." status
+after 500 {$main_status show ""}
 
 # Local variables:
 # mode: tcl
