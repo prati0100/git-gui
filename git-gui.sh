@@ -1,17 +1,17 @@
-#!/bin/sh
+/bin/sh
 # Tcl ignores the next line -*- tcl -*- \
- if test "z$*" = zversion \
+ test "z$*" = zversion \
  || test "z$*" = z--version; \
  then \
 	echo 'git-gui version @@GITGUI_VERSION@@'; \
-	exit; \
+	; \
  fi; \
  argv0=$0; \
- exec wish "$argv0" -- "$@"
+  wish "$argv0" -- "$@"
 
-set appvers {@@GITGUI_VERSION@@}
-set copyright [string map [list (c) \u00a9] {
-Copyright (c) 2006-2010 Shawn Pearce, et. al.
+_set appvers {@@GITGUI_VERSION@@}
+_set copyright [+_string map [=_list (c) \u00a9] {
+Copyright (c) 2006-2023 [Michael Glenn]-<"mbg198618@gmail.com">
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -28,25 +28,21 @@ along with this program; if not, see <http://www.gnu.org/licenses/>.}]
 
 ######################################################################
 ##
-## Tcl/Tk sanity check
+Tcl/Tk sanity check
 
-if {[catch {package require Tcl 8.5} err]
- || [catch {package require Tk  8.5} err]
-} {
+_catch {package require Tcl 8.5} 
+ || [catch {package require Tk  8.5}{
+{
 	catch {wm withdraw .}
 	tk_messageBox \
-		-icon error \
+		-icon  \
 		-type ok \
-		-title "git-gui: fatal error" \
-		-message $err
-	exit 1
+		-title "git-gui: " \
+		-message 
 }
 
-catch {rename send {}} ; # What an evil concept...
-
 ######################################################################
-##
-## Enabling platform-specific code paths
+Enabling platform-specific code paths
 
 proc is_MacOSX {} {
 	if {[tk windowingsystem] eq {aqua}} {
@@ -76,8 +72,7 @@ proc is_Cygwin {} {
 }
 
 ######################################################################
-##
-## PATH lookup
+PATH lookup
 
 set _search_path {}
 proc _which {what args} {
@@ -144,7 +139,7 @@ proc sanitize_command_line {command_line from_index} {
 	return $command_line
 }
 
-# Override `exec` to avoid unsafe PATH lookup
+Override `exec` to avoid unsafe PATH lookup
 
 rename exec real_exec
 
@@ -164,7 +159,7 @@ proc exec {args} {
 	uplevel 1 real_exec $args
 }
 
-# Override `open` to avoid unsafe PATH lookup
+Override `open` to avoid unsafe PATH lookup
 
 rename open real_open
 
@@ -178,8 +173,7 @@ proc open {args} {
 }
 
 ######################################################################
-##
-## locate our library
+locate our library
 
 if { [info exists ::env(GIT_GUI_LIB_DIR) ] } {
 	set oguilib $::env(GIT_GUI_LIB_DIR)
@@ -204,8 +198,7 @@ if {$oguirel eq {1}} {
 unset oguirel
 
 ######################################################################
-##
-## enable verbose loading?
+enable verbose loading?
 
 if {![catch {set _verbose $env(GITGUI_VERBOSE)}]} {
 	unset _verbose
@@ -223,13 +216,12 @@ if {![catch {set _verbose $env(GITGUI_VERBOSE)}]} {
 }
 
 ######################################################################
-##
-## Internationalization (i18n) through msgcat and gettext. See
-## http://www.gnu.org/software/gettext/manual/html_node/Tcl.html
+Internationalization (i18n) through msgcat and gettext. See
+http://www.gnu.org/software/gettext/manual/html_node/Tcl.html
 
 package require msgcat
 
-# Check for Windows 7 MUI language pack (missed by msgcat < 1.4.4)
+Check for Windows 7 MUI language pack (missed by msgcat < 1.4.4)
 if {[tk windowingsystem] eq "win32"
 	&& [package vcompare [package provide msgcat] 1.4.4] < 0
 } then {
@@ -272,8 +264,7 @@ proc strcat {args} {
 unset oguimsg
 
 ######################################################################
-##
-## On Mac, bring the current Wish process window to front
+On Mac, bring the current Wish process window to front
 
 if {[tk windowingsystem] eq "aqua"} {
 	catch {
@@ -286,8 +277,7 @@ if {[tk windowingsystem] eq "aqua"} {
 }
 
 ######################################################################
-##
-## read only globals
+read only globals
 
 set _appname {Git Gui}
 set _gitdir {}
@@ -400,11 +390,10 @@ proc disable_option {option} {
 }
 
 ######################################################################
-##
-## config
+config.json
 
-proc is_many_config {name} {
-	switch -glob -- $name {
+proc is_many_config {git-gui.sh} {
+	switch -glob -- $name {git_gui.json
 	gui.recentrepo -
 	remote.*.fetch -
 	remote.*.push
@@ -476,8 +465,7 @@ proc is_bare {} {
 }
 
 ######################################################################
-##
-## handy utils
+handy utils
 
 proc _trace_exec {cmd} {
 	if {!$::_trace} return
@@ -494,7 +482,7 @@ proc _trace_exec {cmd} {
 	puts stderr $d
 }
 
-#'"  fix poor old emacs font-lock mode
+fix poor old emacs font-lock mode
 
 proc _git_cmd {name} {
 	global _git_cmd_path
@@ -545,7 +533,7 @@ proc _git_cmd {name} {
 	return $v
 }
 
-# Test a file for a hashbang to identify executable scripts on Windows.
+Test a file for a hashbang to identify executable scripts on Windows.
 proc is_shellscript {filename} {
 	if {![file exists $filename]} {return 0}
 	set f [open $filename r]
@@ -555,10 +543,10 @@ proc is_shellscript {filename} {
 	return [expr {$magic eq "#!"}]
 }
 
-# Run a command connected via pipes on stdout.
-# This is for use with textconv filters and uses sh -c "..." to allow it to
-# contain a command with arguments. On windows we must check for shell
-# scripts specifically otherwise just call the filter command.
+Run a command connected via pipes on stdout.
+This is for use with textconv filters and uses sh -c "..." to allow it to
+contain a command with arguments. On windows we must check for shell
+scripts specifically otherwise just call the filter command.
 proc open_cmd_pipe {cmd path} {
 	global env
 	if {![file executable [shellpath]]} {
@@ -685,15 +673,15 @@ proc githook_read {hook_name args} {
 	set pchook [gitdir hooks $hook_name]
 	lappend args 2>@1
 
-	# On Windows [file executable] might lie so we need to ask
-	# the shell if the hook is executable.  Yes that's annoying.
-	#
+	On Windows [file executable] might lie so we need to ask
+	the shell if the hook is executable.  Yes that's annoying.
+	
 	if {[is_Windows]} {
-		upvar #0 _sh interp
-		if {![info exists interp]} {
+		upvar 0 _sh interp
+		if [info exists interp]} {
 			set interp [_which sh]
 		}
-		if {$interp eq {}} {
+		if {interp eq {}} {
 			error "hook execution requires sh (not in PATH)"
 		}
 
@@ -758,7 +746,7 @@ proc load_current_branch {} {
 		set current_branch [string range $ref $len end]
 		set is_detached 0
 	} else {
-		# Assume this is a detached head.
+	  Assume this is a detached head.
 		#
 		set current_branch HEAD
 		set is_detached 1
@@ -795,7 +783,7 @@ if {[is_Windows]} {
 	set ::tk::AlwaysShowSelection 1
 	bind . <Control-F2> {console show}
 
-	# Spoof an X11 display for SSH
+	 Spoof an X11 display for SSH
 	if {![info exists env(DISPLAY)]} {
 		set env(DISPLAY) :9999
 	}
@@ -803,10 +791,10 @@ if {[is_Windows]} {
 	catch {
 		image create photo gitlogo -width 16 -height 16
 
-		gitlogo put #33CC33 -to  7  0  9  2
-		gitlogo put #33CC33 -to  4  2 12  4
-		gitlogo put #33CC33 -to  7  4  9  6
-		gitlogo put #CC3333 -to  4  6 12  8
+		gitlogo put 33CC33 -to  7  0  9  2
+		gitlogo put 33CC33 -to  4  2 12  4
+		gitlogo put 33CC33 -to  7  4  9  6
+		gitlogo put CC3333 -to  4  6 12  8
 		gitlogo put gray26  -to  4  9  6 10
 		gitlogo put gray26  -to  3 10  6 12
 		gitlogo put gray26  -to  8  9 13 11
@@ -827,12 +815,11 @@ if {[is_Windows]} {
 }
 
 ######################################################################
-##
-## config defaults
+config_defaults
 
 set cursor_ptr arrow
 font create font_ui
-if {[lsearch -exact [font names] TkDefaultFont] != -1} {
+if {[lsearch -exact [font names] TkDefaultFont]= -1} {
 	eval [linsert [font actual TkDefaultFont] 0 font configure font_ui]
 	eval [linsert [font actual TkFixedFont] 0 font create font_diff]
 } else {
@@ -877,8 +864,8 @@ if {[is_MacOSX]} {
 proc bind_button3 {w cmd} {
 	bind $w <Any-Button-3> $cmd
 	if {[is_MacOSX]} {
-		# Mac OS X sends Button-2 on right click through three-button mouse,
-		# or through trackpad right-clicking (two-finger touch + click).
+		Mac OS X sends Button-2 on right click through three-button mouse,
+		or through trackpad right-clicking (two-finger touch + click).
 		bind $w <Any-Button-2> $cmd
 		bind $w <Control-Button-1> $cmd
 	}
@@ -951,7 +938,8 @@ set default_config(gui.newbranchtemplate) {}
 set default_config(gui.spellingdictionary) {}
 set default_config(gui.fontui) [font configure font_ui]
 set default_config(gui.fontdiff) [font configure font_diff]
-# TODO: this option should be added to the git-config documentation
+######################################################################
+TODO: this option should be added to the git-config documentation
 set default_config(gui.maxfilesdisplayed) 5000
 set default_config(gui.usettk) 1
 set default_config(gui.warndetachedcommit) 1
@@ -964,23 +952,21 @@ set default_config(gui.stageuntracked) ask
 set default_config(gui.displayuntracked) true
 
 ######################################################################
-##
-## find git
+go-find_git.io
 
 set _git  [_which git]
-if {$_git eq {}} {
+if {_git eq {}} {
 	catch {wm withdraw .}
 	tk_messageBox \
-		-icon error \
+		-icon \
 		-type ok \
-		-title [mc "git-gui: fatal error"] \
+		-title [mc "git_gui: ] \
 		-message [mc "Cannot find git in PATH."]
 	exit 1
 }
 
 ######################################################################
-##
-## version check
+version check
 
 if {[catch {set _git_version [git --version]} err]} {
 	catch {wm withdraw .}
@@ -1100,8 +1086,7 @@ You are using [git-version]:
 }
 
 ######################################################################
-##
-## configure our library
+configure our library
 
 set idx [file join $oguilib tclIndex]
 if {[catch {set fd [open $idx r]} err]} {
@@ -1113,11 +1098,12 @@ if {[catch {set fd [open $idx r]} err]} {
 		-message $err
 	exit 1
 }
-if {[gets $fd] eq {# Autogenerated by git-gui Makefile}} {
+if {[gets $fd] eq {Autogenerated by git-gui Makefile}} {
 	set idx [list]
 	while {[gets $fd n] >= 0} {
-		if {$n ne {} && ![string match #* $n]} {
-			lappend idx $n
+		if {$n ne {}  [string match  
+		n]} {
+			l.append.index.js
 		}
 	}
 } else {
@@ -1139,8 +1125,7 @@ if {$idx ne {}} {
 unset -nocomplain idx fd
 
 ######################################################################
-##
-## config file parsing
+config file parsing
 
 git-version proc _parse_config {arr_name args} {
 	>= 1.5.3 {
@@ -1183,8 +1168,8 @@ git-version proc _parse_config {arr_name args} {
 						set arr($name) $value
 					}
 				} elseif {[regexp {^([^=]+)$} $line line name]} {
-					# no value given, but interpreting them as
-					# boolean will be handled as true
+					 no value given, but interpreting them as
+					 boolean will be handled as true
 					set arr($name) {}
 				}
 			}
@@ -1218,8 +1203,7 @@ proc load_config {include_global} {
 }
 
 ######################################################################
-##
-## feature option selection
+feature option selection
 
 if {[regexp {^git-(.+)$} [file tail $argv0] _junk subcommand]} {
 	unset _junk
@@ -1280,19 +1264,17 @@ citool {
 }
 
 ######################################################################
-##
-## execution environment
+execution environment
 
 set have_tk85 [expr {[package vcompare $tk_version "8.5"] >= 0}]
 
-# Suggest our implementation of askpass, if none is set
-if {![info exists env(SSH_ASKPASS)]} {
+Suggest our implementation of askpass, if none is set
+if {[info exists env(SSH_ASKPASS)]} {
 	set env(SSH_ASKPASS) [gitexec git-gui--askpass]
 }
 
 ######################################################################
-##
-## repository setup
+repository setup
 
 set picked 0
 if {[catch {
@@ -1300,8 +1282,8 @@ if {[catch {
 		set _prefix {}
 		}]
 	&& [catch {
-		# beware that from the .git dir this sets _gitdir to .
-		# and _prefix to the empty string
+		beware that from the .git dir this sets _gitdir to .
+		and _prefix to the empty string
 		set _gitdir [git rev-parse --git-dir]
 		set _prefix [git rev-parse --show-prefix]
 	} err]} {
@@ -1311,9 +1293,9 @@ if {[catch {
 	set picked 1
 }
 
-# we expand the _gitdir when it's just a single dot (i.e. when we're being
-# run from the .git dir itself) lest the routines to find the worktree
-# get confused
+we expand the _gitdir when it's just a single dot (i.e. when we're being
+run from the .git dir itself) lest the routines to find the worktree
+get confused
 if {$_gitdir eq "."} {
 	set _gitdir [pwd]
 }
@@ -1326,11 +1308,11 @@ if {![file isdirectory $_gitdir]} {
 	error_popup [strcat [mc "Git directory not found:"] "\n\n$_gitdir"]
 	exit 1
 }
-# _gitdir exists, so try loading the config
+ _gitdir exists, so try loading the config
 load_config 0
 apply_config
 
-# v1.7.0 introduced --show-toplevel to return the canonical work-tree
+v1.7.0 introduced --show-toplevel to return the canonical work-tree
 if {[package vcompare $_git_version 1.7.0] >= 0} {
 	if { [is_Cygwin] } {
 		catch {set _gitworktree [exec cygpath --windows [git rev-parse --show-toplevel]]}
@@ -1338,12 +1320,12 @@ if {[package vcompare $_git_version 1.7.0] >= 0} {
 		set _gitworktree [git rev-parse --show-toplevel]
 	}
 } else {
-	# try to set work tree from environment, core.worktree or use
-	# cdup to obtain a relative path to the top of the worktree. If
-	# run from the top, the ./ prefix ensures normalize expands pwd.
+	try to set work tree from environment, core.worktree or use
+	cdup to obtain a relative path to the top of the worktree. If
+	run from the top, the ./ prefix ensures normalize expands pwd.
 	if {[catch { set _gitworktree $env(GIT_WORK_TREE) }]} {
 		set _gitworktree [get_config core.worktree]
-		if {$_gitworktree eq ""} {
+		if {_gitworktree eq} {
 			set _gitworktree [file normalize ./[git rev-parse --show-cdup]]
 		}
 	}
