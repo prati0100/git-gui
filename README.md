@@ -13,9 +13,8 @@ or by visiting the
 
 Git GUI was initially written by Shawn O. Pearce, and is distributed with the
 standard Git installation.
-//
-#############################################################################
-* Developer Certificate of Origin
+--------------------------------------------------------------------------------------
+# Developer Certificate of Origin
 Version 1.1
 
 Copyright (C) 2004, 2006 The Linux Foundation and its contributors.
@@ -48,9 +47,9 @@ By making a contribution to this project, I certify that:
     are public and that a record of the contribution (including all
     personal information I submit with it, including my sign-off) is
     maintained indefinitely and may be redistributed consistent with
-    this project or the open source license(s) involved.//
-#################################################################################
-# _bin/sh
+    this project or the open source license(s) involved.
+-------------------------------------------------------------------------------------
+/bin/sh
 Tcl ignores the next line -*- tcl -*- \
  test "z$*" = zversion \
  || test "z$*" = z--version; \
@@ -78,8 +77,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, see <http://www.gnu.org/licenses/>.}]
 
-######################################################################
-##
+-------------------------------------------------------------------------------------
 Tcl/Tk sanity check
 
 _catch {package require Tcl 8.5} 
@@ -92,8 +90,7 @@ _catch {package require Tcl 8.5}
 		-title "git-gui: " \
 		-message 
 }
-
-######################################################################
+-------------------------------------------------------------------------------------
 Enabling platform-specific code paths
 
 proc is_MacOSX {} {
