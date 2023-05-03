@@ -947,6 +947,7 @@ set default_config(gui.blamehistoryctx) 7
 set default_config(gui.diffcontext) 5
 set default_config(gui.diffopts) {}
 set default_config(gui.commitmsgwidth) 75
+set default_config(gui.commitmsgwrap) false
 set default_config(gui.newbranchtemplate) {}
 set default_config(gui.spellingdictionary) {}
 set default_config(gui.fontui) [font configure font_ui]
@@ -3504,6 +3505,12 @@ if {![is_enabled nocommit]} {
 	pack .vpane.lower.commarea.buffer.header.amend -side right
 }
 
+if {$repo_config(gui.commitmsgwrap)} {
+	set comm_wrap word
+} else {
+	set comm_wrap none
+}
+
 textframe .vpane.lower.commarea.buffer.frame
 ttext $ui_comm \
 	-borderwidth 1 \
@@ -3513,7 +3520,7 @@ ttext $ui_comm \
 	-takefocus 1 \
 	-highlightthickness 1 \
 	-relief sunken \
-	-width $repo_config(gui.commitmsgwidth) -height 9 -wrap none \
+	-width $repo_config(gui.commitmsgwidth) -height 9 -wrap $comm_wrap \
 	-font font_diff \
 	-xscrollcommand {.vpane.lower.commarea.buffer.frame.sbx set} \
 	-yscrollcommand {.vpane.lower.commarea.buffer.frame.sby set}
