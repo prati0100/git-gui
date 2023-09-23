@@ -1,0 +1,458 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2020-01-26 22:26+0100\n"
+"PO-Revision-Date: 2023-09-01 12:00+0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.3\n"
+"Last-Translator: e2d.tw <engineer2designer@gmail.com>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh_TW\n"
+
+#. "English Definition (Dear translator: This file will never be visible to the user! It should only serve as a tool for you, the translator. Nothing more.)"
+msgid "English Term (Dear translator: This file will never be visible to the user!)"
+msgstr "English Term (Dear translator: This file will never be visible to the user!)"
+
+#. "prematurely stop and abandon an operation"
+#, fuzzy
+msgid "abort"
+msgstr "中止完成。就緒。"
+
+#. ""
+msgid "amend"
+msgstr "修訂"
+
+#. "a commit that succeeds the current one in git's graph of commits (not necessarily directly)"
+#, fuzzy
+msgid "ancestor"
+msgstr "祖先"
+
+#. ""
+msgid "annotate"
+msgstr "加註"
+
+#. "The person who initially created (authored) a commit"
+msgid "author"
+msgstr "作者"
+
+#. "a repository with only .git directory, without working directory"
+#, fuzzy
+msgid "bare repository"
+msgstr "裸存儲庫"
+
+#. "a parent version of the current file"
+msgid "base"
+msgstr "基準"
+
+#. ""
+#, fuzzy
+msgid "bisect"
+msgstr "平分"
+
+#. "get the authors responsible for each line in a file"
+#, fuzzy
+msgid "blame"
+msgstr "僅在已變更文件上究責副本"
+
+#. ""
+#, fuzzy
+msgid "blob"
+msgstr "斑點"
+
+#. "A 'branch' is an active line of development."
+msgid "branch [noun]"
+msgstr "分支"
+
+#. ""
+msgid "branch [verb]"
+msgstr "分支"
+
+#. ""
+msgid "checkout [noun]"
+msgstr "checkout [noun]"
+
+#. "The action of updating the working tree to a revision which was stored in the object database."
+msgid "checkout [verb]"
+msgstr "checkout [verb]"
+
+#. "to select and apply a single commit to the current HEAD without merging"
+msgid "cherry-pick"
+msgstr "cherry-pick"
+
+#. "a commit that directly succeeds the current one in git's graph of commits"
+#, fuzzy
+msgid "child commit"
+msgstr "子提交"
+
+#. "clean the state of the git repository, often after manually stopped operation"
+#, fuzzy
+msgid "cleanup"
+msgstr "清理"
+
+#. ""
+msgid "clone [verb]"
+msgstr "克隆"
+
+#. "A single point in the git history."
+#, fuzzy
+msgid "commit [noun]"
+msgstr "提交"
+
+#. "The action of storing a new snapshot of the project's state in the git history."
+#, fuzzy
+msgid "commit [verb]"
+msgstr "提交 [動詞]"
+
+#. "a message that gets attached with any commit"
+#, fuzzy
+msgid "commit message"
+msgstr "提交描述："
+
+#. "The person who committed a commit (to the current branch), which might be different than the author."
+#, fuzzy
+msgid "committer"
+msgstr "提交者："
+
+#. "a commit that precedes the current one in git's graph of commits (not necessarily directly)"
+#, fuzzy
+msgid "descendant"
+msgstr "後代"
+
+#. "checkout of a revision rather than some head"
+#, fuzzy
+msgid "detached HEAD"
+msgstr "分離式頭"
+
+#. "checkout of a revision rather than some head"
+#, fuzzy
+msgid "detached checkout"
+msgstr "當前脫節檢出的拷貝"
+
+#. ""
+#, fuzzy
+msgid "diff [noun]"
+msgstr "差異 [名詞]"
+
+#. ""
+msgid "diff [verb]"
+msgstr "對比"
+
+#. ""
+msgid "directory"
+msgstr "目錄"
+
+#. "A fast-forward merge is a special type of merge where you have a revision and you are merging another branch's changes that happen to be a descendant of what you have."
+msgid "fast-forward"
+msgstr "快進"
+
+#. "Fetching a branch means to get the branch's head from a remote repository, to find out which objects are missing from the local object database, and to get them, too."
+msgid "fetch"
+msgstr "獲取"
+
+#. "any merge strategy that works on a file by file basis"
+#, fuzzy
+msgid "file level merging"
+msgstr "檔級合併"
+
+#. ""
+msgid "file"
+msgstr "檔案"
+
+#. "the last revision in a branch"
+msgid "head"
+msgstr "頭部"
+
+#. "script that gets executed automatically on some event"
+#, fuzzy
+msgid "hook"
+msgstr "正調用「準備提交信息」命令..."
+
+#. "One context of consecutive lines in a whole patch, which consists of many such hunks"
+msgid "hunk"
+msgstr "修改塊"
+
+#. "A collection of files. The index is a stored version of your working tree."
+msgid "index (in git-gui: staging area)"
+msgstr "索引"
+
+#. "the first checkout during a clone operation"
+#, fuzzy
+msgid "initial checkout"
+msgstr "初始結帳"
+
+#. "The very first commit in a repository"
+#, fuzzy
+msgid "initial commit"
+msgstr "初始的提交描述："
+
+#. "a branch that resides in the local git repository"
+#, fuzzy
+msgid "local branch"
+msgstr "本地分支"
+
+#. "a Git object that is not part of any pack"
+#, fuzzy
+msgid "loose object"
+msgstr "鬆散的物體"
+
+#. "a branch called by convention 'master' that exists in a newly created git repository"
+#, fuzzy
+msgid "master branch"
+msgstr "主分支"
+
+#. "A successful merge results in the creation of a new commit representing the result of the merge."
+#, fuzzy
+msgid "merge [noun]"
+msgstr "合併 [名詞]"
+
+#. "To bring the contents of another branch into the current branch."
+#, fuzzy
+msgid "merge [verb]"
+msgstr "合併 [動詞]"
+
+#. ""
+msgid "message"
+msgstr "訊息"
+
+#. "a remote called by convention 'origin' that the current git repository has been cloned from"
+msgid "origin"
+msgstr "origin"
+
+#. ""
+#, fuzzy
+msgid "orphan commit"
+msgstr "孤立提交"
+
+#. ""
+#, fuzzy
+msgid "orphan reference"
+msgstr "孤立引用"
+
+#. "a file containing many git objects packed together"
+#, fuzzy
+msgid "pack [noun]"
+msgstr "包 [名詞]"
+
+#. "the process of creating a pack file"
+#, fuzzy
+msgid "pack [verb]"
+msgstr "包 [動詞]"
+
+#. "a Git object part of some pack"
+#, fuzzy
+msgid "packed object"
+msgstr "包裝物件"
+
+#. "a commit that directly precedes the current one in git's graph of commits"
+#, fuzzy
+msgid "parent commit"
+msgstr "歸咎父級提交"
+
+#, fuzzy
+msgid "patch\" \""
+msgstr "補丁“”"
+
+#. "The path to a file"
+#, fuzzy
+msgid "path"
+msgstr "路徑"
+
+#. "Delete all stale tracking branches under <name>. These stale branches have already been removed from the remote repository referenced by <name>, but are still locally available in 'remotes/<name>'."
+msgid "prune"
+msgstr "修剪"
+
+#. "Pulling a branch means to fetch it and merge it."
+msgid "pull"
+msgstr "拉取"
+
+#. "Pushing a branch means to get the branch's head ref from a remote repository, and ... (well, can someone please explain it for mere mortals?)"
+msgid "push"
+msgstr "推送"
+
+#. "The process of rebasing one set of commits on top of another branch's head"
+#, fuzzy
+msgid "rebase [noun]"
+msgstr "變基 [名詞]"
+
+#. "Re-apply one set of commits on top of another branch's head. Contrary to merge."
+#, fuzzy
+msgid "rebase [verb]"
+msgstr "變基 [動詞]"
+
+#. ""
+msgid "redo"
+msgstr "取消復原"
+
+#. ""
+#, fuzzy
+msgid "reference"
+msgstr "參考"
+
+#. "the log file containing all states of the HEAD reference (in other words past pristine states of the working copy)"
+#, fuzzy
+msgid "reflog"
+msgstr "參考日誌"
+
+#, fuzzy
+msgid "refmap\"       \""
+msgstr "參考地圖“ ”"
+
+#. ""
+msgid "refspec"
+msgstr "引用規格"
+
+#. "The adjective for anything which is outside of the current (local) repository"
+#, fuzzy
+msgid "remote [adj]"
+msgstr "遠端 [調整]"
+
+#. "A branch in any other ('remote') repository"
+#, fuzzy
+msgid "remote branch"
+msgstr "遠端分支機構"
+
+#. "An other repository ('remote'). One might have a set of remotes whose branches one tracks."
+#, fuzzy
+msgid "remote repository"
+msgstr "遠端存儲庫"
+
+#. "A collection of refs (?) together with an object database containing all objects which are reachable from the refs... (oops, you've lost me here. Again, please an explanation for mere mortals?)"
+msgid "repository"
+msgstr "版本庫"
+
+#. ""
+msgid "reset"
+msgstr "重設"
+
+#. "decide which changes from alternative versions of a file should persist in Git"
+#, fuzzy
+msgid "resolve (a conflict)"
+msgstr "解決（衝突）"
+
+#. "abandon changes and go to pristine version"
+#, fuzzy
+msgid "revert changes"
+msgstr "回復更改"
+
+#. ""
+msgid "revert"
+msgstr "還原"
+
+#. "expression that signifies a revision in git"
+#, fuzzy
+msgid "revision expression"
+msgstr "版本表示式："
+
+#. "A particular state of files and directories which was stored in the object database."
+#, fuzzy
+msgid "revision"
+msgstr "修訂版本"
+
+#. ""
+#, fuzzy
+msgid "sign off"
+msgstr "簽名"
+
+#. "see: staging area. In some areas of git this is called 'index'."
+#, fuzzy
+msgid "stage [noun], index"
+msgstr "階段[名詞]，索引"
+
+#. "add some content of files and directories to the staging area in preparation for a commit"
+#, fuzzy
+msgid "stage [verb]"
+msgstr "階段 [動詞]"
+
+#. "The place where changes from files are marked to be included for the next commit. In some areas of git this is called 'index'."
+msgid "staging area"
+msgstr "預存區"
+
+#. "The place (stack) where changes can be temporarily saved without committing"
+#, fuzzy
+msgid "stash [noun]"
+msgstr "藏匿 [名詞]"
+
+#. "temporarily save changes in a stack without committing"
+#, fuzzy
+msgid "stash [verb]"
+msgstr "藏匿 [動詞]"
+
+#. ""
+msgid "status"
+msgstr "狀態"
+
+#. ""
+#, fuzzy
+msgid "submodule"
+msgstr "視覺化此子模組中的當前分支歷史"
+
+#. "A ref pointing to some commit object. In other words: A label on a specific commit."
+msgid "tag [noun]"
+msgstr "標籤"
+
+#. "The process of creating a tag at a specific commit object"
+msgid "tag [verb]"
+msgstr "加標"
+
+#. "The person who created a tag"
+#, fuzzy
+msgid "tagger"
+msgstr "標記器"
+
+#. "file whose content is tracked/not tracked by git"
+#, fuzzy
+msgid "tracked/untracked"
+msgstr "跟蹤/未跟蹤"
+
+#. "A regular git branch that is used to follow changes from another repository."
+#, fuzzy
+msgid "tracking branch"
+msgstr "跟蹤分支："
+
+#. ""
+msgid "trailer"
+msgstr "預告"
+
+#. "1. tree object, 2. directory tree"
+msgid "tree"
+msgstr "樹狀"
+
+#. ""
+msgid "undo"
+msgstr "回上一步"
+
+#. "Remove content of files from the staging area again so that it will not be part of the next commit"
+#, fuzzy
+msgid "unstage"
+msgstr "取消舞臺"
+
+#. "Retrieving the temporarily saved changes back again from the stash"
+#, fuzzy
+msgid "unstash [verb]"
+msgstr "解散 [動詞]"
+
+#. ""
+msgid "update"
+msgstr "更新"
+
+#. ""
+#, fuzzy
+msgid "upstream branch"
+msgstr "上游分支"
+
+#. ""
+#, fuzzy
+msgid "verify"
+msgstr "驗證"
+
+#. "The tree of actual checked out files."
+#, fuzzy
+msgid "working directory, working copy, working tree"
+msgstr "工作目錄， 工作副本， 工作樹"
