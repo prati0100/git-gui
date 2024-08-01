@@ -1,3 +1,10 @@
+# NOTE
+
+**This tree is no longer maintained**. The official git-gui tree can be found in
+[git.git/Documentation/SubmittingPatches](https://github.com/git/git/blob/master/Documentation/SubmittingPatches)
+(search for git-gui). As of writing this, the official tree is
+https://github.com/j6t/git-gui.
+
 # Git GUI - A graphical user interface for Git
 
 Git GUI allows you to use the [Git source control management
