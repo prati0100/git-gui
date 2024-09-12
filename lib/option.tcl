@@ -156,6 +156,7 @@ proc do_options {} {
 		{i-1..99 gui.diffcontext {mc "Number of Diff Context Lines"}}
 		{t gui.diffopts {mc "Additional Diff Parameters"}}
 		{i-0..99 gui.commitmsgwidth {mc "Commit Message Text Width"}}
+		{b gui.commitmsgwrap {mc "Commit Message Wrap Lines"}}
 		{t gui.newbranchtemplate {mc "New Branch Name Template"}}
 		{c gui.encoding {mc "Default File Contents Encoding"}}
 		{b gui.warndetachedcommit {mc "Warn before committing to a detached head"}}
