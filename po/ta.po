@@ -1,0 +1,2817 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-08 22:54+0100\n"
+"PO-Revision-Date: 2025-05-06 03:39\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: git-gui.sh:847
+#, tcl-format
+msgid "Invalid font specified in %s:"
+msgstr "%s இல் குறிப்பிடப்பட்டுள்ள தவறான எழுத்துரு:"
+
+#: git-gui.sh:901
+msgid "Main Font"
+msgstr "முதன்மையான எழுத்துரு"
+
+#: git-gui.sh:902
+msgid "Diff/Console Font"
+msgstr "வேறுபாடு/கன்சோல் எழுத்துரு"
+
+#: git-gui.sh:917 git-gui.sh:931 git-gui.sh:944 git-gui.sh:1034
+#: git-gui.sh:1053 git-gui.sh:3212
+msgid "git-gui: fatal error"
+msgstr "Git-gui: அபாயகரமான பிழை"
+
+#: git-gui.sh:918
+msgid "Cannot find git in PATH."
+msgstr "பாதையில் அறிவிலி கண்டுபிடிக்க முடியவில்லை."
+
+#: git-gui.sh:945
+msgid "Cannot parse Git version string:"
+msgstr "அறிவிலி பதிப்பு சரத்தை அலச முடியாது:"
+
+#: git-gui.sh:970
+#, tcl-format
+msgid ""
+"Git version cannot be determined.\n"
+"\n"
+"%s claims it is version '%s'.\n"
+"\n"
+"%s requires at least Git 1.5.0 or later.\n"
+"\n"
+"Assume '%s' is version 1.5.0?\n"
+msgstr ""
+"அறிவிலி பதிப்பை தீர்மானிக்க முடியாது. \n"
+"\n"
+"இது பதிப்பு '%s' என்று%s கூறுகிறது. \n"
+"\n"
+"%s க்கு குறைந்தது GIT 1.5.0 அல்லது அதற்குப் பிறகு தேவைப்படுகிறது. \n"
+"\n"
+"'%s' என்பது பதிப்பு 1.5.0 என்று வைத்துக் கொள்ளுங்கள்?\n"
+
+#: git-gui.sh:1267
+msgid "Git directory not found:"
+msgstr "அறிவிலி அடைவு காணப்படவில்லை:"
+
+#: git-gui.sh:1301
+msgid "Cannot move to top of working directory:"
+msgstr "வேலை கோப்பகத்தின் உச்சிக்கு செல்ல முடியாது:"
+
+#: git-gui.sh:1309
+msgid "Cannot use bare repository:"
+msgstr "வெற்று களஞ்சியத்தைப் பயன்படுத்த முடியாது:"
+
+#: git-gui.sh:1317
+msgid "No working directory"
+msgstr "வேலை அடைவு இல்லை"
+
+#: git-gui.sh:1491 lib/checkout_op.tcl:306
+msgid "Refreshing file status..."
+msgstr "புத்துணர்ச்சியூட்டும் கோப்பு நிலை ..."
+
+#: git-gui.sh:1551
+msgid "Scanning for modified files ..."
+msgstr "மாற்றியமைக்கப்பட்ட கோப்புகளுக்கு ச்கேனிங் ..."
+
+#: git-gui.sh:1629
+msgid "Calling prepare-commit-msg hook..."
+msgstr "Preper-commit-msg ஊக்கை அழைக்கிறது ..."
+
+#: git-gui.sh:1646
+msgid "Commit declined by prepare-commit-msg hook."
+msgstr "தயாரிப்பு-கமிட்-எம்.எச்.சி ஊக் மூலம் கமிட் குறைக்கப்பட்டுள்ளது."
+
+#: git-gui.sh:1804 lib/browser.tcl:252
+msgid "Ready."
+msgstr "ஆயத்தம்."
+
+#: git-gui.sh:1968
+#, tcl-format
+msgid ""
+"Display limit (gui.maxfilesdisplayed = %s) reached, not showing all %s "
+"files."
+msgstr ""
+"காட்சி வரம்பு (gui.maxfilesdisplayed = %s) எட்டியது, அனைத்து %s "
+"கோப்புகளையும் காட்டவில்லை."
+
+#: git-gui.sh:2091
+msgid "Unmodified"
+msgstr "மாற்றப்படாதது"
+
+#: git-gui.sh:2093
+msgid "Modified, not staged"
+msgstr "மாற்றியமைக்கப்பட்ட, அரங்கேற்றப்படவில்லை"
+
+#: git-gui.sh:2094 git-gui.sh:2106
+msgid "Staged for commit"
+msgstr "உறுதிப்பாட்டிற்காக அரங்கேற்றப்பட்டது"
+
+#: git-gui.sh:2095 git-gui.sh:2107
+msgid "Portions staged for commit"
+msgstr "உறுதிப்பாட்டிற்காக அரங்கேற்றப்பட்ட பகுதிகள்"
+
+#: git-gui.sh:2096 git-gui.sh:2108
+msgid "Staged for commit, missing"
+msgstr "உறுதிப்பாட்டிற்காக அரங்கேற்றப்பட்டது, காணவில்லை"
+
+#: git-gui.sh:2098
+msgid "File type changed, not staged"
+msgstr "கோப்பு வகை மாற்றப்பட்டது, அரங்கேற்றப்படவில்லை"
+
+#: git-gui.sh:2099 git-gui.sh:2100
+msgid "File type changed, old type staged for commit"
+msgstr "கோப்பு வகை மாற்றப்பட்டது, பழைய வகை கமிட்டத்திற்காக அரங்கேற்றப்பட்டது"
+
+#: git-gui.sh:2101
+msgid "File type changed, staged"
+msgstr "கோப்பு வகை மாற்றப்பட்டது, அரங்கேற்றப்பட்டது"
+
+#: git-gui.sh:2102
+msgid "File type change staged, modification not staged"
+msgstr "கோப்பு வகை மாற்றம் அரங்கேற்றப்பட்டது, மாற்றம் அரங்கேற்றப்படவில்லை"
+
+#: git-gui.sh:2103
+msgid "File type change staged, file missing"
+msgstr "கோப்பு வகை மாற்றம் அரங்கேற்றப்பட்டது, கோப்பு இல்லை"
+
+#: git-gui.sh:2105
+msgid "Untracked, not staged"
+msgstr "கட்டுப்படுத்தப்படாதது, அரங்கேற்றப்படவில்லை"
+
+#: git-gui.sh:2110
+msgid "Missing"
+msgstr "இல்லை"
+
+#: git-gui.sh:2111
+msgid "Staged for removal"
+msgstr "அகற்றுவதற்காக அரங்கேற்றப்பட்டது"
+
+#: git-gui.sh:2112
+msgid "Staged for removal, still present"
+msgstr "அகற்றுவதற்காக அரங்கேற்றப்பட்டது, இன்னும் உள்ளது"
+
+#: git-gui.sh:2114 git-gui.sh:2115 git-gui.sh:2116 git-gui.sh:2117
+#: git-gui.sh:2118 git-gui.sh:2119
+msgid "Requires merge resolution"
+msgstr "ஒன்றிணைக்கும் தீர்மானம் தேவை"
+
+#: git-gui.sh:2164
+msgid "Couldn't find gitk in PATH"
+msgstr "பாதையில் கிட்கைக் கண்டுபிடிக்க முடியவில்லை"
+
+#: git-gui.sh:2210 git-gui.sh:2245
+#, tcl-format
+msgid "Starting %s... please wait..."
+msgstr "%s தொடங்குகின்றன ... தயவுசெய்து காத்திருங்கள் ..."
+
+#: git-gui.sh:2224
+msgid "Couldn't find git gui in PATH"
+msgstr "பாதையில் அறிவிலி குயியைக் கண்டுபிடிக்க முடியவில்லை"
+
+#: git-gui.sh:2726 lib/choose_repository.tcl:53
+msgid "Repository"
+msgstr "களஞ்சியம்"
+
+#: git-gui.sh:2727
+msgid "Edit"
+msgstr "தொகு"
+
+#: git-gui.sh:2729 lib/choose_rev.tcl:567
+msgid "Branch"
+msgstr "கிளை"
+
+#: git-gui.sh:2732 lib/choose_rev.tcl:554
+msgid "Commit@@noun"
+msgstr "@@ பெயர்ச்சொல்"
+
+#: git-gui.sh:2735 lib/merge.tcl:127 lib/merge.tcl:174
+msgid "Merge"
+msgstr "ஒன்றிணைக்கவும்"
+
+#: git-gui.sh:2736 lib/choose_rev.tcl:563
+msgid "Remote"
+msgstr "தொலைநிலை"
+
+#: git-gui.sh:2739
+msgid "Tools"
+msgstr "கருவிகள்"
+
+#: git-gui.sh:2748
+msgid "Explore Working Copy"
+msgstr "வேலை நகலை ஆராயுங்கள்"
+
+#: git-gui.sh:2763
+msgid "Git Bash"
+msgstr "அறிவிலி பாச்"
+
+#: git-gui.sh:2772
+msgid "Browse Current Branch's Files"
+msgstr "தற்போதைய கிளையின் கோப்புகளை உலாவுக"
+
+#: git-gui.sh:2776
+msgid "Browse Branch Files..."
+msgstr "கிளை கோப்புகளை உலாவுக ..."
+
+#: git-gui.sh:2781
+msgid "Visualize Current Branch's History"
+msgstr "தற்போதைய கிளையின் வரலாற்றைக் காட்சிப்படுத்துங்கள்"
+
+#: git-gui.sh:2785
+msgid "Visualize All Branch History"
+msgstr "அனைத்து கிளை வரலாற்றையும் காட்சிப்படுத்துங்கள்"
+
+#: git-gui.sh:2792
+#, tcl-format
+msgid "Browse %s's Files"
+msgstr "%s இன் கோப்புகளை உலாவுக"
+
+#: git-gui.sh:2794
+#, tcl-format
+msgid "Visualize %s's History"
+msgstr "%s இன் வரலாற்றைக் காட்சிப்படுத்துங்கள்"
+
+#: git-gui.sh:2799 lib/database.tcl:40
+msgid "Database Statistics"
+msgstr "தரவுத்தள புள்ளிவிவரங்கள்"
+
+#: git-gui.sh:2802 lib/database.tcl:33
+msgid "Compress Database"
+msgstr "தரவுத்தளத்தை சுருக்கவும்"
+
+#: git-gui.sh:2805
+msgid "Verify Database"
+msgstr "தரவுத்தளத்தை சரிபார்க்கவும்"
+
+#: git-gui.sh:2812 git-gui.sh:2816 git-gui.sh:2820
+msgid "Create Desktop Icon"
+msgstr "டெச்க்டாப் ஐகானை உருவாக்கவும்"
+
+#: git-gui.sh:2828 lib/choose_repository.tcl:209 lib/choose_repository.tcl:217
+msgid "Quit"
+msgstr "வெளியேறு"
+
+#: git-gui.sh:2836
+msgid "Undo"
+msgstr "செயல்தவிர்"
+
+#: git-gui.sh:2839
+msgid "Redo"
+msgstr "மீண்டும்செய்"
+
+#: git-gui.sh:2843 git-gui.sh:3461
+msgid "Cut"
+msgstr "வெட்டு"
+
+#: git-gui.sh:2846 git-gui.sh:3464 git-gui.sh:3540 git-gui.sh:3633
+#: lib/console.tcl:69
+msgid "Copy"
+msgstr "நகலெடு"
+
+#: git-gui.sh:2849 git-gui.sh:3467
+msgid "Paste"
+msgstr "ஒட்டு"
+
+#: git-gui.sh:2852 git-gui.sh:3470 lib/remote_branch_delete.tcl:39
+#: lib/branch_delete.tcl:28
+msgid "Delete"
+msgstr "நீக்கு"
+
+#: git-gui.sh:2856 git-gui.sh:3474 git-gui.sh:3637 lib/console.tcl:71
+msgid "Select All"
+msgstr "அனைத்தையும் தெரிவுசெய்"
+
+#: git-gui.sh:2865
+msgid "Create..."
+msgstr "உருவாக்கு ..."
+
+#: git-gui.sh:2871
+msgid "Checkout..."
+msgstr "புதுப்பித்து ..."
+
+#: git-gui.sh:2877
+msgid "Rename..."
+msgstr "மறுபெயரிடுங்கள் ..."
+
+#: git-gui.sh:2882
+msgid "Delete..."
+msgstr "நீக்கு ..."
+
+#: git-gui.sh:2887
+msgid "Reset..."
+msgstr "மீட்டமை ..."
+
+#: git-gui.sh:2897
+msgid "Done"
+msgstr "முடிந்தது"
+
+#: git-gui.sh:2899
+msgid "Commit@@verb"
+msgstr "@@ வினைச்சொல்"
+
+#: git-gui.sh:2908 git-gui.sh:3400
+msgid "Amend Last Commit"
+msgstr "கடைசி உறுதிப்பாட்டை திருத்துங்கள்"
+
+#: git-gui.sh:2918 git-gui.sh:3361 lib/remote_branch_delete.tcl:101
+msgid "Rescan"
+msgstr "ரெச்கான்"
+
+#: git-gui.sh:2924
+msgid "Stage To Commit"
+msgstr "செய்ய மேடை"
+
+#: git-gui.sh:2930
+msgid "Stage Changed Files To Commit"
+msgstr "மேடை மாற்றப்பட்ட கோப்புகள்"
+
+#: git-gui.sh:2936
+msgid "Unstage From Commit"
+msgstr "கமிட்டிலிருந்து கட்டமாக"
+
+#: git-gui.sh:2942 lib/index.tcl:521
+msgid "Revert Changes"
+msgstr "மாற்றங்களை மாற்றியமைத்தல்"
+
+#: git-gui.sh:2950 git-gui.sh:3700 git-gui.sh:3731
+msgid "Show Less Context"
+msgstr "குறைவான சூழலைக் காட்டுங்கள்"
+
+#: git-gui.sh:2954 git-gui.sh:3704 git-gui.sh:3735
+msgid "Show More Context"
+msgstr "மேலும் சூழலைக் காட்டு"
+
+#: git-gui.sh:2961 git-gui.sh:3374 git-gui.sh:3485
+msgid "Sign Off"
+msgstr "பதிவு செய்க"
+
+#: git-gui.sh:2977
+msgid "Local Merge..."
+msgstr "உள்ளக ஒன்றிணைப்பு ..."
+
+#: git-gui.sh:2982
+msgid "Abort Merge..."
+msgstr "ஒன்றிணைத்தல் ..."
+
+#: git-gui.sh:2994 git-gui.sh:3022
+msgid "Add..."
+msgstr "சேர்க்கவும் ..."
+
+#: git-gui.sh:2998
+msgid "Push..."
+msgstr "புச் ..."
+
+#: git-gui.sh:3002
+msgid "Delete Branch..."
+msgstr "கிளையை நீக்கு ..."
+
+#: git-gui.sh:3012 git-gui.sh:3666
+msgid "Options..."
+msgstr "விருப்பங்கள் ..."
+
+#: git-gui.sh:3023
+msgid "Remove..."
+msgstr "அகற்று ..."
+
+#: git-gui.sh:3032 lib/choose_repository.tcl:67
+msgid "Help"
+msgstr "உதவி"
+
+#: git-gui.sh:3036 git-gui.sh:3040 lib/choose_repository.tcl:61
+#: lib/choose_repository.tcl:70 lib/about.tcl:14
+#, tcl-format
+msgid "About %s"
+msgstr "சுமார் %s"
+
+#: git-gui.sh:3064
+msgid "Online Documentation"
+msgstr "நிகழ்நிலை ஆவணங்கள்"
+
+#: git-gui.sh:3067 lib/choose_repository.tcl:64 lib/choose_repository.tcl:73
+msgid "Show SSH Key"
+msgstr "பாஓடு விசையை காட்டு"
+
+#: git-gui.sh:3097 git-gui.sh:3229
+msgid "usage:"
+msgstr "பயன்பாடு:"
+
+#: git-gui.sh:3101 git-gui.sh:3233
+msgid "Usage"
+msgstr "பயன்பாடு"
+
+#: git-gui.sh:3182 lib/blame.tcl:575
+msgid "Error"
+msgstr "பிழை"
+
+#: git-gui.sh:3213
+#, tcl-format
+msgid "fatal: cannot stat path %s: No such file or directory"
+msgstr "அபாயகரமானது: ச்டேட் பாதை %s: அத்தகைய கோப்பு அல்லது அடைவு இல்லை"
+
+#: git-gui.sh:3246
+msgid "Current Branch:"
+msgstr "தற்போதைய கிளை:"
+
+#: git-gui.sh:3271
+msgid "Unstaged Changes"
+msgstr "நிலையற்ற மாற்றங்கள்"
+
+#: git-gui.sh:3293
+msgid "Staged Changes (Will Commit)"
+msgstr "அரங்கேற்றப்பட்ட மாற்றங்கள் (செய்யும்)"
+
+#: git-gui.sh:3367
+msgid "Stage Changed"
+msgstr "மேடை மாற்றப்பட்டது"
+
+#: git-gui.sh:3386 lib/transport.tcl:137
+msgid "Push"
+msgstr "புச்"
+
+#: git-gui.sh:3413
+msgid "Initial Commit Message:"
+msgstr "ஆரம்ப கமிட் செய்தி:"
+
+#: git-gui.sh:3414
+msgid "Amended Commit Message:"
+msgstr "திருத்தப்பட்ட செய்த செய்தி:"
+
+#: git-gui.sh:3415
+msgid "Amended Initial Commit Message:"
+msgstr "திருத்த ஆரம்ப கமிட் செய்தி:"
+
+#: git-gui.sh:3416
+msgid "Amended Merge Commit Message:"
+msgstr "திருத்தப்பட்ட ஒன்றிணைப்பு செய்தியை ஒன்றிணைத்தல்:"
+
+#: git-gui.sh:3417
+msgid "Merge Commit Message:"
+msgstr "செய்தியை ஒன்றிணைக்கவும்:"
+
+#: git-gui.sh:3418
+msgid "Commit Message:"
+msgstr "செய்தியைச் செய்யுங்கள்:"
+
+#: git-gui.sh:3477 git-gui.sh:3641 lib/console.tcl:73
+msgid "Copy All"
+msgstr "அனைத்தையும் நகலெடுக்கவும்"
+
+#: git-gui.sh:3501 lib/blame.tcl:106
+msgid "File:"
+msgstr "கோப்பு:"
+
+#: git-gui.sh:3549 lib/choose_repository.tcl:1100
+msgid "Open"
+msgstr "திற"
+
+#: git-gui.sh:3629
+msgid "Refresh"
+msgstr "புதுப்பிப்பு"
+
+#: git-gui.sh:3650
+msgid "Decrease Font Size"
+msgstr "எழுத்துரு அளவைக் குறைக்கவும்"
+
+#: git-gui.sh:3654
+msgid "Increase Font Size"
+msgstr "எழுத்துரு அளவை அதிகரிக்கவும்"
+
+#: git-gui.sh:3662 lib/blame.tcl:296
+msgid "Encoding"
+msgstr "குறியாக்கம்"
+
+#: git-gui.sh:3673
+msgid "Apply/Reverse Hunk"
+msgstr "விண்ணப்பிக்கவும்/தலைகீழ் அங்க்"
+
+#: git-gui.sh:3678
+msgid "Apply/Reverse Line"
+msgstr "விண்ணப்பிக்கவும்/தலைகீழ் வரி"
+
+#: git-gui.sh:3684 git-gui.sh:3794 git-gui.sh:3805
+msgid "Revert Hunk"
+msgstr "அங்க் மாற்றவும்"
+
+#: git-gui.sh:3689 git-gui.sh:3801 git-gui.sh:3812
+msgid "Revert Line"
+msgstr "வரி மாற்றவும்"
+
+#: git-gui.sh:3694 git-gui.sh:3791
+msgid "Undo Last Revert"
+msgstr "கடைசியாக மாற்றியமைக்கவும்"
+
+#: git-gui.sh:3713
+msgid "Run Merge Tool"
+msgstr "ஒன்றிணைக்கும் கருவியை இயக்கவும்"
+
+#: git-gui.sh:3718
+msgid "Use Remote Version"
+msgstr "தொலை பதிப்பைப் பயன்படுத்தவும்"
+
+#: git-gui.sh:3722
+msgid "Use Local Version"
+msgstr "உள்ளக பதிப்பைப் பயன்படுத்தவும்"
+
+#: git-gui.sh:3726
+msgid "Revert To Base"
+msgstr "தளத்திற்கு திரும்பவும்"
+
+#: git-gui.sh:3744
+msgid "Visualize These Changes In The Submodule"
+msgstr "துணைமோடூலில் இந்த மாற்றங்களைக் காட்சிப்படுத்துங்கள்"
+
+#: git-gui.sh:3748
+msgid "Visualize Current Branch History In The Submodule"
+msgstr "துணைமோடூலில் தற்போதைய கிளை வரலாற்றைக் காட்சிப்படுத்துங்கள்"
+
+#: git-gui.sh:3752
+msgid "Visualize All Branch History In The Submodule"
+msgstr "சப்மோடூலில் அனைத்து கிளை வரலாற்றையும் காட்சிப்படுத்துங்கள்"
+
+#: git-gui.sh:3757
+msgid "Start git gui In The Submodule"
+msgstr "சப்மோடூலில் அறிவிலி குய் தொடங்கவும்"
+
+#: git-gui.sh:3793
+msgid "Unstage Hunk From Commit"
+msgstr "கமிட்டிலிருந்து இடமாக அங்க்"
+
+#: git-gui.sh:3797
+msgid "Unstage Lines From Commit"
+msgstr "கமிட்டிலிருந்து கட்டப்பட்ட கோடுகள்"
+
+#: git-gui.sh:3798 git-gui.sh:3809
+msgid "Revert Lines"
+msgstr "கோடுகளை மாற்றவும்"
+
+#: git-gui.sh:3800
+msgid "Unstage Line From Commit"
+msgstr "கமிட்டிலிருந்து கட்டம் வரி"
+
+#: git-gui.sh:3804
+msgid "Stage Hunk For Commit"
+msgstr "கமிட்டத்திற்காக மேடை அங்க்"
+
+#: git-gui.sh:3808
+msgid "Stage Lines For Commit"
+msgstr "உறுதிப்பாட்டிற்கான மேடை கோடுகள்"
+
+#: git-gui.sh:3811
+msgid "Stage Line For Commit"
+msgstr "உறுதிப்பாட்டிற்கான மேடை வரி"
+
+#: git-gui.sh:3861
+msgid "Initializing..."
+msgstr "தொடங்குதல் ..."
+
+#: git-gui.sh:4017
+#, tcl-format
+msgid ""
+"Possible environment issues exist.\n"
+"\n"
+"The following environment variables are probably\n"
+"going to be ignored by any Git subprocess run\n"
+"by %s:\n"
+"\n"
+msgstr ""
+"சாத்தியமான சூழல் சிக்கல்கள் உள்ளன. \n"
+"\n"
+"பின்வரும் சுற்றுச்சூழல் மாறிகள் அநேகமாக இருக்கலாம் \n"
+"எந்தவொரு அறிவிலி துணை செயலாக்கமும் புறக்கணிக்கப்படப் போகிறது \n"
+"மூலம் %s:\n"
+
+#: git-gui.sh:4046
+msgid ""
+"\n"
+"This is due to a known issue with the\n"
+"Tcl binary distributed by Cygwin."
+msgstr ""
+"\n"
+"இது அறியப்பட்ட சிக்கல் காரணமாகும் \n"
+"சைக்வின் விநியோகித்த டி.சி.எல் பைனரி."
+
+#: git-gui.sh:4051
+#, tcl-format
+msgid ""
+"\n"
+"\n"
+"A good replacement for %s\n"
+"is placing values for the user.name and\n"
+"user.email settings into your personal\n"
+"~/.gitconfig file.\n"
+msgstr ""
+"\n"
+"%s க்கு ஒரு நல்ல மாற்று \n"
+"பயனருக்கான மதிப்புகளை வைக்கிறது. பெயர் மற்றும் \n"
+"உங்கள் தனிப்பட்ட அமைப்புகளில் பயனர் \n"
+"~/.gitconfig கோப்பு.\n"
+
+#: lib/spellcheck.tcl:57
+msgid "Unsupported spell checker"
+msgstr "ஆதரிக்கப்படாத எழுத்துப்பிழை சரிபார்ப்பு"
+
+#: lib/spellcheck.tcl:65
+msgid "Spell checking is unavailable"
+msgstr "எழுத்துப்பிழை சோதனை கிடைக்கவில்லை"
+
+#: lib/spellcheck.tcl:68
+msgid "Invalid spell checking configuration"
+msgstr "தவறான எழுத்துப்பிழை சரிபார்ப்பு உள்ளமைவு"
+
+#: lib/spellcheck.tcl:70
+#, tcl-format
+msgid "Reverting dictionary to %s."
+msgstr "அகராதியை %s ஆக மாற்றுகிறது."
+
+#: lib/spellcheck.tcl:73
+msgid "Spell checker silently failed on startup"
+msgstr "தொடக்கத்தில் எழுத்துப்பிழை சரிபார்ப்பு அமைதியாக தோல்வியடைந்தது"
+
+#: lib/spellcheck.tcl:80
+msgid "Unrecognized spell checker"
+msgstr "அங்கீகரிக்கப்படாத எழுத்துப்பிழை சரிபார்ப்பு"
+
+#: lib/spellcheck.tcl:186
+msgid "No Suggestions"
+msgstr "பரிந்துரைகள் இல்லை"
+
+#: lib/spellcheck.tcl:388
+msgid "Unexpected EOF from spell checker"
+msgstr "எழுத்துப்பிழை சரிபார்ப்பிலிருந்து எதிர்பாராத EOF"
+
+#: lib/spellcheck.tcl:392
+msgid "Spell Checker Failed"
+msgstr "எழுத்துப்பிழை சரிபார்ப்பு தோல்வியடைந்தது"
+
+#: lib/transport.tcl:6 lib/remote_add.tcl:132
+#, tcl-format
+msgid "fetch %s"
+msgstr "%s பெறவும்"
+
+#: lib/transport.tcl:7
+#, tcl-format
+msgid "Fetching new changes from %s"
+msgstr "%s இலிருந்து புதிய மாற்றங்களைப் பெறுகிறது"
+
+#: lib/transport.tcl:18
+#, tcl-format
+msgid "remote prune %s"
+msgstr "தொலைநிலை ப்ரூன் %s"
+
+#: lib/transport.tcl:19
+#, tcl-format
+msgid "Pruning tracking branches deleted from %s"
+msgstr "கத்தரிக்காய் கண்காணிப்பு கிளைகள் %s இலிருந்து நீக்கப்பட்டன"
+
+#: lib/transport.tcl:25
+msgid "fetch all remotes"
+msgstr "அனைத்து தொலைதூரங்களையும் பெறுங்கள்"
+
+#: lib/transport.tcl:26
+msgid "Fetching new changes from all remotes"
+msgstr "அனைத்து ரிமோட்டுகளிலிருந்தும் புதிய மாற்றங்களைப் பெறுகிறது"
+
+#: lib/transport.tcl:40
+msgid "remote prune all remotes"
+msgstr "ரிமோட் ப்ரூன் அனைத்து ரிமோட்டுகளும்"
+
+#: lib/transport.tcl:41
+msgid "Pruning tracking branches deleted from all remotes"
+msgstr ""
+"கத்தரிக்காய் கண்காணிப்பு கிளைகள் அனைத்து தொலைதூரங்களிலிருந்தும் நீக்கப்பட்டன"
+
+#: lib/transport.tcl:54 lib/transport.tcl:92 lib/transport.tcl:110
+#: lib/remote_add.tcl:162
+#, tcl-format
+msgid "push %s"
+msgstr "புச் %s"
+
+#: lib/transport.tcl:55
+#, tcl-format
+msgid "Pushing changes to %s"
+msgstr "மாற்றங்களை %s க்கு தள்ளுகிறது"
+
+#: lib/transport.tcl:93
+#, tcl-format
+msgid "Mirroring to %s"
+msgstr "%s க்கு பிரதிபலிக்கிறது"
+
+#: lib/transport.tcl:111
+#, tcl-format
+msgid "Pushing %s %s to %s"
+msgstr "%s %s க்கு %s க்கு தள்ளுகிறது"
+
+#: lib/transport.tcl:132
+msgid "Push Branches"
+msgstr "புச் கிளைகள்"
+
+#: lib/transport.tcl:141 lib/checkout_op.tcl:580 lib/remote_add.tcl:34
+#: lib/browser.tcl:292 lib/branch_checkout.tcl:30 lib/branch_rename.tcl:32
+#: lib/choose_font.tcl:45 lib/option.tcl:127 lib/tools_dlg.tcl:41
+#: lib/tools_dlg.tcl:202 lib/tools_dlg.tcl:345 lib/remote_branch_delete.tcl:43
+#: lib/branch_create.tcl:37 lib/branch_delete.tcl:34 lib/merge.tcl:178
+msgid "Cancel"
+msgstr "ரத்துசெய்"
+
+#: lib/transport.tcl:147
+msgid "Source Branches"
+msgstr "மூல கிளைகள்"
+
+#: lib/transport.tcl:162
+msgid "Destination Repository"
+msgstr "இலக்கு களஞ்சியம்"
+
+#: lib/transport.tcl:165 lib/remote_branch_delete.tcl:51
+msgid "Remote:"
+msgstr "தொலைநிலை:"
+
+#: lib/transport.tcl:187 lib/remote_branch_delete.tcl:72
+msgid "Arbitrary Location:"
+msgstr "தன்னிச்சையான இடம்:"
+
+#: lib/transport.tcl:205
+msgid "Transfer Options"
+msgstr "பரிமாற்ற விருப்பங்கள்"
+
+#: lib/transport.tcl:207
+msgid "Force overwrite existing branch (may discard changes)"
+msgstr "ஏற்கனவே இருக்கும் கிளையை மேலெழுதும் (மாற்றங்களை நிராகரிக்கலாம்)"
+
+#: lib/transport.tcl:211
+msgid "Use thin pack (for slow network connections)"
+msgstr "மெல்லிய பேக் பயன்படுத்தவும் (மெதுவான பிணைய இணைப்புகளுக்கு)"
+
+#: lib/transport.tcl:215
+msgid "Include tags"
+msgstr "குறிச்சொற்களைச் சேர்க்கவும்"
+
+#: lib/transport.tcl:229
+#, tcl-format
+msgid "%s (%s): Push"
+msgstr "%s (%s): புச்"
+
+#: lib/checkout_op.tcl:85
+#, tcl-format
+msgid "Fetching %s from %s"
+msgstr "%s இலிருந்து %s ஐப் பெறுதல்"
+
+#: lib/checkout_op.tcl:133
+#, tcl-format
+msgid "fatal: Cannot resolve %s"
+msgstr "அபாயகரமானது: %s ஐ தீர்க்க முடியாது"
+
+#: lib/checkout_op.tcl:146 lib/sshkey.tcl:58 lib/console.tcl:81
+#: lib/database.tcl:30
+msgid "Close"
+msgstr "மூடு"
+
+#: lib/checkout_op.tcl:175
+#, tcl-format
+msgid "Branch '%s' does not exist."
+msgstr "கிளை '%s' இல்லை."
+
+#: lib/checkout_op.tcl:194
+#, tcl-format
+msgid "Failed to configure simplified git-pull for '%s'."
+msgstr "'%s' க்கு எளிமைப்படுத்தப்பட்ட கிட்-புல்லை உள்ளமைக்கத் தவறிவிட்டது."
+
+#: lib/checkout_op.tcl:202 lib/branch_rename.tcl:102
+#, tcl-format
+msgid "Branch '%s' already exists."
+msgstr "கிளை '%s' ஏற்கனவே உள்ளது."
+
+#: lib/checkout_op.tcl:229
+#, tcl-format
+msgid ""
+"Branch '%s' already exists.\n"
+"\n"
+"It cannot fast-forward to %s.\n"
+"A merge is required."
+msgstr ""
+"கிளை '%s' ஏற்கனவே உள்ளது. \n"
+"\n"
+"இது %s க்கு வேகமாக முன்னோக்கி செல்ல முடியாது. \n"
+"ஒன்றிணைப்பு தேவை."
+
+#: lib/checkout_op.tcl:243
+#, tcl-format
+msgid "Merge strategy '%s' not supported."
+msgstr "மூலோபாயத்தை ஒன்றிணைக்கவில்லை '%s' ஆதரிக்கப்படவில்லை."
+
+#: lib/checkout_op.tcl:262
+#, tcl-format
+msgid "Failed to update '%s'."
+msgstr "'%s' புதுப்பிக்கத் தவறிவிட்டது."
+
+#: lib/checkout_op.tcl:274
+msgid "Staging area (index) is already locked."
+msgstr "ச்டேசிங் பகுதி (குறியீட்டு) ஏற்கனவே பூட்டப்பட்டுள்ளது."
+
+#: lib/checkout_op.tcl:289
+msgid ""
+"Last scanned state does not match repository state.\n"
+"\n"
+"Another Git program has modified this repository since the last scan.  A rescan must be performed before the current branch can be changed.\n"
+"\n"
+"The rescan will be automatically started now.\n"
+msgstr ""
+"கடைசியாக வருடு செய்யப்பட்ட மாநிலம் களஞ்சிய நிலைக்கு பொருந்தவில்லை. \n"
+"\n"
+"மற்றொரு சிஐடி திட்டம் கடைசி வருடு முதல் இந்த களஞ்சியத்தை மாற்றியமைத்துள்ளது. தற்போதைய கிளையை மாற்றுவதற்கு முன்பு ஒரு மீட்டமைப்பை செய்ய வேண்டும். \n"
+"\n"
+"ரெச்கான் இப்போது தானாகவே தொடங்கப்படும்.\n"
+
+#: lib/checkout_op.tcl:345
+#, tcl-format
+msgid "Updating working directory to '%s'..."
+msgstr "பணி கோப்பகத்தை '%s' க்கு புதுப்பித்தல் ..."
+
+#: lib/checkout_op.tcl:346
+msgid "files checked out"
+msgstr "கோப்புகள் சரிபார்க்கப்பட்டன"
+
+#: lib/checkout_op.tcl:377
+#, tcl-format
+msgid "Aborted checkout of '%s' (file level merging is required)."
+msgstr "'%s' (கோப்பு நிலை இணைத்தல் தேவை) இன் கைவிடப்பட்ட புதுப்பிப்பு."
+
+#: lib/checkout_op.tcl:378
+msgid "File level merge required."
+msgstr "கோப்பு நிலை ஒன்றிணைப்பு தேவை."
+
+#: lib/checkout_op.tcl:382
+#, tcl-format
+msgid "Staying on branch '%s'."
+msgstr "கிளையில் '%s'."
+
+#: lib/checkout_op.tcl:453
+msgid ""
+"You are no longer on a local branch.\n"
+"\n"
+"If you wanted to be on a branch, create one now starting from 'This Detached Checkout'."
+msgstr ""
+"நீங்கள் இனி உள்ளக கிளையில் இல்லை. \n"
+"\n"
+"நீங்கள் ஒரு கிளையில் இருக்க விரும்பினால், இப்போது 'இந்த பிரிக்கப்பட்ட புதுப்பித்தலில்' தொடங்கி ஒன்றை உருவாக்கவும்."
+
+#: lib/checkout_op.tcl:504 lib/checkout_op.tcl:508
+#, tcl-format
+msgid "Checked out '%s'."
+msgstr "'%s' சரிபார்க்கப்பட்டது."
+
+#: lib/checkout_op.tcl:536
+#, tcl-format
+msgid "Resetting '%s' to '%s' will lose the following commits:"
+msgstr "'%s' க்கு '%s' க்கு மீட்டமைப்பது பின்வரும் கமிட்டுகளை இழக்கும்:"
+
+#: lib/checkout_op.tcl:558
+msgid "Recovering lost commits may not be easy."
+msgstr "இழந்த கமிட்டுகளை மீட்டெடுப்பது எளிதானது அல்ல."
+
+#: lib/checkout_op.tcl:563
+#, tcl-format
+msgid "Reset '%s'?"
+msgstr "'%s' மீட்டமைக்கவா?"
+
+#: lib/checkout_op.tcl:568 lib/tools_dlg.tcl:336 lib/merge.tcl:170
+msgid "Visualize"
+msgstr "காட்சிப்படுத்துங்கள்"
+
+#: lib/checkout_op.tcl:572 lib/branch_create.tcl:85
+msgid "Reset"
+msgstr "மீட்டமை"
+
+#: lib/checkout_op.tcl:636
+#, tcl-format
+msgid ""
+"Failed to set current branch.\n"
+"\n"
+"This working directory is only partially switched.  We successfully updated your files, but failed to update an internal Git file.\n"
+"\n"
+"This should not have occurred.  %s will now close and give up."
+msgstr ""
+"தற்போதைய கிளையை அமைப்பதில் தோல்வி. \n"
+"\n"
+"இந்த வேலை அடைவு ஓரளவு மட்டுமே மாற்றப்படுகிறது. உங்கள் கோப்புகளை நாங்கள் வெற்றிகரமாக புதுப்பித்தோம், ஆனால் உள் அறிவிலி கோப்பைப் புதுப்பிக்கத் தவறிவிட்டோம். \n"
+"\n"
+"இது நிகழ்ந்திருக்கக்கூடாது. %s இப்போது மூடப்பட்டு கைவிடப்படும்."
+
+#: lib/remote_add.tcl:20
+#, tcl-format
+msgid "%s (%s): Add Remote"
+msgstr "%s (%s): ரிமோட்டைச் சேர்க்கவும்"
+
+#: lib/remote_add.tcl:25
+msgid "Add New Remote"
+msgstr "புதிய ரிமோட்டைச் சேர்க்கவும்"
+
+#: lib/remote_add.tcl:30 lib/tools_dlg.tcl:37
+msgid "Add"
+msgstr "கூட்டு"
+
+#: lib/remote_add.tcl:39
+msgid "Remote Details"
+msgstr "தொலை விவரங்கள்"
+
+#: lib/remote_add.tcl:41 lib/tools_dlg.tcl:51 lib/branch_create.tcl:44
+msgid "Name:"
+msgstr "பெயர்:"
+
+#: lib/remote_add.tcl:50
+msgid "Location:"
+msgstr "இடம்:"
+
+#: lib/remote_add.tcl:60
+msgid "Further Action"
+msgstr "மேலும் நடவடிக்கை"
+
+#: lib/remote_add.tcl:63
+msgid "Fetch Immediately"
+msgstr "உடனடியாக வரும்"
+
+#: lib/remote_add.tcl:69
+msgid "Initialize Remote Repository and Push"
+msgstr "தொலை களஞ்சியத்தை துவக்கி உந்துதல்"
+
+#: lib/remote_add.tcl:75
+msgid "Do Nothing Else Now"
+msgstr "இப்போது வேறு எதுவும் செய்ய வேண்டாம்"
+
+#: lib/remote_add.tcl:100
+msgid "Please supply a remote name."
+msgstr "தொலைதூர பெயரை வழங்கவும்."
+
+#: lib/remote_add.tcl:113
+#, tcl-format
+msgid "'%s' is not an acceptable remote name."
+msgstr "'%s' என்பது ஏற்றுக்கொள்ளக்கூடிய தொலைநிலை பெயர் அல்ல."
+
+#: lib/remote_add.tcl:124
+#, tcl-format
+msgid "Failed to add remote '%s' of location '%s'."
+msgstr "இருப்பிடத்தின் தொலைதூர '%s' ஐ சேர்க்கத் தவறிவிட்டது '%s'."
+
+#: lib/remote_add.tcl:133
+#, tcl-format
+msgid "Fetching the %s"
+msgstr "%s ஐப் பெறுகிறது"
+
+#: lib/remote_add.tcl:156
+#, tcl-format
+msgid "Do not know how to initialize repository at location '%s'."
+msgstr "'%s' இருப்பிடத்தில் களஞ்சியத்தை எவ்வாறு தொடங்குவது என்று தெரியவில்லை."
+
+#: lib/remote_add.tcl:163
+#, tcl-format
+msgid "Setting up the %s (at %s)"
+msgstr "%s ஐ அமைத்தல் ( %s இல்)"
+
+#: lib/browser.tcl:17
+msgid "Starting..."
+msgstr "தொடங்குகிறது ..."
+
+#: lib/browser.tcl:27
+#, tcl-format
+msgid "%s (%s): File Browser"
+msgstr "%s (%s): கோப்பு உலாவி"
+
+#: lib/browser.tcl:132 lib/browser.tcl:149
+#, tcl-format
+msgid "Loading %s..."
+msgstr "%s ஏற்றுகிறது ..."
+
+#: lib/browser.tcl:193
+msgid "[Up To Parent]"
+msgstr "[பெற்றோர் வரை]"
+
+#: lib/browser.tcl:275
+#, tcl-format
+msgid "%s (%s): Browse Branch Files"
+msgstr "%s (%s): கிளை கோப்புகளை உலாவுக"
+
+#: lib/browser.tcl:282
+msgid "Browse Branch Files"
+msgstr "கிளை கோப்புகளை உலாவுக"
+
+#: lib/browser.tcl:288 lib/choose_repository.tcl:437
+#: lib/choose_repository.tcl:524 lib/choose_repository.tcl:533
+#: lib/choose_repository.tcl:1115
+msgid "Browse"
+msgstr "உலாவு"
+
+#: lib/browser.tcl:297 lib/branch_checkout.tcl:35 lib/tools_dlg.tcl:321
+msgid "Revision"
+msgstr "திருத்தம்"
+
+#: lib/index.tcl:6
+msgid "Unable to unlock the index."
+msgstr "குறியீட்டைத் திறக்க முடியவில்லை."
+
+#: lib/index.tcl:30
+msgid "Index Error"
+msgstr "குறியீட்டு பிழை"
+
+#: lib/index.tcl:32
+msgid ""
+"Updating the Git index failed.  A rescan will be automatically started to "
+"resynchronize git-gui."
+msgstr ""
+"அறிவிலி குறியீட்டைப் புதுப்பிப்பது தோல்வியடைந்தது. கிட்-GUI ஐ மீண்டும் "
+"ஒத்திசைக்க ஒரு ரெச்கான் தானாகவே தொடங்கப்படும்."
+
+#: lib/index.tcl:43
+msgid "Continue"
+msgstr "தொடரவும்"
+
+#: lib/index.tcl:46
+msgid "Unlock Index"
+msgstr "குறியீட்டைத் திறக்கவும்"
+
+#: lib/index.tcl:77 lib/index.tcl:146 lib/index.tcl:220 lib/index.tcl:587
+#: lib/choose_repository.tcl:999
+msgid "files"
+msgstr "கோப்புகள்"
+
+#: lib/index.tcl:326
+msgid "Unstaging selected files from commit"
+msgstr "கமிட்டிலிருந்து தேர்ந்தெடுக்கப்பட்ட கோப்புகளைத் தூண்டுகிறது"
+
+#: lib/index.tcl:330
+#, tcl-format
+msgid "Unstaging %s from commit"
+msgstr "கமிட்டிலிருந்து %s"
+
+#: lib/index.tcl:369
+msgid "Ready to commit."
+msgstr "செய்ய தயாராக உள்ளது."
+
+#: lib/index.tcl:378
+msgid "Adding selected files"
+msgstr "தேர்ந்தெடுக்கப்பட்ட கோப்புகளைச் சேர்ப்பது"
+
+#: lib/index.tcl:382
+#, tcl-format
+msgid "Adding %s"
+msgstr "%s ஐ சேர்க்கிறது"
+
+#: lib/index.tcl:412
+#, tcl-format
+msgid "Stage %d untracked files?"
+msgstr "நிலை %d கட்டுப்படுத்தப்படாத கோப்புகள்?"
+
+#: lib/index.tcl:420
+msgid "Adding all changed files"
+msgstr "மாற்றப்பட்ட அனைத்து கோப்புகளையும் சேர்க்கிறது"
+
+#: lib/index.tcl:503
+#, tcl-format
+msgid "Revert changes in file %s?"
+msgstr "கோப்பு %s இல் மாற்றங்களை மாற்றியமைக்கவா?"
+
+#: lib/index.tcl:508
+#, tcl-format
+msgid "Revert changes in these %i files?"
+msgstr "இந்த %i கோப்புகளில் மாற்றங்களை மாற்றியமைக்கவா?"
+
+#: lib/index.tcl:517
+msgid "Any unstaged changes will be permanently lost by the revert."
+msgstr "எந்தவொரு நிலையற்ற மாற்றங்களும் தலைகீழ் மூலம் நிரந்தரமாக இழக்கப்படும்."
+
+#: lib/index.tcl:520 lib/index.tcl:563
+msgid "Do Nothing"
+msgstr "எதுவும் செய்ய வேண்டாம்"
+
+#: lib/index.tcl:545
+#, tcl-format
+msgid "Delete untracked file %s?"
+msgstr "கட்டுப்படுத்தப்படாத கோப்பு %s ஐ நீக்கவா?"
+
+#: lib/index.tcl:550
+#, tcl-format
+msgid "Delete these %i untracked files?"
+msgstr "இந்த %நான் கட்டுப்படுத்தப்படாத கோப்புகளை நீக்கவா?"
+
+#: lib/index.tcl:560
+msgid "Files will be permanently deleted."
+msgstr "கோப்புகள் நிரந்தரமாக நீக்கப்படும்."
+
+#: lib/index.tcl:564
+msgid "Delete Files"
+msgstr "கோப்புகளை நீக்கு"
+
+#: lib/index.tcl:586
+msgid "Deleting"
+msgstr "நீக்குதல்"
+
+#: lib/index.tcl:665
+msgid "Encountered errors deleting files:\n"
+msgstr "கோப்புகளை நீக்குவது பிழைகள்:\n"
+
+#: lib/index.tcl:674
+#, tcl-format
+msgid "None of the %d selected files could be deleted."
+msgstr "%d தேர்ந்தெடுக்கப்பட்ட கோப்புகள் எதுவும் நீக்க முடியாது."
+
+#: lib/index.tcl:679
+#, tcl-format
+msgid "%d of the %d selected files could not be deleted."
+msgstr "%d தேர்ந்தெடுக்கப்பட்ட கோப்புகளின் %d ஐ நீக்க முடியவில்லை."
+
+#: lib/index.tcl:726
+msgid "Reverting selected files"
+msgstr "தேர்ந்தெடுக்கப்பட்ட கோப்புகளை மாற்றியமைத்தல்"
+
+#: lib/index.tcl:730
+#, tcl-format
+msgid "Reverting %s"
+msgstr "%s மாற்றும்"
+
+#: lib/branch_checkout.tcl:16
+#, tcl-format
+msgid "%s (%s): Checkout Branch"
+msgstr "%s (%s): புதுப்பித்து கிளை"
+
+#: lib/branch_checkout.tcl:21
+msgid "Checkout Branch"
+msgstr "புதுப்பித்து கிளை"
+
+#: lib/branch_checkout.tcl:26
+msgid "Checkout"
+msgstr "புதுப்பித்து"
+
+#: lib/branch_checkout.tcl:39 lib/option.tcl:310 lib/branch_create.tcl:69
+msgid "Options"
+msgstr "விருப்பங்கள்"
+
+#: lib/branch_checkout.tcl:42 lib/branch_create.tcl:92
+msgid "Fetch Tracking Branch"
+msgstr "கண்காணிப்பு கிளையைப் பெறுங்கள்"
+
+#: lib/branch_checkout.tcl:47
+msgid "Detach From Local Branch"
+msgstr "உள்ளக கிளையிலிருந்து பிரிக்கவும்"
+
+#: lib/status_bar.tcl:263
+#, tcl-format
+msgid "%s ... %*i of %*i %s (%3i%%)"
+msgstr "%s ... %*i of %*i %s ( %3i %%)"
+
+#: lib/remote.tcl:200
+msgid "Push to"
+msgstr "தள்ளுங்கள்"
+
+#: lib/remote.tcl:218
+msgid "Remove Remote"
+msgstr "ரிமோட்டை அகற்று"
+
+#: lib/remote.tcl:223
+msgid "Prune from"
+msgstr "இருந்து கத்தரிக்காய்"
+
+#: lib/remote.tcl:228
+msgid "Fetch from"
+msgstr "இருந்து பெறுங்கள்"
+
+#: lib/remote.tcl:249 lib/remote.tcl:253 lib/remote.tcl:258 lib/remote.tcl:264
+msgid "All"
+msgstr "அனைத்தும்"
+
+#: lib/branch_rename.tcl:15
+#, tcl-format
+msgid "%s (%s): Rename Branch"
+msgstr "%s (%s): கிளை மறுபெயரிடுதல்"
+
+#: lib/branch_rename.tcl:23
+msgid "Rename Branch"
+msgstr "கிளை மறுபெயரிடுக"
+
+#: lib/branch_rename.tcl:28
+msgid "Rename"
+msgstr "மறுபெயரிடுங்கள்"
+
+#: lib/branch_rename.tcl:38
+msgid "Branch:"
+msgstr "கிளை:"
+
+#: lib/branch_rename.tcl:46
+msgid "New Name:"
+msgstr "புதிய பெயர்:"
+
+#: lib/branch_rename.tcl:81
+msgid "Please select a branch to rename."
+msgstr "மறுபெயரிட ஒரு கிளையைத் தேர்ந்தெடுக்கவும்."
+
+#: lib/branch_rename.tcl:92 lib/branch_create.tcl:154
+msgid "Please supply a branch name."
+msgstr "தயவுசெய்து ஒரு கிளை பெயரை வழங்கவும்."
+
+#: lib/branch_rename.tcl:112 lib/branch_create.tcl:165
+#, tcl-format
+msgid "'%s' is not an acceptable branch name."
+msgstr "'%s' என்பது ஏற்றுக்கொள்ளக்கூடிய கிளை பெயர் அல்ல."
+
+#: lib/branch_rename.tcl:123
+#, tcl-format
+msgid "Failed to rename '%s'."
+msgstr "'%s' என மறுபெயரிடுவதில் தோல்வி."
+
+#: lib/choose_font.tcl:41
+msgid "Select"
+msgstr "தேர்ந்தெடு"
+
+#: lib/choose_font.tcl:55
+msgid "Font Family"
+msgstr "எழுத்துரு குடும்பம்"
+
+#: lib/choose_font.tcl:76
+msgid "Font Size"
+msgstr "எழுத்துரு அளவு"
+
+#: lib/choose_font.tcl:93
+msgid "Font Example"
+msgstr "எழுத்துரு சான்று"
+
+#: lib/choose_font.tcl:105
+msgid ""
+"This is example text.\n"
+"If you like this text, it can be your font."
+msgstr ""
+"இது எடுத்துக்காட்டு உரை. \n"
+"இந்த உரையை நீங்கள் விரும்பினால், அது உங்கள் எழுத்துருவாக இருக்கலாம்."
+
+#: lib/option.tcl:11
+#, tcl-format
+msgid "Invalid global encoding '%s'"
+msgstr "தவறான உலகளாவிய குறியாக்கம் '%s'"
+
+#: lib/option.tcl:19
+#, tcl-format
+msgid "Invalid repo encoding '%s'"
+msgstr "தவறான ரெப்போ குறியீட்டு '%s'"
+
+#: lib/option.tcl:119
+msgid "Restore Defaults"
+msgstr "இயல்புநிலைகளை மீட்டெடுங்கள்"
+
+#: lib/option.tcl:123
+msgid "Save"
+msgstr "சேமி"
+
+#: lib/option.tcl:133
+#, tcl-format
+msgid "%s Repository"
+msgstr "%s களஞ்சியம்"
+
+#: lib/option.tcl:134
+msgid "Global (All Repositories)"
+msgstr "உலகளாவிய (அனைத்து களஞ்சியங்களும்)"
+
+#: lib/option.tcl:140
+msgid "User Name"
+msgstr "பயனர் பெயர்"
+
+#: lib/option.tcl:141
+msgid "Email Address"
+msgstr "மின்னஞ்சல் முகவரி"
+
+#: lib/option.tcl:143
+msgid "Summarize Merge Commits"
+msgstr "சுருக்கம் ஒன்றிணைப்பு கமிட்டுகள்"
+
+#: lib/option.tcl:144
+msgid "Merge Verbosity"
+msgstr "சொற்களஞ்சியத்தை ஒன்றிணைக்கவும்"
+
+#: lib/option.tcl:145
+msgid "Show Diffstat After Merge"
+msgstr "ஒன்றிணைந்த பிறகு டிஃப்ச்டாட்டைக் காட்டு"
+
+#: lib/option.tcl:146
+msgid "Use Merge Tool"
+msgstr "ஒன்றிணைக்கும் கருவியைப் பயன்படுத்தவும்"
+
+#: lib/option.tcl:148
+msgid "Trust File Modification Timestamps"
+msgstr "கோப்பு மாற்றியமைக்கும் நேர முத்திரைகளை நம்புங்கள்"
+
+#: lib/option.tcl:149
+msgid "Prune Tracking Branches During Fetch"
+msgstr "பெறும்போது கிளைகளை கண்காணிக்கும் கிளைகளை கத்தரிக்காய்"
+
+#: lib/option.tcl:150
+msgid "Match Tracking Branches"
+msgstr "கண்காணிப்பு கிளைகளை பொருத்தவும்"
+
+#: lib/option.tcl:151
+msgid "Use Textconv For Diffs and Blames"
+msgstr "வேறுபாடுகள் மற்றும் குற்றவாளிகளுக்கு TextConv ஐப் பயன்படுத்தவும்"
+
+#: lib/option.tcl:152
+msgid "Blame Copy Only On Changed Files"
+msgstr "மாற்றப்பட்ட கோப்புகளில் மட்டுமே நகலை குறை கூறுங்கள்"
+
+#: lib/option.tcl:153
+msgid "Maximum Length of Recent Repositories List"
+msgstr "அண்மைக் கால களஞ்சியங்களின் பட்டியலின் அதிகபட்ச நீளம்"
+
+#: lib/option.tcl:154
+msgid "Minimum Letters To Blame Copy On"
+msgstr "நகலைக் குறை கூற குறைந்தபட்ச கடிதங்கள்"
+
+#: lib/option.tcl:155
+msgid "Blame History Context Radius (days)"
+msgstr "வரலாற்று சூழல் ஆரம் (நாட்கள்)"
+
+#: lib/option.tcl:156
+msgid "Number of Diff Context Lines"
+msgstr "வேறுபட்ட சூழல் வரிகளின் எண்ணிக்கை"
+
+#: lib/option.tcl:157
+msgid "Additional Diff Parameters"
+msgstr "கூடுதல் வேறுபாடு அளவுருக்கள்"
+
+#: lib/option.tcl:158
+msgid "Commit Message Text Width"
+msgstr "செய்தி உரை அகலத்தை செய்யுங்கள்"
+
+#: lib/option.tcl:159
+msgid "New Branch Name Template"
+msgstr "புதிய கிளை பெயர் வார்ப்புரு"
+
+#: lib/option.tcl:160
+msgid "Default File Contents Encoding"
+msgstr "இயல்புநிலை கோப்பு உள்ளடக்கங்கள் குறியாக்கம்"
+
+#: lib/option.tcl:161
+msgid "Warn before committing to a detached head"
+msgstr "பிரிக்கப்பட்ட தலையில் ஈடுபடுவதற்கு முன் எச்சரிக்கவும்"
+
+#: lib/option.tcl:162
+msgid "Staging of untracked files"
+msgstr "கட்டுப்படுத்தப்படாத கோப்புகளின் நிலை"
+
+#: lib/option.tcl:163
+msgid "Show untracked files"
+msgstr "கட்டுப்படுத்தப்படாத கோப்புகளைக் காட்டு"
+
+#: lib/option.tcl:164
+msgid "Tab spacing"
+msgstr "தாவல் இடைவெளி"
+
+#: lib/option.tcl:182 lib/option.tcl:197 lib/option.tcl:220 lib/option.tcl:282
+#: lib/database.tcl:57
+#, tcl-format
+msgid "%s:"
+msgstr "%s:"
+
+#: lib/option.tcl:210
+msgid "Change"
+msgstr "மாற்றம்"
+
+#: lib/option.tcl:254
+msgid "Spelling Dictionary:"
+msgstr "எழுத்துப்பிழை அகராதி:"
+
+#: lib/option.tcl:284
+msgid "Change Font"
+msgstr "எழுத்துருவை மாற்றவும்"
+
+#: lib/option.tcl:288
+#, tcl-format
+msgid "Choose %s"
+msgstr "%s ஐத் தேர்வுசெய்க"
+
+#: lib/option.tcl:294
+msgid "pt."
+msgstr "பக்."
+
+#: lib/option.tcl:308
+msgid "Preferences"
+msgstr "விருப்பத்தேர்வுகள்"
+
+#: lib/option.tcl:345
+msgid "Failed to completely save options:"
+msgstr "விருப்பங்களை முழுமையாக சேமிப்பதில் தோல்வி:"
+
+#: lib/encoding.tcl:443
+msgid "Default"
+msgstr "இயல்புநிலை"
+
+#: lib/encoding.tcl:448
+#, tcl-format
+msgid "System (%s)"
+msgstr "அமைப்பு (%s)"
+
+#: lib/encoding.tcl:459 lib/encoding.tcl:465
+msgid "Other"
+msgstr "மற்றொன்று"
+
+#: lib/tools.tcl:76
+#, tcl-format
+msgid "Running %s requires a selected file."
+msgstr "%s இயங்குவதற்கு தேர்ந்தெடுக்கப்பட்ட கோப்பு தேவை."
+
+#: lib/tools.tcl:92
+#, tcl-format
+msgid "Are you sure you want to run %1$s on file \"%2$s\"?"
+msgstr "\" %2$s\" கோப்பில் %1$s ஐ இயக்க விரும்புகிறீர்களா?"
+
+#: lib/tools.tcl:96
+#, tcl-format
+msgid "Are you sure you want to run %s?"
+msgstr "நீங்கள் %s ஐ இயக்க விரும்புகிறீர்களா?"
+
+#: lib/tools.tcl:118
+#, tcl-format
+msgid "Tool: %s"
+msgstr "கருவிகள்"
+
+#: lib/tools.tcl:119
+#, tcl-format
+msgid "Running: %s"
+msgstr "இயங்கும்: %s"
+
+#: lib/tools.tcl:158
+#, tcl-format
+msgid "Tool completed successfully: %s"
+msgstr "கருவி வெற்றிகரமாக முடிந்தது: %s"
+
+#: lib/tools.tcl:160
+#, tcl-format
+msgid "Tool failed: %s"
+msgstr "கருவி தோல்வியுற்றது: %s"
+
+#: lib/mergetool.tcl:8
+msgid "Force resolution to the base version?"
+msgstr "அடிப்படை பதிப்பிற்கு ஆற்றல் தீர்மானம்?"
+
+#: lib/mergetool.tcl:9
+msgid "Force resolution to this branch?"
+msgstr "இந்த கிளைக்கு ஆற்றல் தீர்மானம்?"
+
+#: lib/mergetool.tcl:10
+msgid "Force resolution to the other branch?"
+msgstr "மற்ற கிளைக்கு ஆற்றல் தீர்மானம்?"
+
+#: lib/mergetool.tcl:14
+#, tcl-format
+msgid ""
+"Note that the diff shows only conflicting changes.\n"
+"\n"
+"%s will be overwritten.\n"
+"\n"
+"This operation can be undone only by restarting the merge."
+msgstr ""
+"வேறுபாடு முரண்பட்ட மாற்றங்களை மட்டுமே காட்டுகிறது என்பதை நினைவில் கொள்க. \n"
+"\n"
+"%s மேலெழுதப்படும். \n"
+"\n"
+"ஒன்றிணைப்பை மறுதொடக்கம் செய்வதன் மூலம் மட்டுமே இந்த செயல்பாட்டை செயல்தவிர்க்க முடியும்."
+
+#: lib/mergetool.tcl:45
+#, tcl-format
+msgid "File %s seems to have unresolved conflicts, still stage?"
+msgstr ""
+"கோப்பு %s தீர்க்கப்படாத மோதல்களைக் கொண்டிருப்பதாகத் தெரிகிறது, இன்னும் நிலை?"
+
+#: lib/mergetool.tcl:60
+#, tcl-format
+msgid "Adding resolution for %s"
+msgstr "%s க்கான தீர்மானத்தை சேர்க்கிறது"
+
+#: lib/mergetool.tcl:141
+msgid "Cannot resolve deletion or link conflicts using a tool"
+msgstr ""
+"ஒரு கருவியைப் பயன்படுத்தி நீக்குதல் அல்லது இணைப்பு மோதல்களைத் தீர்க்க "
+"முடியாது"
+
+#: lib/mergetool.tcl:146
+msgid "Conflict file does not exist"
+msgstr "மோதல் கோப்பு இல்லை"
+
+#: lib/mergetool.tcl:246
+#, tcl-format
+msgid "Not a GUI merge tool: '%s'"
+msgstr "GUI ஒன்றிணைக்கும் கருவி அல்ல: '%s'"
+
+#: lib/mergetool.tcl:275
+#, tcl-format
+msgid "Unsupported merge tool '%s'"
+msgstr "ஆதரிக்கப்படாத ஒன்றிணைக்கும் கருவி '%s'"
+
+#: lib/mergetool.tcl:310
+msgid "Merge tool is already running, terminate it?"
+msgstr "ஒன்றிணைக்கும் கருவி ஏற்கனவே இயங்குகிறது, அதை நிறுத்தவா?"
+
+#: lib/mergetool.tcl:330
+#, tcl-format
+msgid ""
+"Error retrieving versions:\n"
+"%s"
+msgstr ""
+"பதிப்புகளை மீட்டெடுப்பதில் பிழை: \n"
+"%s"
+
+#: lib/mergetool.tcl:350
+#, tcl-format
+msgid ""
+"Could not start the merge tool:\n"
+"\n"
+"%s"
+msgstr ""
+"ஒன்றிணைக்கும் கருவியைத் தொடங்க முடியவில்லை: \n"
+"\n"
+"%s"
+
+#: lib/mergetool.tcl:354
+msgid "Running merge tool..."
+msgstr "ஒன்றிணைக்கும் கருவி இயங்கும் ..."
+
+#: lib/mergetool.tcl:382 lib/mergetool.tcl:390
+msgid "Merge tool failed."
+msgstr "ஒன்றிணைக்கும் கருவி தோல்வியடைந்தது."
+
+#: lib/tools_dlg.tcl:22
+#, tcl-format
+msgid "%s (%s): Add Tool"
+msgstr "%s (%s): கருவியைச் சேர்க்கவும்"
+
+#: lib/tools_dlg.tcl:28
+msgid "Add New Tool Command"
+msgstr "புதிய கருவி கட்டளையைச் சேர்க்கவும்"
+
+#: lib/tools_dlg.tcl:34
+msgid "Add globally"
+msgstr "உலகளவில் சேர்க்கவும்"
+
+#: lib/tools_dlg.tcl:46
+msgid "Tool Details"
+msgstr "கருவி விவரங்கள்"
+
+#: lib/tools_dlg.tcl:49
+msgid "Use '/' separators to create a submenu tree:"
+msgstr "ஒரு துணை மரத்தை உருவாக்க '/' பிரிப்பான்களைப் பயன்படுத்தவும்:"
+
+#: lib/tools_dlg.tcl:60
+msgid "Command:"
+msgstr "கட்டளை:"
+
+#: lib/tools_dlg.tcl:71
+msgid "Show a dialog before running"
+msgstr "இயங்குவதற்கு முன் ஒரு உரையாடலைக் காட்டு"
+
+#: lib/tools_dlg.tcl:77
+msgid "Ask the user to select a revision (sets $REVISION)"
+msgstr ""
+"ஒரு திருத்தத்தைத் தேர்ந்தெடுக்க பயனரிடம் கேளுங்கள் (அமைக்கிறது $ "
+"திருத்தத்தை)"
+
+#: lib/tools_dlg.tcl:82
+msgid "Ask the user for additional arguments (sets $ARGS)"
+msgstr "கூடுதல் வாதங்களை பயனரிடம் கேளுங்கள் (அமைக்கிறது $ args)"
+
+#: lib/tools_dlg.tcl:89
+msgid "Don't show the command output window"
+msgstr "கட்டளை வெளியீட்டு சாளரத்தைக் காட்ட வேண்டாம்"
+
+#: lib/tools_dlg.tcl:94
+msgid "Run only if a diff is selected ($FILENAME not empty)"
+msgstr ""
+"ஒரு வேறுபாடு தேர்ந்தெடுக்கப்பட்டால் மட்டுமே இயக்கவும் ($ கோப்பு பெயர் "
+"காலியாக இல்லை)"
+
+#: lib/tools_dlg.tcl:118
+msgid "Please supply a name for the tool."
+msgstr "கருவிக்கு ஒரு பெயரை வழங்கவும்."
+
+#: lib/tools_dlg.tcl:126
+#, tcl-format
+msgid "Tool '%s' already exists."
+msgstr "கருவி '%s' ஏற்கனவே உள்ளது."
+
+#: lib/tools_dlg.tcl:148
+#, tcl-format
+msgid ""
+"Could not add tool:\n"
+"%s"
+msgstr "கருவிகளைச் சேர்க்க முடியவில்லை"
+
+#: lib/tools_dlg.tcl:187
+#, tcl-format
+msgid "%s (%s): Remove Tool"
+msgstr "%s (%s): கருவியை அகற்று"
+
+#: lib/tools_dlg.tcl:193
+msgid "Remove Tool Commands"
+msgstr "கருவி கட்டளைகளை அகற்று"
+
+#: lib/tools_dlg.tcl:198
+msgid "Remove"
+msgstr "அகற்று"
+
+#: lib/tools_dlg.tcl:231
+msgid "(Blue denotes repository-local tools)"
+msgstr "(நீலம் களஞ்சிய-உள்ளூர் கருவிகளைக் குறிக்கிறது)"
+
+#: lib/tools_dlg.tcl:283
+#, tcl-format
+msgid "%s (%s):"
+msgstr "%s (%s):"
+
+#: lib/tools_dlg.tcl:292
+#, tcl-format
+msgid "Run Command: %s"
+msgstr "கட்டளை ரன்: %s"
+
+#: lib/tools_dlg.tcl:306
+msgid "Arguments"
+msgstr "வாதங்கள்"
+
+#: lib/tools_dlg.tcl:341
+msgid "OK"
+msgstr "சரி"
+
+#: lib/search.tcl:48
+msgid "Find:"
+msgstr "கண்டுபிடி:"
+
+#: lib/search.tcl:50
+msgid "Next"
+msgstr "அடுத்தது"
+
+#: lib/search.tcl:51
+msgid "Prev"
+msgstr "முந்தைய"
+
+#: lib/search.tcl:52
+msgid "RegExp"
+msgstr "Regexp"
+
+#: lib/search.tcl:54
+msgid "Case"
+msgstr "வழக்கு"
+
+#: lib/shortcut.tcl:8 lib/shortcut.tcl:43 lib/shortcut.tcl:75
+#, tcl-format
+msgid "%s (%s): Create Desktop Icon"
+msgstr "%s (%s): டெச்க்டாப் ஐகானை உருவாக்கவும்"
+
+#: lib/shortcut.tcl:24 lib/shortcut.tcl:65
+msgid "Cannot write shortcut:"
+msgstr "குறுக்குவழியை எழுத முடியாது:"
+
+#: lib/shortcut.tcl:140
+msgid "Cannot write icon:"
+msgstr "படவுரு எழுத முடியாது:"
+
+#: lib/remote_branch_delete.tcl:29
+#, tcl-format
+msgid "%s (%s): Delete Branch Remotely"
+msgstr "%s (%s): கிளையை தொலைவிலிருந்து நீக்கு"
+
+#: lib/remote_branch_delete.tcl:34
+msgid "Delete Branch Remotely"
+msgstr "கிளையை தொலைவிலிருந்து நீக்கவும்"
+
+#: lib/remote_branch_delete.tcl:48
+msgid "From Repository"
+msgstr "களஞ்சியத்திலிருந்து"
+
+#: lib/remote_branch_delete.tcl:88
+msgid "Branches"
+msgstr "கிளைகள்"
+
+#: lib/remote_branch_delete.tcl:110
+msgid "Delete Only If"
+msgstr "என்றால் மட்டும் நீக்கு"
+
+#: lib/remote_branch_delete.tcl:112
+msgid "Merged Into:"
+msgstr "ஒன்றிணைந்தது:"
+
+#: lib/remote_branch_delete.tcl:120 lib/branch_delete.tcl:53
+msgid "Always (Do not perform merge checks)"
+msgstr "எப்போதும் (ஒன்றிணைக்கும் சோதனைகளைச் செய்ய வேண்டாம்)"
+
+#: lib/remote_branch_delete.tcl:153
+msgid "A branch is required for 'Merged Into'."
+msgstr "'இணைக்க' ஒரு கிளை தேவை."
+
+#: lib/remote_branch_delete.tcl:185
+#, tcl-format
+msgid ""
+"The following branches are not completely merged into %s:\n"
+"\n"
+" - %s"
+msgstr ""
+"பின்வரும் கிளைகள் %s இல் முழுமையாக இணைக்கப்படவில்லை: \n"
+"\n"
+"- %s"
+
+#: lib/remote_branch_delete.tcl:190
+#, tcl-format
+msgid ""
+"One or more of the merge tests failed because you have not fetched the "
+"necessary commits.  Try fetching from %s first."
+msgstr ""
+"ஒன்றிணைந்த சோதனைகளில் ஒன்று அல்லது அதற்கு மேற்பட்டவை தோல்வியடைந்தன, ஏனெனில் "
+"நீங்கள் தேவையான கமிட்டுகளைப் பெறவில்லை. முதலில் %s இலிருந்து பெற "
+"முயற்சிக்கவும்."
+
+#: lib/remote_branch_delete.tcl:208
+msgid "Please select one or more branches to delete."
+msgstr "நீக்க ஒன்று அல்லது அதற்கு மேற்பட்ட கிளைகளைத் தேர்ந்தெடுக்கவும்."
+
+#: lib/remote_branch_delete.tcl:218 lib/branch_delete.tcl:115
+msgid ""
+"Recovering deleted branches is difficult.\n"
+"\n"
+"Delete the selected branches?"
+msgstr ""
+"நீக்கப்பட்ட கிளைகளை மீட்டெடுப்பது கடினம். \n"
+"\n"
+"தேர்ந்தெடுக்கப்பட்ட கிளைகளை நீக்கவா?"
+
+#: lib/remote_branch_delete.tcl:227
+#, tcl-format
+msgid "Deleting branches from %s"
+msgstr "%s இலிருந்து கிளைகளை நீக்குதல்"
+
+#: lib/remote_branch_delete.tcl:300
+msgid "No repository selected."
+msgstr "எந்த களஞ்சியமும் தேர்ந்தெடுக்கப்படவில்லை."
+
+#: lib/remote_branch_delete.tcl:305
+#, tcl-format
+msgid "Scanning %s..."
+msgstr "ச்கேனிங் %s ..."
+
+#: lib/choose_repository.tcl:45
+msgid "Git Gui"
+msgstr "அறிவிலி குய்"
+
+#: lib/choose_repository.tcl:104 lib/choose_repository.tcl:427
+msgid "Create New Repository"
+msgstr "புதிய களஞ்சியத்தை உருவாக்கவும்"
+
+#: lib/choose_repository.tcl:110
+msgid "New..."
+msgstr "புதியது ..."
+
+#: lib/choose_repository.tcl:117 lib/choose_repository.tcl:511
+msgid "Clone Existing Repository"
+msgstr "இருக்கும் களஞ்சியத்தை நகலி செய்யுங்கள்"
+
+#: lib/choose_repository.tcl:128
+msgid "Clone..."
+msgstr "நகலி ..."
+
+#: lib/choose_repository.tcl:135 lib/choose_repository.tcl:1105
+msgid "Open Existing Repository"
+msgstr "இருக்கும் களஞ்சியத்தைத் திறக்கவும்"
+
+#: lib/choose_repository.tcl:141
+msgid "Open..."
+msgstr "திறந்த ..."
+
+#: lib/choose_repository.tcl:154
+msgid "Recent Repositories"
+msgstr "அண்மைக் கால களஞ்சியங்கள்"
+
+#: lib/choose_repository.tcl:164
+msgid "Open Recent Repository:"
+msgstr "அண்மைக் கால களஞ்சியத்தைத் திறக்கவும்:"
+
+#: lib/choose_repository.tcl:331 lib/choose_repository.tcl:338
+#: lib/choose_repository.tcl:345
+#, tcl-format
+msgid "Failed to create repository %s:"
+msgstr "%s களஞ்சியத்தை உருவாக்குவதில் தோல்வி:"
+
+#: lib/choose_repository.tcl:422 lib/branch_create.tcl:33
+msgid "Create"
+msgstr "உருவாக்கு"
+
+#: lib/choose_repository.tcl:432
+msgid "Directory:"
+msgstr "அடைவு:"
+
+#: lib/choose_repository.tcl:462 lib/choose_repository.tcl:588
+#: lib/choose_repository.tcl:1139
+msgid "Git Repository"
+msgstr "அறிவிலி களஞ்சியம்"
+
+#: lib/choose_repository.tcl:487
+#, tcl-format
+msgid "Directory %s already exists."
+msgstr "அடைவு %s ஏற்கனவே உள்ளன."
+
+#: lib/choose_repository.tcl:491
+#, tcl-format
+msgid "File %s already exists."
+msgstr "கோப்பு %s ஏற்கனவே உள்ளது."
+
+#: lib/choose_repository.tcl:506
+msgid "Clone"
+msgstr "நகலி"
+
+#: lib/choose_repository.tcl:519
+msgid "Source Location:"
+msgstr "மூல இடம்:"
+
+#: lib/choose_repository.tcl:528
+msgid "Target Directory:"
+msgstr "இலக்கு அடைவு:"
+
+#: lib/choose_repository.tcl:538
+msgid "Clone Type:"
+msgstr "நகலி வகை:"
+
+#: lib/choose_repository.tcl:543
+msgid "Standard (Fast, Semi-Redundant, Hardlinks)"
+msgstr "தரநிலை (வேகமான, அரை-குறைப்பு, ஆர்ட்லிங்க்ச்)"
+
+#: lib/choose_repository.tcl:548
+msgid "Full Copy (Slower, Redundant Backup)"
+msgstr "முழு நகல் (மெதுவான, தேவையற்ற காப்புப்பிரதி)"
+
+#: lib/choose_repository.tcl:553
+msgid "Shared (Fastest, Not Recommended, No Backup)"
+msgstr "பகிரப்பட்டது (வேகமான, பரிந்துரைக்கப்படவில்லை, காப்புப்பிரதி இல்லை)"
+
+#: lib/choose_repository.tcl:560
+msgid "Recursively clone submodules too"
+msgstr "மீண்டும் மீண்டும் நகலி சப்மோடூல்கள்"
+
+#: lib/choose_repository.tcl:594 lib/choose_repository.tcl:641
+#: lib/choose_repository.tcl:790 lib/choose_repository.tcl:864
+#: lib/choose_repository.tcl:1145 lib/choose_repository.tcl:1153
+#, tcl-format
+msgid "Not a Git repository: %s"
+msgstr "ஒரு அறிவிலி களஞ்சியம் அல்ல: %s"
+
+#: lib/choose_repository.tcl:630
+msgid "Standard only available for local repository."
+msgstr "உள்ளக களஞ்சியத்திற்கு மட்டுமே தரநிலை கிடைக்கிறது."
+
+#: lib/choose_repository.tcl:634
+msgid "Shared only available for local repository."
+msgstr "உள்ளக களஞ்சியத்திற்கு மட்டுமே பகிரப்பட்டது."
+
+#: lib/choose_repository.tcl:655
+#, tcl-format
+msgid "Location %s already exists."
+msgstr "இருப்பிடம் %s ஏற்கனவே உள்ளன."
+
+#: lib/choose_repository.tcl:666
+msgid "Failed to configure origin"
+msgstr "தோற்றத்தை உள்ளமைக்கத் தவறிவிட்டது"
+
+#: lib/choose_repository.tcl:678
+msgid "Counting objects"
+msgstr "பொருள்களை எண்ணுதல்"
+
+#: lib/choose_repository.tcl:679
+msgid "buckets"
+msgstr "வாளிகள்"
+
+#: lib/choose_repository.tcl:703
+#, tcl-format
+msgid "Unable to copy objects/info/alternates: %s"
+msgstr "பொருள்கள்/தகவல்/மாற்றுகளை நகலெடுக்க முடியவில்லை: %s"
+
+#: lib/choose_repository.tcl:740
+#, tcl-format
+msgid "Nothing to clone from %s."
+msgstr "%s இலிருந்து நகலி செய்ய எதுவும் இல்லை."
+
+#: lib/choose_repository.tcl:742 lib/choose_repository.tcl:962
+#: lib/choose_repository.tcl:974
+msgid "The 'master' branch has not been initialized."
+msgstr "'மாச்டர்' கிளை துவக்கப்படவில்லை."
+
+#: lib/choose_repository.tcl:755
+msgid "Hardlinks are unavailable.  Falling back to copying."
+msgstr "ஆர்ட்லிங்க்கள் கிடைக்கவில்லை. நகலெடுப்பதற்கு மீண்டும் விழுகிறது."
+
+#: lib/choose_repository.tcl:769
+#, tcl-format
+msgid "Cloning from %s"
+msgstr "%s இலிருந்து குளோனிங்"
+
+#: lib/choose_repository.tcl:800
+msgid "Copying objects"
+msgstr "பொருள்களை நகலெடுக்கும்"
+
+#: lib/choose_repository.tcl:801
+msgid "KiB"
+msgstr "வினோதமாக"
+
+#: lib/choose_repository.tcl:825
+#, tcl-format
+msgid "Unable to copy object: %s"
+msgstr "பொருளை நகலெடுக்க முடியவில்லை: %s"
+
+#: lib/choose_repository.tcl:837
+msgid "Linking objects"
+msgstr "பொருள்களை இணைக்கும்"
+
+#: lib/choose_repository.tcl:838
+msgid "objects"
+msgstr "பொருள்கள்"
+
+#: lib/choose_repository.tcl:846
+#, tcl-format
+msgid "Unable to hardlink object: %s"
+msgstr "ஆர்ட்லிங்க் பொருள்: %s"
+
+#: lib/choose_repository.tcl:903
+msgid "Cannot fetch branches and objects.  See console output for details."
+msgstr ""
+"கிளைகளையும் பொருள்களையும் பெற முடியாது. விவரங்களுக்கு கன்சோல் வெளியீட்டைப் "
+"பார்க்கவும்."
+
+#: lib/choose_repository.tcl:914
+msgid "Cannot fetch tags.  See console output for details."
+msgstr ""
+"குறிச்சொற்களைப் பெற முடியாது. விவரங்களுக்கு கன்சோல் வெளியீட்டைப் "
+"பார்க்கவும்."
+
+#: lib/choose_repository.tcl:938
+msgid "Cannot determine HEAD.  See console output for details."
+msgstr ""
+"தலையை தீர்மானிக்க முடியாது. விவரங்களுக்கு கன்சோல் வெளியீட்டைப் பார்க்கவும்."
+
+#: lib/choose_repository.tcl:947
+#, tcl-format
+msgid "Unable to cleanup %s"
+msgstr "%களை தூய்மை செய்ய முடியவில்லை"
+
+#: lib/choose_repository.tcl:953
+msgid "Clone failed."
+msgstr "நகலி தோல்வியடைந்தது."
+
+#: lib/choose_repository.tcl:960
+msgid "No default branch obtained."
+msgstr "இயல்புநிலை கிளை எதுவும் பெறப்படவில்லை."
+
+#: lib/choose_repository.tcl:971
+#, tcl-format
+msgid "Cannot resolve %s as a commit."
+msgstr "%s ஐ ஒரு உறுதிப்பாடாக தீர்க்க முடியாது."
+
+#: lib/choose_repository.tcl:998
+msgid "Creating working directory"
+msgstr "வேலை கோப்பகத்தை உருவாக்குதல்"
+
+#: lib/choose_repository.tcl:1028
+msgid "Initial file checkout failed."
+msgstr "ஆரம்ப கோப்பு புதுப்பிப்பு தோல்வியடைந்தது."
+
+#: lib/choose_repository.tcl:1072
+msgid "Cloning submodules"
+msgstr "குளோனிங் சப்மோடூல்கள்"
+
+#: lib/choose_repository.tcl:1087
+msgid "Cannot clone submodules."
+msgstr "துணைமண்டலங்களை நகலி செய்ய முடியாது."
+
+#: lib/choose_repository.tcl:1110
+msgid "Repository:"
+msgstr "களஞ்சியம்:"
+
+#: lib/choose_repository.tcl:1159
+#, tcl-format
+msgid "Failed to open repository %s:"
+msgstr "களஞ்சியத்தை திறக்கத் தவறிவிட்டது %s:"
+
+#: lib/about.tcl:26
+msgid "git-gui - a graphical user interface for Git."
+msgstr "GIT -GUI - GIT க்கான வரைகலை பயனர் இடைமுகம்."
+
+#: lib/blame.tcl:74
+#, tcl-format
+msgid "%s (%s): File Viewer"
+msgstr "%s (%s): கோப்பு பார்வையாளர்"
+
+#: lib/blame.tcl:80
+msgid "Commit:"
+msgstr "கமிட்:"
+
+#: lib/blame.tcl:282
+msgid "Copy Commit"
+msgstr "நகல்"
+
+#: lib/blame.tcl:286
+msgid "Find Text..."
+msgstr "உரையைக் கண்டுபிடி ..."
+
+#: lib/blame.tcl:290
+msgid "Goto Line..."
+msgstr "கோட்டோ வரி ..."
+
+#: lib/blame.tcl:299
+msgid "Do Full Copy Detection"
+msgstr "முழு நகல் கண்டறிதலைச் செய்யுங்கள்"
+
+#: lib/blame.tcl:303
+msgid "Show History Context"
+msgstr "வரலாற்று சூழலைக் காட்டு"
+
+#: lib/blame.tcl:306
+msgid "Blame Parent Commit"
+msgstr "குற்றம் சாட்டிய பெற்றோர்"
+
+#: lib/blame.tcl:468
+#, tcl-format
+msgid "Reading %s..."
+msgstr "%s படித்தல் ..."
+
+#: lib/blame.tcl:596
+msgid "Loading copy/move tracking annotations..."
+msgstr "நகல்/நகரும் கண்காணிப்பு சிறுகுறிப்புகளை ஏற்றுகிறது ..."
+
+#: lib/blame.tcl:613
+msgid "lines annotated"
+msgstr "கோடுகள் சிறுகுறிப்பு"
+
+#: lib/blame.tcl:815
+msgid "Loading original location annotations..."
+msgstr "அசல் இருப்பிட சிறுகுறிப்புகளை ஏற்றுகிறது ..."
+
+#: lib/blame.tcl:818
+msgid "Annotation complete."
+msgstr "சிறுகுறிப்பு முடிந்தது."
+
+#: lib/blame.tcl:849
+msgid "Busy"
+msgstr "பிசியாக"
+
+#: lib/blame.tcl:850
+msgid "Annotation process is already running."
+msgstr "சிறுகுறிப்பு செயல்முறை ஏற்கனவே இயங்குகிறது."
+
+#: lib/blame.tcl:889
+msgid "Running thorough copy detection..."
+msgstr "முழுமையான நகல் கண்டறிதலை இயக்குகிறது ..."
+
+#: lib/blame.tcl:957
+msgid "Loading annotation..."
+msgstr "சிறுகுறிப்பு ஏற்றுகிறது ..."
+
+#: lib/blame.tcl:1010
+msgid "Author:"
+msgstr "ஆசிரியர்:"
+
+#: lib/blame.tcl:1014
+msgid "Committer:"
+msgstr "ஆணையர்:"
+
+#: lib/blame.tcl:1019
+msgid "Original File:"
+msgstr "அசல் கோப்பு:"
+
+#: lib/blame.tcl:1067
+msgid "Cannot find HEAD commit:"
+msgstr "தலை உறுதிப்பாட்டைக் கண்டுபிடிக்க முடியவில்லை:"
+
+#: lib/blame.tcl:1122
+msgid "Cannot find parent commit:"
+msgstr "பெற்றோர் உறுதிப்பாட்டைக் கண்டுபிடிக்க முடியவில்லை:"
+
+#: lib/blame.tcl:1137
+msgid "Unable to display parent"
+msgstr "பெற்றோரைக் காட்ட முடியவில்லை"
+
+#: lib/blame.tcl:1138 lib/diff.tcl:345
+msgid "Error loading diff:"
+msgstr "பிழை ஏற்றுதல் வேறுபாடு:"
+
+#: lib/blame.tcl:1279
+msgid "Originally By:"
+msgstr "முதலில்:"
+
+#: lib/blame.tcl:1285
+msgid "In File:"
+msgstr "கோப்பில்:"
+
+#: lib/blame.tcl:1290
+msgid "Copied Or Moved Here By:"
+msgstr "இங்கு நகலெடுக்கப்பட்டது அல்லது நகர்த்தப்பட்டது:"
+
+#: lib/diff.tcl:77
+#, tcl-format
+msgid ""
+"No differences detected.\n"
+"\n"
+"%s has no changes.\n"
+"\n"
+"The modification date of this file was updated by another application, but the content within the file was not changed.\n"
+"\n"
+"A rescan will be automatically started to find other files which may have the same state."
+msgstr ""
+"வேறுபாடுகள் எதுவும் கண்டறியப்படவில்லை. \n"
+"\n"
+"%s எந்த மாற்றங்களும் இல்லை. \n"
+"\n"
+"இந்த கோப்பின் மாற்றும் தேதி மற்றொரு பயன்பாட்டால் புதுப்பிக்கப்பட்டது, ஆனால் கோப்பில் உள்ள உள்ளடக்கம் மாற்றப்படவில்லை. \n"
+"\n"
+"அதே நிலையைக் கொண்ட பிற கோப்புகளைக் கண்டுபிடிக்க ஒரு மீட்டமைப்பை தானாகத் தொடங்கும்."
+
+#: lib/diff.tcl:117
+#, tcl-format
+msgid "Loading diff of %s..."
+msgstr "%s இன் வேறுபாட்டை ஏற்றுகிறது ..."
+
+#: lib/diff.tcl:143
+msgid ""
+"LOCAL: deleted\n"
+"REMOTE:\n"
+msgstr ""
+"உள்ளூர்: நீக்கப்பட்டது \n"
+"தொலைநிலை:\n"
+
+#: lib/diff.tcl:148
+msgid ""
+"REMOTE: deleted\n"
+"LOCAL:\n"
+msgstr ""
+"தொலைநிலை: நீக்கப்பட்டது \n"
+"உள்ளூர்:\n"
+
+#: lib/diff.tcl:155
+msgid "LOCAL:\n"
+msgstr "உள்ளூர்:\n"
+
+#: lib/diff.tcl:158
+msgid "REMOTE:\n"
+msgstr "தொலைநிலை:\n"
+
+#: lib/diff.tcl:220 lib/diff.tcl:344
+#, tcl-format
+msgid "Unable to display %s"
+msgstr "%s ஐக் காட்ட முடியவில்லை"
+
+#: lib/diff.tcl:221
+msgid "Error loading file:"
+msgstr "கோப்பை ஏற்றுவதில் பிழை:"
+
+#: lib/diff.tcl:227
+msgid "Git Repository (subproject)"
+msgstr "அறிவிலி களஞ்சியம் (துணை திட்டம்)"
+
+#: lib/diff.tcl:239
+msgid "* Binary file (not showing content)."
+msgstr "* பைனரி கோப்பு (உள்ளடக்கத்தைக் காட்டவில்லை)."
+
+#: lib/diff.tcl:244
+#, tcl-format
+msgid ""
+"* Untracked file is %d bytes.\n"
+"* Showing only first %d bytes.\n"
+msgstr ""
+"* கட்டுப்படுத்தப்படாத கோப்பு %d பைட்டுகள். \n"
+"* முதல் %d பைட்டுகளை மட்டுமே காட்டுகிறது.\n"
+
+#: lib/diff.tcl:250
+#, tcl-format
+msgid ""
+"\n"
+"* Untracked file clipped here by %s.\n"
+"* To see the entire file, use an external editor.\n"
+msgstr ""
+"\n"
+"* கட்டுப்படுத்தப்படாத கோப்பு இங்கே %s ஆல் கிளிப் செய்யப்பட்டது. \n"
+"* முழு கோப்பையும் காண, வெளிப்புற எடிட்டரைப் பயன்படுத்தவும்.\n"
+
+#: lib/diff.tcl:583
+msgid "Failed to unstage selected hunk."
+msgstr "தேர்ந்தெடுக்கப்பட்ட அங்க் இடைக்குத் தவறிவிட்டது."
+
+#: lib/diff.tcl:591
+msgid "Failed to revert selected hunk."
+msgstr "தேர்ந்தெடுக்கப்பட்ட அங்கை மாற்றுவதில் தோல்வி."
+
+#: lib/diff.tcl:594
+msgid "Failed to stage selected hunk."
+msgstr "தேர்ந்தெடுக்கப்பட்ட அங்கை மேடை செய்யத் தவறிவிட்டது."
+
+#: lib/diff.tcl:687
+msgid "Failed to unstage selected line."
+msgstr "தேர்ந்தெடுக்கப்பட்ட வரியில் கட்டமைக்கத் தவறிவிட்டது."
+
+#: lib/diff.tcl:696
+msgid "Failed to revert selected line."
+msgstr "தேர்ந்தெடுக்கப்பட்ட வரியை மாற்றுவதில் தோல்வி."
+
+#: lib/diff.tcl:700
+msgid "Failed to stage selected line."
+msgstr "தேர்ந்தெடுக்கப்பட்ட வரியை நிலைநிறுத்துவதில் தோல்வி."
+
+#: lib/diff.tcl:889
+msgid "Failed to undo last revert."
+msgstr "கடைசியாக மாற்றியமைக்கத் தவறிவிட்டது."
+
+#: lib/sshkey.tcl:34
+msgid "No keys found."
+msgstr "விசைகள் எதுவும் கிடைக்கவில்லை."
+
+#: lib/sshkey.tcl:37
+#, tcl-format
+msgid "Found a public key in: %s"
+msgstr "இதில் ஒரு பொது விசை கிடைத்தது: %s"
+
+#: lib/sshkey.tcl:43
+msgid "Generate Key"
+msgstr "விசையை உருவாக்குங்கள்"
+
+#: lib/sshkey.tcl:61
+msgid "Copy To Clipboard"
+msgstr "இடைநிலைப்பலகைக்கு நகலெடுக்கவும்"
+
+#: lib/sshkey.tcl:75
+msgid "Your OpenSSH Public Key"
+msgstr "உங்கள் ஓபன்ச் பொது விசை"
+
+#: lib/sshkey.tcl:83
+msgid "Generating..."
+msgstr "உருவாக்குதல் ..."
+
+#: lib/sshkey.tcl:89
+#, tcl-format
+msgid ""
+"Could not start ssh-keygen:\n"
+"\n"
+"%s"
+msgstr ""
+"SSH-KEYGEN ஐத் தொடங்க முடியவில்லை: \n"
+"\n"
+"%s"
+
+#: lib/sshkey.tcl:116
+msgid "Generation failed."
+msgstr "தலைமுறை தோல்வியடைந்தது."
+
+#: lib/sshkey.tcl:123
+msgid "Generation succeeded, but no keys found."
+msgstr "தலைமுறை செய் பெற்றது, ஆனால் விசைகள் எதுவும் கிடைக்கவில்லை."
+
+#: lib/sshkey.tcl:126
+#, tcl-format
+msgid "Your key is in: %s"
+msgstr "உங்கள் திறவுகோல் உள்ளது: %s"
+
+#: lib/branch_create.tcl:23
+#, tcl-format
+msgid "%s (%s): Create Branch"
+msgstr "%s (%s): கிளையை உருவாக்கவும்"
+
+#: lib/branch_create.tcl:28
+msgid "Create New Branch"
+msgstr "புதிய கிளையை உருவாக்கவும்"
+
+#: lib/branch_create.tcl:42
+msgid "Branch Name"
+msgstr "கிளை பெயர்"
+
+#: lib/branch_create.tcl:57
+msgid "Match Tracking Branch Name"
+msgstr "போட்டி கண்காணிப்பு கிளை பெயர்"
+
+#: lib/branch_create.tcl:66
+msgid "Starting Revision"
+msgstr "தொடங்கும் திருத்தம்"
+
+#: lib/branch_create.tcl:72
+msgid "Update Existing Branch:"
+msgstr "தற்போதுள்ள கிளைப் புதுப்பிக்கவும்:"
+
+#: lib/branch_create.tcl:75
+msgid "No"
+msgstr "இல்லை"
+
+#: lib/branch_create.tcl:80
+msgid "Fast Forward Only"
+msgstr "வேகமாக முன்னோக்கி மட்டுமே"
+
+#: lib/branch_create.tcl:97
+msgid "Checkout After Creation"
+msgstr "படைப்புக்குப் பிறகு புதுப்பிக்கவும்"
+
+#: lib/branch_create.tcl:132
+msgid "Please select a tracking branch."
+msgstr "கண்காணிப்பு கிளையைத் தேர்ந்தெடுக்கவும்."
+
+#: lib/branch_create.tcl:141
+#, tcl-format
+msgid "Tracking branch %s is not a branch in the remote repository."
+msgstr "கிளை %s கண்காணிப்பு தொலை களஞ்சியத்தில் ஒரு கிளை அல்ல."
+
+#: lib/console.tcl:59
+msgid "Working... please wait..."
+msgstr "வேலை ... தயவுசெய்து காத்திருங்கள் ..."
+
+#: lib/console.tcl:186
+msgid "Success"
+msgstr "செய்"
+
+#: lib/console.tcl:200
+msgid "Error: Command Failed"
+msgstr "பிழை: கட்டளை தோல்வியடைந்தது"
+
+#: lib/line.tcl:17
+msgid "Goto Line:"
+msgstr "கோட்டோ வரி:"
+
+#: lib/line.tcl:23
+msgid "Go"
+msgstr "போ"
+
+#: lib/choose_rev.tcl:52
+msgid "This Detached Checkout"
+msgstr "இந்த பிரிக்கப்பட்ட புதுப்பிப்பு"
+
+#: lib/choose_rev.tcl:60
+msgid "Revision Expression:"
+msgstr "திருத்த வெளிப்பாடு:"
+
+#: lib/choose_rev.tcl:72
+msgid "Local Branch"
+msgstr "உள்ளக கிளை"
+
+#: lib/choose_rev.tcl:77
+msgid "Tracking Branch"
+msgstr "கண்காணிப்பு கிளை"
+
+#: lib/choose_rev.tcl:82 lib/choose_rev.tcl:544
+msgid "Tag"
+msgstr "குறிச்சொல்"
+
+#: lib/choose_rev.tcl:321
+#, tcl-format
+msgid "Invalid revision: %s"
+msgstr "தவறான திருத்தம்: %s"
+
+#: lib/choose_rev.tcl:342
+msgid "No revision selected."
+msgstr "திருத்தம் எதுவும் தேர்ந்தெடுக்கப்படவில்லை."
+
+#: lib/choose_rev.tcl:350
+msgid "Revision expression is empty."
+msgstr "திருத்த வெளிப்பாடு காலியாக உள்ளது."
+
+#: lib/choose_rev.tcl:537
+msgid "Updated"
+msgstr "புதுப்பிக்கப்பட்டது"
+
+#: lib/choose_rev.tcl:565
+msgid "URL"
+msgstr "முகவரி"
+
+#: lib/commit.tcl:9
+msgid ""
+"There is nothing to amend.\n"
+"\n"
+"You are about to create the initial commit.  There is no commit before this to amend.\n"
+msgstr ""
+"திருத்த எதுவும் இல்லை. \n"
+"\n"
+"நீங்கள் ஆரம்ப உறுதிப்பாட்டை உருவாக்க உள்ளீர்கள். இதைத் திருத்துவதற்கு முன்பு எந்த உறுதிப்பாடும் இல்லை.\n"
+
+#: lib/commit.tcl:18
+msgid ""
+"Cannot amend while merging.\n"
+"\n"
+"You are currently in the middle of a merge that has not been fully completed.  You cannot amend the prior commit unless you first abort the current merge activity.\n"
+msgstr ""
+"ஒன்றிணைக்கும் போது திருத்த முடியாது. \n"
+"\n"
+"நீங்கள் தற்போது முழுமையாக முடிக்கப்படாத ஒரு ஒன்றிணைப்பின் நடுவில் இருக்கிறீர்கள். தற்போதைய ஒன்றிணைக்கும் செயல்பாட்டை நீங்கள் முதலில் நிறுத்தாவிட்டால் முந்தைய உறுதிப்பாட்டை நீங்கள் திருத்த முடியாது.\n"
+
+#: lib/commit.tcl:56
+msgid "Error loading commit data for amend:"
+msgstr "திருத்தத்திற்கான தரவை ஏற்றுதல் திருத்தத்திற்கான தரவை ஏற்றுவது:"
+
+#: lib/commit.tcl:83
+msgid "Unable to obtain your identity:"
+msgstr "உங்கள் அடையாளத்தைப் பெற முடியவில்லை:"
+
+#: lib/commit.tcl:88
+msgid "Invalid GIT_COMMITTER_IDENT:"
+msgstr "தவறான git_committer_ident:"
+
+#: lib/commit.tcl:138
+#, tcl-format
+msgid "warning: Tcl does not support encoding '%s'."
+msgstr "எச்சரிக்கை: '%s' குறியாக்கத்தை டி.சி.எல் ஆதரிக்கவில்லை."
+
+#: lib/commit.tcl:158
+msgid ""
+"Last scanned state does not match repository state.\n"
+"\n"
+"Another Git program has modified this repository since the last scan.  A rescan must be performed before another commit can be created.\n"
+"\n"
+"The rescan will be automatically started now.\n"
+msgstr ""
+"கடைசியாக வருடு செய்யப்பட்ட மாநிலம் களஞ்சிய நிலைக்கு பொருந்தவில்லை. \n"
+"\n"
+"மற்றொரு சிஐடி திட்டம் கடைசி வருடு முதல் இந்த களஞ்சியத்தை மாற்றியமைத்துள்ளது. மற்றொரு உறுதிப்பாட்டை உருவாக்குவதற்கு முன்பு ஒரு மீட்டமைப்பை செய்ய வேண்டும். \n"
+"\n"
+"ரெச்கான் இப்போது தானாகவே தொடங்கப்படும்.\n"
+
+#: lib/commit.tcl:182
+#, tcl-format
+msgid ""
+"Unmerged files cannot be committed.\n"
+"\n"
+"File %s has merge conflicts.  You must resolve them and stage the file before committing.\n"
+msgstr ""
+"அவிழ்க்கப்படாத கோப்புகளை செய்ய முடியாது. \n"
+"\n"
+"கோப்பு %s ஒன்றிணைக்கும் மோதல்களைக் கொண்டுள்ளன. நீங்கள் அவற்றைத் தீர்த்துக் கொள்ள வேண்டும்.\n"
+
+#: lib/commit.tcl:190
+#, tcl-format
+msgid ""
+"Unknown file state %s detected.\n"
+"\n"
+"File %s cannot be committed by this program.\n"
+msgstr ""
+"அறியப்படாத கோப்பு நிலை %s கண்டறியப்பட்டன. \n"
+"\n"
+"இந்த திட்டத்தால் %s செய்ய முடியாது.\n"
+
+#: lib/commit.tcl:198
+msgid ""
+"No changes to commit.\n"
+"\n"
+"You must stage at least 1 file before you can commit.\n"
+msgstr ""
+"செய்ய எந்த மாற்றங்களும் இல்லை. \n"
+"\n"
+"நீங்கள் ஈடுபடுவதற்கு முன்பு நீங்கள் குறைந்தது 1 கோப்பை அரங்கேற்ற வேண்டும்.\n"
+
+#: lib/commit.tcl:213
+msgid ""
+"Please supply a commit message.\n"
+"\n"
+"A good commit message has the following format:\n"
+"\n"
+"- First line: Describe in one sentence what you did.\n"
+"- Second line: Blank\n"
+"- Remaining lines: Describe why this change is good.\n"
+msgstr ""
+"தயவுசெய்து ஒரு கமிட் செய்தியை வழங்கவும். \n"
+"\n"
+"ஒரு நல்ல கமிட் செய்தி பின்வரும் வடிவத்தைக் கொண்டுள்ளது: \n"
+"\n"
+"- முதல் வரி: நீங்கள் செய்ததை ஒரு வாக்கியத்தில் விவரிக்கவும். \n"
+"- இரண்டாவது வரி: வெற்று \n"
+"- மீதமுள்ள கோடுகள்: இந்த மாற்றம் ஏன் நல்லது என்பதை விவரிக்கவும்.\n"
+
+#: lib/commit.tcl:244
+msgid "Calling pre-commit hook..."
+msgstr "முன் கட்டளை கொக்கி என்று அழைக்கிறது ..."
+
+#: lib/commit.tcl:259
+msgid "Commit declined by pre-commit hook."
+msgstr "கமிட்-கமிட் ஊக்கால் மறுக்கப்பட்டது."
+
+#: lib/commit.tcl:278
+msgid ""
+"You are about to commit on a detached head. This is a potentially dangerous thing to do because if you switch to another branch you will lose your changes and it can be difficult to retrieve them later from the reflog. You should probably cancel this commit and create a new branch to continue.\n"
+" \n"
+" Do you really want to proceed with your Commit?"
+msgstr ""
+"நீங்கள் பிரிக்கப்பட்ட தலையில் ஈடுபட உள்ளீர்கள். இது ஒரு ஆபத்தான சேதி, ஏனென்றால் நீங்கள் வேறொரு கிளைக்கு மாறினால் உங்கள் மாற்றங்களை இழப்பீர்கள், பின்னர் அவற்றை பிரதிபலிப்பிலிருந்து மீட்டெடுப்பது கடினம். நீங்கள் இந்த உறுதிப்பாட்டை ரத்துசெய்து தொடர ஒரு புதிய கிளையை உருவாக்க வேண்டும். \n"
+"\n"
+"உங்கள் உறுதிப்பாட்டைத் தொடர விரும்புகிறீர்களா?"
+
+#: lib/commit.tcl:299
+msgid "Calling commit-msg hook..."
+msgstr "கமிட்-எம்.எச்.சி ஊக்கை அழைக்கிறது ..."
+
+#: lib/commit.tcl:314
+msgid "Commit declined by commit-msg hook."
+msgstr "கமிட்-எம்.எச்.சி ஊக்கால் கமிட் மறுக்கப்பட்டது."
+
+#: lib/commit.tcl:327
+msgid "Committing changes..."
+msgstr "மாற்றங்களைச் செய்கிறது ..."
+
+#: lib/commit.tcl:344
+msgid "write-tree failed:"
+msgstr "எழுதும் மரம் தோல்வியுற்றது:"
+
+#: lib/commit.tcl:345 lib/commit.tcl:395 lib/commit.tcl:422
+msgid "Commit failed."
+msgstr "கமிட் தோல்வியுற்றது."
+
+#: lib/commit.tcl:362
+#, tcl-format
+msgid "Commit %s appears to be corrupt"
+msgstr "கமிட் %s ஊழல் நிறைந்ததாகத் தெரிகிறது"
+
+#: lib/commit.tcl:367
+msgid ""
+"No changes to commit.\n"
+"\n"
+"No files were modified by this commit and it was not a merge commit.\n"
+"\n"
+"A rescan will be automatically started now.\n"
+msgstr ""
+"செய்ய எந்த மாற்றங்களும் இல்லை. \n"
+"\n"
+"இந்த உறுதிப்பாட்டால் எந்த கோப்புகளும் மாற்றியமைக்கப்படவில்லை, இது ஒரு ஒன்றிணைந்த உறுதிப்பாடு அல்ல. \n"
+"\n"
+"ஒரு மீட்டமை இப்போது தானாகவே தொடங்கப்படும்.\n"
+
+#: lib/commit.tcl:374
+msgid "No changes to commit."
+msgstr "செய்ய எந்த மாற்றங்களும் இல்லை."
+
+#: lib/commit.tcl:394
+msgid "commit-tree failed:"
+msgstr "கமிட்-மரம் தோல்வியுற்றது:"
+
+#: lib/commit.tcl:421
+msgid "update-ref failed:"
+msgstr "புதுப்பிப்பு-ரெஃப் தோல்வியுற்றது:"
+
+#: lib/commit.tcl:514
+#, tcl-format
+msgid "Created commit %s: %s"
+msgstr "உருவாக்கப்பட்ட கமிட் %s: %s"
+
+#: lib/branch_delete.tcl:16
+#, tcl-format
+msgid "%s (%s): Delete Branch"
+msgstr "%s (%s): கிளையை நீக்கு"
+
+#: lib/branch_delete.tcl:21
+msgid "Delete Local Branch"
+msgstr "உள்ளக கிளையை நீக்கு"
+
+#: lib/branch_delete.tcl:39
+msgid "Local Branches"
+msgstr "உள்ளக கிளைகள்"
+
+#: lib/branch_delete.tcl:51
+msgid "Delete Only If Merged Into"
+msgstr "ஒன்றிணைந்தால் மட்டுமே நீக்கவும்"
+
+#: lib/branch_delete.tcl:103
+#, tcl-format
+msgid "The following branches are not completely merged into %s:"
+msgstr "பின்வரும் கிளைகள் %s இல் முழுமையாக இணைக்கப்படவில்லை:"
+
+#: lib/branch_delete.tcl:131
+#, tcl-format
+msgid " - %s:"
+msgstr "- %s:"
+
+#: lib/branch_delete.tcl:141
+#, tcl-format
+msgid ""
+"Failed to delete branches:\n"
+"%s"
+msgstr ""
+"கிளைகளை நீக்குவதில் தோல்வி: \n"
+"%s"
+
+#: lib/date.tcl:25
+#, tcl-format
+msgid "Invalid date from Git: %s"
+msgstr "GIT இலிருந்து தவறான தேதி: %s"
+
+#: lib/database.tcl:42
+msgid "Number of loose objects"
+msgstr "தளர்வான பொருட்களின் எண்ணிக்கை"
+
+#: lib/database.tcl:43
+msgid "Disk space used by loose objects"
+msgstr "தளர்வான பொருள்களால் பயன்படுத்தப்படும் வட்டு இடம்"
+
+#: lib/database.tcl:44
+msgid "Number of packed objects"
+msgstr "நிரம்பிய பொருட்களின் எண்ணிக்கை"
+
+#: lib/database.tcl:45
+msgid "Number of packs"
+msgstr "பொதிகளின் எண்ணிக்கை"
+
+#: lib/database.tcl:46
+msgid "Disk space used by packed objects"
+msgstr "நிரம்பிய பொருள்களால் பயன்படுத்தப்படும் வட்டு இடம்"
+
+#: lib/database.tcl:47
+msgid "Packed objects waiting for pruning"
+msgstr "கத்தரிக்காய் காத்திருக்கும் நிரம்பிய பொருள்கள்"
+
+#: lib/database.tcl:48
+msgid "Garbage files"
+msgstr "குப்பை கோப்புகள்"
+
+#: lib/database.tcl:66
+#, tcl-format
+msgid "%s (%s): Database Statistics"
+msgstr "%s (%s): தரவுத்தள புள்ளிவிவரங்கள்"
+
+#: lib/database.tcl:72
+msgid "Compressing the object database"
+msgstr "பொருள் தரவுத்தளத்தை சுருக்கவும்"
+
+#: lib/database.tcl:83
+msgid "Verifying the object database with fsck-objects"
+msgstr "பொருள் தரவுத்தளத்தை FSCK-Objects உடன் சரிபார்க்கவும்"
+
+#: lib/database.tcl:107
+#, tcl-format
+msgid ""
+"This repository currently has approximately %i loose objects.\n"
+"\n"
+"To maintain optimal performance it is strongly recommended that you compress the database.\n"
+"\n"
+"Compress the database now?"
+msgstr ""
+"இந்த களஞ்சியத்தில் தற்போது சுமார் %நான் தளர்வான பொருள்களைக் கொண்டுள்ளது. \n"
+"\n"
+"உகந்த செயல்திறனை பராமரிக்க நீங்கள் தரவுத்தளத்தை சுருக்க வேண்டும் என்று கடுமையாக பரிந்துரைக்கப்படுகிறது. \n"
+"\n"
+"இப்போது தரவுத்தளத்தை சுருக்கவா?"
+
+#: lib/error.tcl:20
+#, tcl-format
+msgid "%s: error"
+msgstr "%s: பிழை"
+
+#: lib/error.tcl:36
+#, tcl-format
+msgid "%s: warning"
+msgstr "%s: முன்னறிவிப்பு"
+
+#: lib/error.tcl:80
+#, tcl-format
+msgid "%s hook failed:"
+msgstr "%s ஊக் தோல்வியுற்றது:"
+
+#: lib/error.tcl:96
+msgid "You must correct the above errors before committing."
+msgstr "செய்வதற்கு முன் மேலே உள்ள பிழைகளை நீங்கள் சரிசெய்ய வேண்டும்."
+
+#: lib/error.tcl:116
+#, tcl-format
+msgid "%s (%s): error"
+msgstr "%s (%s): பிழை"
+
+#: lib/merge.tcl:13
+msgid ""
+"Cannot merge while amending.\n"
+"\n"
+"You must finish amending this commit before starting any type of merge.\n"
+msgstr ""
+"திருத்தும்போது ஒன்றிணைக்க முடியாது. \n"
+"\n"
+"எந்தவொரு ஒன்றிணைப்பையும் தொடங்குவதற்கு முன் இந்த உறுதிப்பாட்டை திருத்துவதை நீங்கள் முடிக்க வேண்டும்.\n"
+
+#: lib/merge.tcl:27
+msgid ""
+"Last scanned state does not match repository state.\n"
+"\n"
+"Another Git program has modified this repository since the last scan.  A rescan must be performed before a merge can be performed.\n"
+"\n"
+"The rescan will be automatically started now.\n"
+msgstr ""
+"கடைசியாக வருடு செய்யப்பட்ட மாநிலம் களஞ்சிய நிலைக்கு பொருந்தவில்லை. \n"
+"\n"
+"மற்றொரு சிஐடி திட்டம் கடைசி வருடு முதல் இந்த களஞ்சியத்தை மாற்றியமைத்துள்ளது. ஒன்றிணைக்கப்படுவதற்கு முன்பு ஒரு மீட்டமைப்பை செய்ய வேண்டும். \n"
+"\n"
+"ரெச்கான் இப்போது தானாகவே தொடங்கப்படும்.\n"
+
+#: lib/merge.tcl:45
+#, tcl-format
+msgid ""
+"You are in the middle of a conflicted merge.\n"
+"\n"
+"File %s has merge conflicts.\n"
+"\n"
+"You must resolve them, stage the file, and commit to complete the current merge.  Only then can you begin another merge.\n"
+msgstr ""
+"நீங்கள் ஒரு முரண்பட்ட ஒன்றிணைப்பின் நடுவில் இருக்கிறீர்கள். \n"
+"\n"
+"கோப்பு %s ஒன்றிணைக்கும் மோதல்களைக் கொண்டுள்ளன. \n"
+"\n"
+"நீங்கள் அவற்றைத் தீர்க்க வேண்டும், கோப்பை அரங்கேற்ற வேண்டும், தற்போதைய ஒன்றிணையை முடிக்க உறுதியளிக்க வேண்டும். அப்போதுதான் நீங்கள் மற்றொரு ஒன்றிணைந்து தொடங்க முடியும்.\n"
+
+#: lib/merge.tcl:55
+#, tcl-format
+msgid ""
+"You are in the middle of a change.\n"
+"\n"
+"File %s is modified.\n"
+"\n"
+"You should complete the current commit before starting a merge.  Doing so will help you abort a failed merge, should the need arise.\n"
+msgstr ""
+"நீங்கள் ஒரு மாற்றத்தின் நடுவில் இருக்கிறீர்கள். \n"
+"\n"
+"கோப்பு %s மாற்றியமைக்கப்படுகின்றன. \n"
+"\n"
+"ஒன்றிணைக்கத் தொடங்குவதற்கு முன் தற்போதைய உறுதிப்பாட்டை நீங்கள் முடிக்க வேண்டும். அவ்வாறு செய்வது தோல்வியுற்ற ஒன்றிணைப்பைக் கைவிட உதவும், தேவை ஏற்பட்டால்.\n"
+
+#: lib/merge.tcl:108
+#, tcl-format
+msgid "%s of %s"
+msgstr "%s %s"
+
+#: lib/merge.tcl:126
+#, tcl-format
+msgid "Merging %s and %s..."
+msgstr "%s மற்றும் %s ஐ இணைத்தல் ..."
+
+#: lib/merge.tcl:137
+msgid "Merge completed successfully."
+msgstr "ஒன்றிணைந்தது வெற்றிகரமாக முடிந்தது."
+
+#: lib/merge.tcl:139
+msgid "Merge failed.  Conflict resolution is required."
+msgstr "ஒன்றிணைந்தது தோல்வியுற்றது. மோதல் தீர்வு தேவை."
+
+#: lib/merge.tcl:156
+#, tcl-format
+msgid "%s (%s): Merge"
+msgstr "%s (%s): ஒன்றிணைக்கவும்"
+
+#: lib/merge.tcl:164
+#, tcl-format
+msgid "Merge Into %s"
+msgstr "%s ஆக இணைக்கவும்"
+
+#: lib/merge.tcl:183
+msgid "Revision To Merge"
+msgstr "ஒன்றிணைக்க திருத்தம்"
+
+#: lib/merge.tcl:218
+msgid ""
+"Cannot abort while amending.\n"
+"\n"
+"You must finish amending this commit.\n"
+msgstr ""
+"திருத்தும்போது கருக்கலைப்பு செய்ய முடியாது. \n"
+"\n"
+"இந்த உறுதிப்பாட்டை திருத்துவதை நீங்கள் முடிக்க வேண்டும்.\n"
+
+#: lib/merge.tcl:228
+msgid ""
+"Abort merge?\n"
+"\n"
+"Aborting the current merge will cause *ALL* uncommitted changes to be lost.\n"
+"\n"
+"Continue with aborting the current merge?"
+msgstr ""
+"ஒன்றிணைக்கவா? \n"
+"\n"
+"தற்போதைய ஒன்றிணைப்பைக் கருக்கலைப்பது * அனைத்து * மாற்றப்படாத மாற்றங்களையும் இழக்கச் செய்யும். \n"
+"\n"
+"தற்போதைய ஒன்றிணைப்பைக் கருக்கலைப்பதைத் தொடரவா?"
+
+#: lib/merge.tcl:234
+msgid ""
+"Reset changes?\n"
+"\n"
+"Resetting the changes will cause *ALL* uncommitted changes to be lost.\n"
+"\n"
+"Continue with resetting the current changes?"
+msgstr ""
+"மாற்றங்களை மீட்டமைக்கவா? \n"
+"\n"
+"மாற்றங்களை மீட்டமைப்பது * அனைத்து * மாற்றப்படாத மாற்றங்களையும் இழக்கச் செய்யும். \n"
+"\n"
+"தற்போதைய மாற்றங்களை மீட்டமைப்பதில் தொடரவா?"
+
+#: lib/merge.tcl:246
+msgid "Aborting"
+msgstr "கருக்கலைப்பு"
+
+#: lib/merge.tcl:247
+msgid "files reset"
+msgstr "கோப்புகள் மீட்டமைக்கப்படுகின்றன"
+
+#: lib/merge.tcl:277
+msgid "Abort failed."
+msgstr "கருக்கலைப்பு தோல்வியுற்றது."
+
+#: lib/merge.tcl:279
+msgid "Abort completed.  Ready."
+msgstr "கருக்கலைப்பு முடிந்தது. ஆயத்தம்."
